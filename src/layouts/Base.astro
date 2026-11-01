@@ -4,7 +4,7 @@ import '@fontsource-variable/figtree';
 import '../styles/global.css';
 import Icono from '../components/Icono.astro';
 import { url, situaciones, provincias } from '../lib/datos';
-import { NOMBRE } from '../config';
+import { NOMBRE, GOATCOUNTER } from '../config';
 
 interface Props {
   titulo: string;
@@ -38,6 +38,7 @@ const datosPerfil = {
     <meta property="og:description" content={descripcion} />
     <meta property="og:url" content={canonica} />
     <meta name="twitter:card" content="summary" />
+    {GOATCOUNTER && <script is:inline async data-goatcounter={GOATCOUNTER} src="https://gc.zgo.at/count.js"></script>}
   </head>
   <body data-tema={tema} data-fondo={fondo}>
     <a class="saltar" href="#contenido">Saltar al contenido</a>

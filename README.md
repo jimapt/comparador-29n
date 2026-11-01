@@ -1,25 +1,25 @@
-# lo que te toca · comparador 29N
+# esto te toca · comparador 29N
 
 Comparador de programas para las elecciones generales del 29 de noviembre de 2026. Empieza por tu situación y tu provincia, y te enseña qué propone cada partido sobre vivienda, empleo, inmigración y pensiones, en 25 palabras y con la fuente. Neutral, sin recomendar voto, sin cuentas, sin cookies y sin guardar respuestas.
 
-> «lo que te toca» es un nombre provisional.
 
 ## Stack
 
 - [Astro](https://astro.build) en modo estático: cada pregunta, tema y provincia es una página HTML ya generada (82 páginas). JavaScript mínimo y sin framework para el perfil, el orden aleatorio, las hojas, el simulador y la tarjeta para stories.
 - Tipografías Unbounded y Figtree servidas desde la propia web (sin Google Fonts, por privacidad).
-- Despliegue gratuito en GitHub Pages con GitHub Actions (`.github/workflows/desplegar.yml`) en cada push a `main`.
+- Despliegue gratuito en Netlify (`netlify.toml`): se publica sola en cada push a `main`.
+- Estadísticas sin cookies con GoatCounter (se activan poniendo el código en `src/config.ts`).
 
 ## Comandos
 
 ```sh
 npm install
-npm run dev        # http://localhost:4321/comparador-29n/
+npm run dev        # http://localhost:4321/
 npm run build      # genera dist/
 npm run contenido  # vuelve a generar src/data/respuestas.json desde contenido/fuentes/
 ```
 
-Con dominio propio: `SITE=https://[dominio] BASE=/ npm run build` (y añadir el dominio en Settings → Pages).
+Con dominio propio: añadirlo en Netlify (Domain management) y cambiar `DOMINIO` en `src/config.ts`.
 
 ## Dónde está cada cosa
 

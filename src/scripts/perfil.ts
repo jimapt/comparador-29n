@@ -34,10 +34,10 @@ export function guardarPerfil(p: Partial<Perfil>) {
 // no se vea nunca en otro orden. Usa la clave 'ltt-orden'.
 
 /**
- * Analítica agregada y sin cookies. [PENDIENTE] conectar Plausible o Umami.
- * Solo se envía el nombre del evento: nunca la situación ni la provincia.
+ * Estadísticas agregadas y sin cookies (GoatCounter). Solo se envía el nombre
+ * del evento: nunca la situación ni la provincia.
  */
 export function evento(nombre: 'comparacion-vista' | 'perfil-completo' | 'tarjeta-compartida') {
-  const w = window as unknown as { plausible?: (n: string) => void };
-  w.plausible?.(nombre);
+  const w = window as unknown as { goatcounter?: { count?: (o: object) => void } };
+  w.goatcounter?.count?.({ path: nombre, title: nombre, event: true });
 }

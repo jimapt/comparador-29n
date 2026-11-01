@@ -67,7 +67,7 @@ export function partidosEn(provincia: string) {
   return partidos.filter((p) => sePresentaEn(p, provincia));
 }
 
-/** Ruta interna con la base del sitio (GitHub Pages sirve en /comparador-29n/). */
+/** Ruta interna con la base del sitio (BASE en astro.config.mjs). */
 export function url(ruta = '') {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const limpia = ruta.replace(/^\//, '');

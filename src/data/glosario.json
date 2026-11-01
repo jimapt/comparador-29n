@@ -1,47 +1,183 @@
 {
-  "_nota": "Borrador de Claude (01/11/2026), pendiente de revisión de Laura. 'formas' = cómo aparece el término en las respuestas; se subraya la primera aparición en cada respuesta.",
+  "_nota": "Revisado y aprobado por Laura el 01/11/2026. 'formas' = cómo aparece el término en las respuestas; se subraya la primera aparición en cada respuesta.",
   "terminos": [
-    { "id": "zona-tensionada", "termino": "Zona tensionada", "formas": ["zonas tensionadas", "zona tensionada", "zonas de mercado tensionado"],
-      "definicion": "Zona donde la vivienda cuesta demasiado para los sueldos de quien vive allí. La Ley de Vivienda permite limitar el alquiler en ellas." },
-    { "id": "ley-de-vivienda", "termino": "Ley de Vivienda", "formas": ["Ley de Vivienda"],
-      "definicion": "Ley estatal de 2023. Entre otras cosas, permite limitar el precio del alquiler en las zonas tensionadas." },
-    { "id": "aval", "termino": "Aval", "formas": ["avales", "aval"],
-      "definicion": "Una garantía: el Estado responde por esa parte de la hipoteca si no puedes pagarla." },
-    { "id": "ico", "termino": "ICO", "formas": ["ICO"],
-      "definicion": "Instituto de Crédito Oficial, el banco público del Estado." },
-    { "id": "smi", "termino": "Salario mínimo (SMI)", "formas": ["salario mínimo", "SMI"],
-      "definicion": "Lo mínimo que se puede pagar por un trabajo a jornada completa. Lo fija el Gobierno cada año." },
-    { "id": "ipc", "termino": "IPC", "formas": ["IPC", "inflación"],
-      "definicion": "Índice de Precios de Consumo: mide cuánto suben los precios. Si algo sube «con el IPC», no pierde poder de compra." },
-    { "id": "garantia-juvenil", "termino": "Garantía Juvenil", "formas": ["Garantía Juvenil"],
-      "definicion": "Programa europeo que ofrece empleo, formación o prácticas a jóvenes que ni estudian ni trabajan." },
-    { "id": "fp-dual", "termino": "FP dual", "formas": ["FP dual"],
-      "definicion": "Formación Profesional que se estudia a la vez en el centro y trabajando en una empresa." },
-    { "id": "cuota-autonomos", "termino": "Cuota de autónomos", "formas": ["cuota"],
-      "definicion": "Lo que paga cada mes un autónomo a la Seguridad Social. Desde 2023 depende de lo que gana." },
-    { "id": "arraigo", "termino": "Arraigo", "formas": ["arraigo"],
-      "definicion": "Vía para conseguir papeles si llevas un tiempo viviendo en España y tienes lazos aquí: trabajo, familia o formación." },
-    { "id": "regularizacion", "termino": "Regularización", "formas": ["regularización"],
-      "definicion": "Proceso para dar permiso de residencia y de trabajo a personas que ya viven en España sin papeles." },
-    { "id": "cie", "termino": "CIE", "formas": ["centros de internamiento", "CIE"],
-      "definicion": "Centros de Internamiento de Extranjeros: retienen a personas sin papeles, hasta 60 días, mientras se tramita su expulsión." },
-    { "id": "asilo", "termino": "Asilo", "formas": ["asilo"],
-      "definicion": "Protección que da un país a quien huye de una persecución o de una guerra." },
-    { "id": "frontex", "termino": "Frontex", "formas": ["Frontex"],
-      "definicion": "Agencia de la Unión Europea que vigila las fronteras exteriores." },
-    { "id": "pacto-de-toledo", "termino": "Pacto de Toledo", "formas": ["Pacto de Toledo"],
-      "definicion": "Acuerdo de los partidos en el Congreso, desde 1995, para decidir las pensiones por consenso." },
-    { "id": "fondo-de-reserva", "termino": "Fondo de Reserva", "formas": ["hucha de las pensiones", "Fondo de Reserva"],
-      "definicion": "El ahorro de la Seguridad Social, conocido como «hucha de las pensiones», para pagarlas en años con menos ingresos." },
-    { "id": "cotizacion", "termino": "Cotización", "formas": ["cotizaciones", "cotización", "cotizantes"],
-      "definicion": "Lo que pagan la empresa y quien trabaja a la Seguridad Social. De ahí salen las pensiones y el paro." },
-    { "id": "irpf", "termino": "IRPF", "formas": ["IRPF", "Renta"],
-      "definicion": "El impuesto sobre lo que ganas. Se ajusta cada año en la declaración de la Renta." },
-    { "id": "pensiones-no-contributivas", "termino": "Pensión no contributiva", "formas": ["no contributivas"],
-      "definicion": "Pensión para quien no ha cotizado lo suficiente y tiene pocos ingresos." },
-    { "id": "dhondt", "termino": "D'Hondt", "formas": ["D'Hondt"],
-      "definicion": "Fórmula que reparte los escaños de cada provincia: divide los votos de cada partido entre 1, 2, 3… y da los escaños a los resultados más altos." },
-    { "id": "umbral", "termino": "Umbral del 3 %", "formas": ["umbral del 3 %"],
-      "definicion": "En cada provincia, los partidos con menos del 3 % de los votos válidos (incluido el voto en blanco) no entran en el reparto." }
+    {
+      "id": "zona-tensionada",
+      "termino": "Zona tensionada",
+      "formas": [
+        "zonas tensionadas",
+        "zona tensionada",
+        "zonas de mercado tensionado"
+      ],
+      "definicion": "Zona donde la vivienda cuesta demasiado para los sueldos de quien vive allí. La Ley de Vivienda permite limitar el alquiler en ellas."
+    },
+    {
+      "id": "ley-de-vivienda",
+      "termino": "Ley de Vivienda",
+      "formas": [
+        "Ley de Vivienda"
+      ],
+      "definicion": "Ley estatal de 2023. Entre otras cosas, permite limitar el precio del alquiler en las zonas tensionadas."
+    },
+    {
+      "id": "aval",
+      "termino": "Aval",
+      "formas": [
+        "avales",
+        "aval"
+      ],
+      "definicion": "Una garantía: el Estado responde por esa parte de la hipoteca si no puedes pagarla."
+    },
+    {
+      "id": "ico",
+      "termino": "ICO",
+      "formas": [
+        "ICO"
+      ],
+      "definicion": "Instituto de Crédito Oficial, el banco público del Estado."
+    },
+    {
+      "id": "smi",
+      "termino": "Salario mínimo (SMI)",
+      "formas": [
+        "salario mínimo",
+        "SMI"
+      ],
+      "definicion": "Lo mínimo que se puede pagar por un trabajo a jornada completa. Lo fija el Gobierno cada año."
+    },
+    {
+      "id": "ipc",
+      "termino": "IPC",
+      "formas": [
+        "IPC",
+        "inflación"
+      ],
+      "definicion": "Índice de Precios de Consumo: mide cuánto suben los precios. Si algo sube «con el IPC», no pierde poder de compra."
+    },
+    {
+      "id": "garantia-juvenil",
+      "termino": "Garantía Juvenil",
+      "formas": [
+        "Garantía Juvenil"
+      ],
+      "definicion": "Programa europeo que ofrece empleo, formación o prácticas a jóvenes que ni estudian ni trabajan."
+    },
+    {
+      "id": "fp-dual",
+      "termino": "FP dual",
+      "formas": [
+        "FP dual"
+      ],
+      "definicion": "Formación Profesional que se estudia a la vez en el centro y trabajando en una empresa."
+    },
+    {
+      "id": "cuota-autonomos",
+      "termino": "Cuota de autónomos",
+      "formas": [
+        "cuota"
+      ],
+      "definicion": "Lo que paga cada mes un autónomo a la Seguridad Social. Desde 2023 depende de lo que gana."
+    },
+    {
+      "id": "arraigo",
+      "termino": "Arraigo",
+      "formas": [
+        "arraigo"
+      ],
+      "definicion": "Vía para conseguir papeles si llevas un tiempo viviendo en España y tienes lazos aquí: trabajo, familia o formación."
+    },
+    {
+      "id": "regularizacion",
+      "termino": "Regularización",
+      "formas": [
+        "regularización"
+      ],
+      "definicion": "Proceso para dar permiso de residencia y de trabajo a personas que ya viven en España sin papeles."
+    },
+    {
+      "id": "cie",
+      "termino": "CIE",
+      "formas": [
+        "centros de internamiento",
+        "CIE"
+      ],
+      "definicion": "Centros de Internamiento de Extranjeros: retienen a personas sin papeles, hasta 60 días, mientras se tramita su expulsión."
+    },
+    {
+      "id": "asilo",
+      "termino": "Asilo",
+      "formas": [
+        "asilo"
+      ],
+      "definicion": "Protección que da un país a quien huye de una persecución o de una guerra."
+    },
+    {
+      "id": "frontex",
+      "termino": "Frontex",
+      "formas": [
+        "Frontex"
+      ],
+      "definicion": "Agencia de la Unión Europea que vigila las fronteras exteriores."
+    },
+    {
+      "id": "pacto-de-toledo",
+      "termino": "Pacto de Toledo",
+      "formas": [
+        "Pacto de Toledo"
+      ],
+      "definicion": "Acuerdo de los partidos en el Congreso, desde 1995, para decidir las pensiones por consenso."
+    },
+    {
+      "id": "fondo-de-reserva",
+      "termino": "Fondo de Reserva",
+      "formas": [
+        "hucha de las pensiones",
+        "Fondo de Reserva"
+      ],
+      "definicion": "El ahorro de la Seguridad Social, conocido como «hucha de las pensiones», para pagarlas en años con menos ingresos."
+    },
+    {
+      "id": "cotizacion",
+      "termino": "Cotización",
+      "formas": [
+        "cotizaciones",
+        "cotización",
+        "cotizantes"
+      ],
+      "definicion": "Lo que pagan la empresa y quien trabaja a la Seguridad Social. De ahí salen las pensiones y el paro."
+    },
+    {
+      "id": "irpf",
+      "termino": "IRPF",
+      "formas": [
+        "IRPF",
+        "Renta"
+      ],
+      "definicion": "El impuesto sobre lo que ganas. Se ajusta cada año en la declaración de la Renta."
+    },
+    {
+      "id": "pensiones-no-contributivas",
+      "termino": "Pensión no contributiva",
+      "formas": [
+        "no contributivas"
+      ],
+      "definicion": "Pensión para quien no ha cotizado lo suficiente y tiene pocos ingresos."
+    },
+    {
+      "id": "dhondt",
+      "termino": "D'Hondt",
+      "formas": [
+        "D'Hondt"
+      ],
+      "definicion": "Fórmula que reparte los escaños de cada provincia: divide los votos de cada partido entre 1, 2, 3… y da los escaños a los resultados más altos."
+    },
+    {
+      "id": "umbral",
+      "termino": "Umbral del 3 %",
+      "formas": [
+        "umbral del 3 %"
+      ],
+      "definicion": "En cada provincia, los partidos con menos del 3 % de los votos válidos (incluido el voto en blanco) no entran en el reparto."
+    }
   ]
 }

@@ -1,10 +1,9 @@
 import { defineConfig } from 'astro/config';
 
-// SITE y BASE se pueden cambiar sin tocar el código:
-// - En GitHub Pages (por defecto): https://jimapt.github.io/comparador-29n/
-// - Con dominio propio: SITE=https://[dominio] BASE=/ npm run build
-const site = process.env.SITE ?? 'https://jimapt.github.io';
-const base = process.env.BASE ?? '/comparador-29n';
+// Netlify define URL con la dirección del sitio. SITE y BASE permiten
+// cambiarlo sin tocar el código (por ejemplo, con un dominio propio).
+const site = process.env.SITE ?? process.env.URL ?? 'https://estotetoca.netlify.app';
+const base = process.env.BASE ?? '/';
 
 export default defineConfig({
   site,
