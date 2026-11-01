@@ -44,7 +44,8 @@ const aqui = partidosEn(provincia.slug);
 
     <section class="tarjeta pila" style="--gap: 0.5rem; box-shadow: none" aria-labelledby="r2023-t">
       <h2 class="h2" id="r2023-t">Cómo quedó en 2023</h2>
-      <p class="aviso aviso--error pequeno">Dato no disponible todavía. Lo añadiremos con los resultados oficiales del Ministerio del Interior. [PENDIENTE]</p>
+      <p class="pequeno">Consulta los votos y escaños de cada partido en {provincia.nombre} en la web oficial de resultados del Ministerio del Interior.</p>
+      <a class="boton boton--sec" href="https://resultados.generales23j.es/" target="_blank" rel="noopener noreferrer">Ver los resultados de 2023<Icono nombre="externo" /><span class="solo-lector"> (se abre en otra pestaña)</span></a>
     </section>
 
     <Simulador escanos={escanos} provincia={provincia.nombre} />
