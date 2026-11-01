@@ -109,7 +109,7 @@
     ],
     "pagina": null,
     "cita": "\"1.800€ de salario mínimo por Ley.\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -169,7 +169,7 @@
     "enlaces": [],
     "pagina": 22,
     "cita": "\"Impulsaremos la subida de todos los salarios, especialmente los más bajos.\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "adelante-andalucia",
@@ -279,7 +279,7 @@
     ],
     "pagina": null,
     "cita": "\"que no se condicionen al tiempo cotizado y tengan en cuenta la intermitencia en el empleo.\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -339,7 +339,7 @@
     "enlaces": [],
     "pagina": 22,
     "cita": "\"Aumentaremos los incentivos a la contratación estable de jóvenes\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "adelante-andalucia",
@@ -451,7 +451,7 @@
     ],
     "pagina": null,
     "cita": "\"Creación de la figura del y de la trabajadora autónoma vulnerable.\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -511,7 +511,7 @@
     "enlaces": [],
     "pagina": 23,
     "cita": "\"la exoneración de la cuota a aquellos cuyos ingresos netos no lleguen al Salario Mínimo Interprofesional\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "adelante-andalucia",
@@ -623,7 +623,7 @@
     ],
     "pagina": null,
     "cita": "\"Estableceremos vías legales y seguras de acceso a Europa a través de un programa efectivo de reasentamiento\" / \"La UE abolirá la Agencia Europea de la Guardia de Fronteras y Costas (Frontex)\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -683,7 +683,7 @@
     "enlaces": [],
     "pagina": 23,
     "cita": "\"Despliegue militar en las fronteras de Ceuta, Melilla y Canarias\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "adelante-andalucia",
@@ -787,13 +787,14 @@
     "texto": "Regularización extraordinaria (pactada con el Gobierno) para quien llegara antes del 31/12/2025, unas 500.000 personas. Cerrar los centros de internamiento.",
     "concreta": "si",
     "origen": "Propuesta 2024-26",
-    "fuente": "Irene Montero sobre el acuerdo, recogido por Periódico de Ibiza, 27/01/2026",
+    "fuente": "Irene Montero sobre el acuerdo, recogido por Periódico de Ibiza, 27/01/2026; cierre de CIE: Programa europeas 2024, cap. 8",
     "enlaces": [
-      "https://www.periodicodeibiza.es/noticias/nacional/2026/01/27/2557523/regularizacion-migratoria-espana-gobierno-acuerda-podemos-reforma-extraordinaria.html"
+      "https://www.periodicodeibiza.es/noticias/nacional/2026/01/27/2557523/regularizacion-migratoria-espana-gobierno-acuerda-podemos-reforma-extraordinaria.html",
+      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
     ],
     "pagina": null,
-    "cita": "\"tendrán papeles todas las personas que estuvieran en España antes del 31 de diciembre de 2025\"",
-    "verificado": false
+    "cita": "\"tendrán papeles todas las personas que estuvieran en España antes del 31 de diciembre de 2025\" / \"Impulsaremos el cierre de todos los centros de internamiento y detención\"",
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -853,7 +854,7 @@
     "enlaces": [],
     "pagina": 60,
     "cita": "\"impidiendo que los okupas y los inmigrantes ilegales puedan inscribirse en el padrón municipal\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "adelante-andalucia",
@@ -963,7 +964,7 @@
     ],
     "pagina": null,
     "cita": "\"todas las personas tengan acceso a una cobertura sanitaria adecuada, al margen de donde vivan\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -1023,7 +1024,7 @@
     "enlaces": [],
     "pagina": 23,
     "cita": "\"aportan su esfuerzo y respetan nuestro modo de vida\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "adelante-andalucia",
@@ -1133,7 +1134,7 @@
     ],
     "pagina": null,
     "cita": "\"que nunca podrán situarse por debajo del umbral de la pobreza\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -1193,7 +1194,7 @@
     "enlaces": [],
     "pagina": 75,
     "cita": "\"pensiones contributivas estarán exentas de IRPF\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "adelante-andalucia",
@@ -1303,7 +1304,7 @@
     ],
     "pagina": null,
     "cita": "\"para blindar el carácter público de los sistemas estatales de pensiones impidiendo su privatización\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -1363,7 +1364,7 @@
     "enlaces": [],
     "pagina": 25,
     "cita": "\"Aseguraremos la sostenibilidad del sistema de pensiones desmontando el sistema autonómico\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "adelante-andalucia",
@@ -1473,7 +1474,7 @@
     ],
     "pagina": null,
     "cita": "\"la posibilidad de jubilación anticipada sin penalización por la especial dureza de estos empleos\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -1533,7 +1534,7 @@
     "enlaces": [],
     "pagina": 91,
     "cita": "\"alcanzaremos la equiparación real en salario y la justa jubilación para las Fuerzas Armadas\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "adelante-andalucia",
@@ -1645,7 +1646,7 @@
     ],
     "pagina": null,
     "cita": "\"rebajar por ley la cuantía de todos los alquileres un 40% con respecto a los precios actuales\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -1705,7 +1706,7 @@
     "enlaces": [],
     "pagina": 40,
     "cita": "\"Acabaremos con la expropiación temporal de inmuebles y con el control de rentas en el contrato de arrendamiento\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "adelante-andalucia",
@@ -1754,7 +1755,7 @@
       "https://www.catalunyapress.es/articulo/politica-nacional/2026-10-10/6047450-miriam-gonzalez-irrumpe-29n-democracia-21-plan-vivienda-madrid-barcelona"
     ],
     "pagina": null,
-    "cita": "\"eliminar todos los impuestos relacionados con la vivienda para los menores de 35 años\"",
+    "cita": "\"eliminar todos los impuestos relacionados con la vivienda para los menores de 35 años\" (texto del periodista)",
     "verificado": false
   },
   {
@@ -1817,7 +1818,7 @@
     ],
     "pagina": null,
     "cita": "\"Nadie que quiera especular debería poder comprar una vivienda en España.\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -1870,14 +1871,14 @@
   {
     "partido": "vox",
     "pregunta": "V2",
-    "texto": "Quitar impuestos a la compra (IVA ⚠️ verificar a qué se aplica) y recuperar la deducción por vivienda habitual en la Renta.",
+    "texto": "Quitar el IVA a la compra de la primera vivienda habitual y recuperar la deducción por vivienda habitual en la Renta.",
     "concreta": "si",
     "origen": "Programa 2023",
     "fuente": "Med. 66-67, pp. 40-41",
     "enlaces": [],
     "pagina": 40,
     "cita": "\"Recuperaremos la deducción por vivienda habitual en la declaración de la Renta.\"",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "adelante-andalucia",
@@ -1989,7 +1990,7 @@
     ],
     "pagina": null,
     "cita": "\"expropiar el uso de 92.000 viviendas en manos de grandes fondos de inversión\" (texto del periodista)",
-    "verificado": false
+    "verificado": true
   },
   {
     "partido": "pp",
@@ -2049,6 +2050,6 @@
     "enlaces": [],
     "pagina": 40,
     "cita": "\"Liberaremos todo el suelo que no esté o deba estar especialmente protegido\"",
-    "verificado": false
+    "verificado": true
   }
 ]

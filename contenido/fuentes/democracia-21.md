@@ -16,7 +16,7 @@ Programa: no hay programa publicado ni web oficial localizada (partido presentad
 ### ¿Cómo ayudarían a comprar la primera vivienda?
 | Partido | Respuesta (≤ 25 palabras) | ¿Concreta? | Origen | Fuente | Cita literal |
 |---|---|---|---|---|---|
-| Democracia 21 ⚠️ | Quitar todos los impuestos sobre la vivienda a los menores de 35 años. | Sí | Propuesta 2026 | Presentación, recogida por [Catalunya Press](https://www.catalunyapress.es/articulo/politica-nacional/2026-10-10/6047450-miriam-gonzalez-irrumpe-29n-democracia-21-plan-vivienda-madrid-barcelona), 10/10/2026 | "eliminar todos los impuestos relacionados con la vivienda para los menores de 35 años" |
+| Democracia 21 ⚠️ | Quitar todos los impuestos sobre la vivienda a los menores de 35 años. | Sí | Propuesta 2026 | Presentación, recogida por [Catalunya Press](https://www.catalunyapress.es/articulo/politica-nacional/2026-10-10/6047450-miriam-gonzalez-irrumpe-29n-democracia-21-plan-vivienda-madrid-barcelona), 10/10/2026 | "eliminar todos los impuestos relacionados con la vivienda para los menores de 35 años" (texto del periodista) |
 
 ### ¿Construirían más vivienda pública o asequible? ¿Cuánta?
 | Partido | Respuesta (≤ 25 palabras) | ¿Concreta? | Origen | Fuente | Cita literal |
@@ -79,3 +79,5 @@ Programa: no hay programa publicado ni web oficial localizada (partido presentad
 - **Cifras que no cuadran en la prensa:** el fondo de vivienda es de "10.000 millones" según Infobae, Catalunya Press y Euronews, pero de 100.000 millones según el resumen de Artículo14. Los impuestos para menores de 35 años se "eliminan" según la mayoría de medios y se "rebajan" según Infobae. Comprobar en el vídeo de la presentación.
 - **Alquiler:** se ha marcado "Vago" porque los 350 € son un objetivo sin medida. Si se aplica a rajatabla la regla de "hay cifra", sería "Sí". Hay que decidirlo con el mismo criterio para todos los partidos.
 - Las dos páginas de El Demócrata con "la primera parte del programa" (regeneración institucional) no se pudieron abrir. Conviene revisarlas a mano por si traen algo más.
+
+- **01/11/2026:** las 5 citas aparecen literales en la prensa enlazada (la de vivienda para menores de 35 es texto del periodista). Sigue sin programa ni nota oficial: pendiente de decidir si se publica.

@@ -13,7 +13,7 @@ Formato de la [plantilla](plantilla-extraccion-propuestas.md). **Estado: borrado
 | Pregunta | Respuesta (≤ 25 palabras) | ¿Concreta? | Origen | Fuente | Cita literal |
 |---|---|---|---|---|---|
 | ¿Qué harían con el precio del alquiler? | Eliminar el control de rentas, derogar la Ley de Vivienda y "tolerancia cero" con la ocupación ilegal. | Sí | Programa 2023 | Med. 72, 77 y 64, pp. 40-43 | "Acabaremos con la expropiación temporal de inmuebles y con el control de rentas en el contrato de arrendamiento" |
-| ¿Cómo ayudarían a comprar la primera vivienda? | Quitar impuestos a la compra (IVA ⚠️ verificar a qué se aplica) y recuperar la deducción por vivienda habitual en la Renta. | Sí | Programa 2023 | Med. 66-67, pp. 40-41 | "Recuperaremos la deducción por vivienda habitual en la declaración de la Renta." |
+| ¿Cómo ayudarían a comprar la primera vivienda? | Quitar el IVA a la compra de la primera vivienda habitual y recuperar la deducción por vivienda habitual en la Renta. | Sí | Programa 2023 | Med. 66-67, pp. 40-41 | "Recuperaremos la deducción por vivienda habitual en la declaración de la Renta." |
 | ¿Construirían más vivienda pública o asequible? | Liberar suelo no protegido e impulsar vivienda social pública con empresas privadas, sin dar una cifra. | Vago | Programa 2023 | Med. 65, 69 y 70, pp. 40-41 | "Liberaremos todo el suelo que no esté o deba estar especialmente protegido" |
 
 ## PSOE · [Programa 2023](https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf)

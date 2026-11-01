@@ -8,6 +8,6 @@ export const PLAZO_CORRECCIONES = '48 horas'; // [PENDIENTE] confirmar con Laura
 export const RESPONSABLE = '[nombre y contacto del responsable]'; // [PENDIENTE] aviso legal
 
 // Fecha de la última revisión del contenido (se muestra en cada pregunta).
-export const ACTUALIZADO = '2026-10-19';
+export const ACTUALIZADO = '2026-11-01';
 
 export const ELECCIONES = '29 de noviembre de 2026';

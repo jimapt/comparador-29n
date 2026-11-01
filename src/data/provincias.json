@@ -1,13 +1,13 @@
 {
-  "_nota": "escanos2023: reparto de 2023 (RD de convocatoria de 2023). PENDIENTE de cotejar con el BOE. escanos2026: null hasta copiar el RD de convocatoria del 29N (BOE). 'orden' = orden aproximado por población, solo para la lista de selección.",
-  "escanos2023Verificado": false,
+  "_nota": "escanos2026: anexo del RD 806/2026 (BOE 6/10/2026), comprobado el 01/11/2026. escanos2023: reparto de 2023; coincide con 2026 salvo Madrid (37→38) y Cádiz (9→8). 'orden' = orden aproximado por población, solo para la lista de selección.",
+  "escanos2023Verificado": true,
   "fuente2023": {
     "titulo": "Real Decreto 400/2023, de convocatoria de elecciones generales (BOE)",
     "url": "https://www.boe.es/eli/es/rd/2023/05/29/400"
   },
   "fuente2026": {
-    "titulo": "[PENDIENTE] Real Decreto de convocatoria del 29N (BOE)",
-    "url": null
+    "titulo": "Real Decreto 806/2026, de 5 de octubre, de convocatoria de elecciones (BOE núm. 248, anexo)",
+    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742"
   },
   "provincias": [
     {
@@ -15,7 +15,7 @@
       "nombre": "Madrid",
       "comunidad": "Comunidad de Madrid",
       "escanos2023": 37,
-      "escanos2026": null,
+      "escanos2026": 38,
       "orden": 1
     },
     {
@@ -23,7 +23,7 @@
       "nombre": "Barcelona",
       "comunidad": "Cataluña",
       "escanos2023": 32,
-      "escanos2026": null,
+      "escanos2026": 32,
       "orden": 2
     },
     {
@@ -31,7 +31,7 @@
       "nombre": "Valencia/València",
       "comunidad": "Comunitat Valenciana",
       "escanos2023": 16,
-      "escanos2026": null,
+      "escanos2026": 16,
       "orden": 3
     },
     {
@@ -39,7 +39,7 @@
       "nombre": "Alicante/Alacant",
       "comunidad": "Comunitat Valenciana",
       "escanos2023": 12,
-      "escanos2026": null,
+      "escanos2026": 12,
       "orden": 4
     },
     {
@@ -47,7 +47,7 @@
       "nombre": "Sevilla",
       "comunidad": "Andalucía",
       "escanos2023": 12,
-      "escanos2026": null,
+      "escanos2026": 12,
       "orden": 5
     },
     {
@@ -55,7 +55,7 @@
       "nombre": "Málaga",
       "comunidad": "Andalucía",
       "escanos2023": 11,
-      "escanos2026": null,
+      "escanos2026": 11,
       "orden": 6
     },
     {
@@ -63,7 +63,7 @@
       "nombre": "Murcia",
       "comunidad": "Región de Murcia",
       "escanos2023": 10,
-      "escanos2026": null,
+      "escanos2026": 10,
       "orden": 7
     },
     {
@@ -71,7 +71,7 @@
       "nombre": "Cádiz",
       "comunidad": "Andalucía",
       "escanos2023": 9,
-      "escanos2026": null,
+      "escanos2026": 8,
       "orden": 8
     },
     {
@@ -79,7 +79,7 @@
       "nombre": "Illes Balears",
       "comunidad": "Illes Balears",
       "escanos2023": 8,
-      "escanos2026": null,
+      "escanos2026": 8,
       "orden": 9
     },
     {
@@ -87,7 +87,7 @@
       "nombre": "Bizkaia",
       "comunidad": "País Vasco",
       "escanos2023": 8,
-      "escanos2026": null,
+      "escanos2026": 8,
       "orden": 10
     },
     {
@@ -95,7 +95,7 @@
       "nombre": "Las Palmas",
       "comunidad": "Canarias",
       "escanos2023": 8,
-      "escanos2026": null,
+      "escanos2026": 8,
       "orden": 11
     },
     {
@@ -103,7 +103,7 @@
       "nombre": "A Coruña",
       "comunidad": "Galicia",
       "escanos2023": 8,
-      "escanos2026": null,
+      "escanos2026": 8,
       "orden": 12
     },
     {
@@ -111,7 +111,7 @@
       "nombre": "Asturias",
       "comunidad": "Principado de Asturias",
       "escanos2023": 7,
-      "escanos2026": null,
+      "escanos2026": 7,
       "orden": 13
     },
     {
@@ -119,7 +119,7 @@
       "nombre": "Santa Cruz de Tenerife",
       "comunidad": "Canarias",
       "escanos2023": 7,
-      "escanos2026": null,
+      "escanos2026": 7,
       "orden": 14
     },
     {
@@ -127,7 +127,7 @@
       "nombre": "Zaragoza",
       "comunidad": "Aragón",
       "escanos2023": 7,
-      "escanos2026": null,
+      "escanos2026": 7,
       "orden": 15
     },
     {
@@ -135,7 +135,7 @@
       "nombre": "Pontevedra",
       "comunidad": "Galicia",
       "escanos2023": 7,
-      "escanos2026": null,
+      "escanos2026": 7,
       "orden": 16
     },
     {
@@ -143,7 +143,7 @@
       "nombre": "Granada",
       "comunidad": "Andalucía",
       "escanos2023": 7,
-      "escanos2026": null,
+      "escanos2026": 7,
       "orden": 17
     },
     {
@@ -151,7 +151,7 @@
       "nombre": "Tarragona",
       "comunidad": "Cataluña",
       "escanos2023": 6,
-      "escanos2026": null,
+      "escanos2026": 6,
       "orden": 18
     },
     {
@@ -159,7 +159,7 @@
       "nombre": "Córdoba",
       "comunidad": "Andalucía",
       "escanos2023": 6,
-      "escanos2026": null,
+      "escanos2026": 6,
       "orden": 19
     },
     {
@@ -167,7 +167,7 @@
       "nombre": "Girona",
       "comunidad": "Cataluña",
       "escanos2023": 6,
-      "escanos2026": null,
+      "escanos2026": 6,
       "orden": 20
     },
     {
@@ -175,7 +175,7 @@
       "nombre": "Almería",
       "comunidad": "Andalucía",
       "escanos2023": 6,
-      "escanos2026": null,
+      "escanos2026": 6,
       "orden": 21
     },
     {
@@ -183,7 +183,7 @@
       "nombre": "Gipuzkoa",
       "comunidad": "País Vasco",
       "escanos2023": 6,
-      "escanos2026": null,
+      "escanos2026": 6,
       "orden": 22
     },
     {
@@ -191,7 +191,7 @@
       "nombre": "Toledo",
       "comunidad": "Castilla-La Mancha",
       "escanos2023": 6,
-      "escanos2026": null,
+      "escanos2026": 6,
       "orden": 23
     },
     {
@@ -199,7 +199,7 @@
       "nombre": "Badajoz",
       "comunidad": "Extremadura",
       "escanos2023": 5,
-      "escanos2026": null,
+      "escanos2026": 5,
       "orden": 24
     },
     {
@@ -207,7 +207,7 @@
       "nombre": "Navarra",
       "comunidad": "Comunidad Foral de Navarra",
       "escanos2023": 5,
-      "escanos2026": null,
+      "escanos2026": 5,
       "orden": 25
     },
     {
@@ -215,7 +215,7 @@
       "nombre": "Jaén",
       "comunidad": "Andalucía",
       "escanos2023": 5,
-      "escanos2026": null,
+      "escanos2026": 5,
       "orden": 26
     },
     {
@@ -223,7 +223,7 @@
       "nombre": "Cantabria",
       "comunidad": "Cantabria",
       "escanos2023": 5,
-      "escanos2026": null,
+      "escanos2026": 5,
       "orden": 27
     },
     {
@@ -231,7 +231,7 @@
       "nombre": "Castellón/Castelló",
       "comunidad": "Comunitat Valenciana",
       "escanos2023": 5,
-      "escanos2026": null,
+      "escanos2026": 5,
       "orden": 28
     },
     {
@@ -239,7 +239,7 @@
       "nombre": "Valladolid",
       "comunidad": "Castilla y León",
       "escanos2023": 5,
-      "escanos2026": null,
+      "escanos2026": 5,
       "orden": 29
     },
     {
@@ -247,7 +247,7 @@
       "nombre": "Ciudad Real",
       "comunidad": "Castilla-La Mancha",
       "escanos2023": 5,
-      "escanos2026": null,
+      "escanos2026": 5,
       "orden": 30
     },
     {
@@ -255,7 +255,7 @@
       "nombre": "Huelva",
       "comunidad": "Andalucía",
       "escanos2023": 5,
-      "escanos2026": null,
+      "escanos2026": 5,
       "orden": 31
     },
     {
@@ -263,7 +263,7 @@
       "nombre": "León",
       "comunidad": "Castilla y León",
       "escanos2023": 4,
-      "escanos2026": null,
+      "escanos2026": 4,
       "orden": 32
     },
     {
@@ -271,7 +271,7 @@
       "nombre": "Lleida",
       "comunidad": "Cataluña",
       "escanos2023": 4,
-      "escanos2026": null,
+      "escanos2026": 4,
       "orden": 33
     },
     {
@@ -279,7 +279,7 @@
       "nombre": "Cáceres",
       "comunidad": "Extremadura",
       "escanos2023": 4,
-      "escanos2026": null,
+      "escanos2026": 4,
       "orden": 34
     },
     {
@@ -287,7 +287,7 @@
       "nombre": "Albacete",
       "comunidad": "Castilla-La Mancha",
       "escanos2023": 4,
-      "escanos2026": null,
+      "escanos2026": 4,
       "orden": 35
     },
     {
@@ -295,7 +295,7 @@
       "nombre": "Burgos",
       "comunidad": "Castilla y León",
       "escanos2023": 4,
-      "escanos2026": null,
+      "escanos2026": 4,
       "orden": 36
     },
     {
@@ -303,7 +303,7 @@
       "nombre": "Lugo",
       "comunidad": "Galicia",
       "escanos2023": 4,
-      "escanos2026": null,
+      "escanos2026": 4,
       "orden": 37
     },
     {
@@ -311,7 +311,7 @@
       "nombre": "Salamanca",
       "comunidad": "Castilla y León",
       "escanos2023": 4,
-      "escanos2026": null,
+      "escanos2026": 4,
       "orden": 38
     },
     {
@@ -319,7 +319,7 @@
       "nombre": "Ourense",
       "comunidad": "Galicia",
       "escanos2023": 4,
-      "escanos2026": null,
+      "escanos2026": 4,
       "orden": 39
     },
     {
@@ -327,7 +327,7 @@
       "nombre": "La Rioja",
       "comunidad": "La Rioja",
       "escanos2023": 4,
-      "escanos2026": null,
+      "escanos2026": 4,
       "orden": 40
     },
     {
@@ -335,7 +335,7 @@
       "nombre": "Araba/Álava",
       "comunidad": "País Vasco",
       "escanos2023": 4,
-      "escanos2026": null,
+      "escanos2026": 4,
       "orden": 41
     },
     {
@@ -343,7 +343,7 @@
       "nombre": "Guadalajara",
       "comunidad": "Castilla-La Mancha",
       "escanos2023": 3,
-      "escanos2026": null,
+      "escanos2026": 3,
       "orden": 42
     },
     {
@@ -351,7 +351,7 @@
       "nombre": "Huesca",
       "comunidad": "Aragón",
       "escanos2023": 3,
-      "escanos2026": null,
+      "escanos2026": 3,
       "orden": 43
     },
     {
@@ -359,7 +359,7 @@
       "nombre": "Cuenca",
       "comunidad": "Castilla-La Mancha",
       "escanos2023": 3,
-      "escanos2026": null,
+      "escanos2026": 3,
       "orden": 44
     },
     {
@@ -367,7 +367,7 @@
       "nombre": "Zamora",
       "comunidad": "Castilla y León",
       "escanos2023": 3,
-      "escanos2026": null,
+      "escanos2026": 3,
       "orden": 45
     },
     {
@@ -375,7 +375,7 @@
       "nombre": "Ávila",
       "comunidad": "Castilla y León",
       "escanos2023": 3,
-      "escanos2026": null,
+      "escanos2026": 3,
       "orden": 46
     },
     {
@@ -383,7 +383,7 @@
       "nombre": "Palencia",
       "comunidad": "Castilla y León",
       "escanos2023": 3,
-      "escanos2026": null,
+      "escanos2026": 3,
       "orden": 47
     },
     {
@@ -391,7 +391,7 @@
       "nombre": "Segovia",
       "comunidad": "Castilla y León",
       "escanos2023": 3,
-      "escanos2026": null,
+      "escanos2026": 3,
       "orden": 48
     },
     {
@@ -399,7 +399,7 @@
       "nombre": "Teruel",
       "comunidad": "Aragón",
       "escanos2023": 3,
-      "escanos2026": null,
+      "escanos2026": 3,
       "orden": 49
     },
     {
@@ -407,7 +407,7 @@
       "nombre": "Soria",
       "comunidad": "Castilla y León",
       "escanos2023": 2,
-      "escanos2026": null,
+      "escanos2026": 2,
       "orden": 50
     },
     {
@@ -415,7 +415,7 @@
       "nombre": "Melilla",
       "comunidad": "Melilla",
       "escanos2023": 1,
-      "escanos2026": null,
+      "escanos2026": 1,
       "orden": 51
     },
     {
@@ -423,7 +423,7 @@
       "nombre": "Ceuta",
       "comunidad": "Ceuta",
       "escanos2023": 1,
-      "escanos2026": null,
+      "escanos2026": 1,
       "orden": 52
     }
   ]

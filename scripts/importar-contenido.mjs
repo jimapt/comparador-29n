@@ -15,9 +15,8 @@ import { fileURLToPath } from 'node:url';
 const raiz = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dirFuentes = join(raiz, 'contenido', 'fuentes');
 
-// Partidos cuyo contenido entero está marcado ⚠️ (citas leídas con un
-// resumidor automático o en prensa). No se publican hasta comprobarlos.
-const SIN_VERIFICAR = new Set(['vox', 'podemos', 'democracia-21']);
+// Partidos cuyo contenido entero sigue sin verificar (ver notas de construcción).
+const SIN_VERIFICAR = new Set(['democracia-21']);
 
 const ID_PARTIDO = {
   pp: 'pp', psoe: 'psoe', vox: 'vox', sumar: 'sumar', podemos: 'podemos',
