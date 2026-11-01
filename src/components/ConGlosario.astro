@@ -1,0 +1,8 @@
+---
+import { conGlosario } from '../lib/datos';
+interface Props { texto: string }
+const trozos = conGlosario(Astro.props.texto);
+---
+{trozos.map((t) => t.termino
+  ? <button type="button" class="termino" data-nombre={t.termino.termino} data-definicion={t.termino.definicion} aria-haspopup="dialog">{t.texto}</button>
+  : t.texto)}

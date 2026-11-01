@@ -1,0 +1,109 @@
+---
+import '@fontsource-variable/unbounded';
+import '@fontsource-variable/figtree';
+import '../styles/global.css';
+import Icono from '../components/Icono.astro';
+import { url, situaciones, provincias } from '../lib/datos';
+import { NOMBRE } from '../config';
+
+interface Props {
+  titulo: string;
+  descripcion?: string;
+  tema?: string;
+  fondo?: 'paper' | 'neutral';
+  nav?: 'para-ti' | 'provincia' | 'mas' | null;
+}
+const { titulo, descripcion = 'Qué propone cada partido sobre vivienda, empleo, inmigración y pensiones, en corto y con la fuente. Sin cuentas y sin guardar nada.', tema, fondo, nav = null } = Astro.props;
+const tituloCompleto = titulo === NOMBRE ? `${NOMBRE} · elecciones generales 29N` : `${titulo} · ${NOMBRE}`;
+const canonica = new URL(Astro.url.pathname, Astro.site);
+const datosPerfil = {
+  situaciones: Object.fromEntries(situaciones.situaciones.map((s) => [s.id, s.corta])),
+  provincias: Object.fromEntries(provincias.map((p) => [p.slug, p.nombre])),
+  base: url(),
+};
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{tituloCompleto}</title>
+    <meta name="description" content={descripcion} />
+    <link rel="canonical" href={canonica} />
+    <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
+    <meta name="theme-color" content="#1A1A1A" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content={tituloCompleto} />
+    <meta property="og:description" content={descripcion} />
+    <meta property="og:url" content={canonica} />
+    <meta name="twitter:card" content="summary" />
+  </head>
+  <body data-tema={tema} data-fondo={fondo}>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+    <slot name="cabecera" />
+    <main id="contenido" tabindex="-1">
+      <slot />
+    </main>
+
+    {nav !== null && (
+      <nav class="nav" aria-label="Secciones">
+        <a href={url('para-ti')} aria-current={nav === 'para-ti' ? 'page' : undefined}>Para ti</a>
+        <a href={url('provincia')} data-enlace-provincia aria-current={nav === 'provincia' ? 'page' : undefined}>Tu provincia</a>
+        <a href={url('mas')} aria-current={nav === 'mas' ? 'page' : undefined}>Más</a>
+      </nav>
+    )}
+
+    <dialog class="hoja" id="hoja-glosario" aria-labelledby="glosario-titulo">
+      <div class="hoja__panel">
+        <div class="hoja__asa" aria-hidden="true"></div>
+        <div class="hoja__cabecera">
+          <h2 class="h2" id="glosario-titulo" data-nombre></h2>
+          <button type="button" class="boton-icono" data-cerrar aria-label="Cerrar"><Icono nombre="cerrar" tam={18} /></button>
+        </div>
+        <p data-definicion></p>
+        <a href={url('mas/glosario')} class="pequeno">Ver todo el glosario</a>
+      </div>
+    </dialog>
+
+    <script type="application/json" id="datos-perfil" set:html={JSON.stringify(datosPerfil)} />
+    <script>
+      import { prepararHojas, prepararGlosario } from '../scripts/hojas';
+      import { perfil } from '../scripts/perfil';
+
+      prepararHojas();
+      prepararGlosario();
+
+      const datos = JSON.parse(document.getElementById('datos-perfil')!.textContent!);
+      const p = perfil();
+
+      // Píldora "Alquilo · Madrid · Cambiar"
+      document.querySelectorAll<HTMLElement>('[data-pildora-texto]').forEach((el) => {
+        const partes = [
+          p.situaciones.map((s: string) => datos.situaciones[s]).filter(Boolean).slice(0, 2).join(' y '),
+          p.provincia ? datos.provincias[p.provincia] : '',
+        ].filter(Boolean);
+        if (partes.length) {
+          el.innerHTML = '';
+          el.append(`${partes.join(' · ')} · `);
+          const u = document.createElement('u');
+          u.textContent = 'Cambiar';
+          el.append(u);
+          el.parentElement!.setAttribute('aria-label', `Tu perfil: ${partes.join(', ')}. Cambiar`);
+        }
+      });
+      // Al cambiar el perfil, se vuelve a la página en la que estabas.
+      document.querySelectorAll('[data-cambiar]').forEach((a) =>
+        a.addEventListener('click', () => {
+          try { sessionStorage.setItem('ltt-volver', location.pathname); } catch {}
+        }),
+      );
+      // "Tu provincia" lleva directamente a la tuya si ya la has elegido.
+      if (p.provincia) {
+        document.querySelectorAll<HTMLAnchorElement>('[data-enlace-provincia]').forEach((a) => {
+          a.href = `${datos.base}provincia/${p.provincia}/`;
+        });
+      }
+    </script>
+  </body>
+</html>

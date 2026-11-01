@@ -1,0 +1,16 @@
+---
+import Base from './Base.astro';
+import Icono from '../components/Icono.astro';
+import { url } from '../lib/datos';
+interface Props { titulo: string; descripcion?: string; volver?: string }
+const { titulo, descripcion, volver = 'mas' } = Astro.props;
+---
+<Base titulo={titulo} descripcion={descripcion} nav="mas">
+  <div class="contenedor pila" style="--gap: 1rem">
+    <header class="cabecera">
+      <a class="boton-icono" href={url(volver)} aria-label="Volver a Más"><Icono nombre="volver" /></a>
+    </header>
+    <h1 class="h1">{titulo}</h1>
+    <div class="prosa"><slot /></div>
+  </div>
+</Base>

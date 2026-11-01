@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import Pildora from '../../components/Pildora.astro';
+import { url, provinciasAlfabetico } from '../../lib/datos';
+import { NOMBRE } from '../../config';
+---
+<Base titulo="Tu provincia" nav="provincia">
+  <div class="contenedor pila" style="--gap: 1.125rem">
+    <header class="cabecera">
+      <a class="marca" href={url()}>{NOMBRE}</a>
+      <Pildora />
+    </header>
+    <h1 class="h1">Lo que pesa tu voto</h1>
+    <p>En las generales votas en tu provincia, y cada provincia reparte sus propios escaños. Elige la tuya para ver cuántos reparte, cómo se reparten y quién se presenta.</p>
+    <ul class="provincias">
+      {provinciasAlfabetico.map((p) => <li><a class="chip" href={url(`provincia/${p.slug}`)}>{p.nombre}</a></li>)}
+    </ul>
+  </div>
+</Base>
+<style>
+  .provincias { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .provincias .chip { display: inline-flex; align-items: center; text-decoration: none; }
+</style>

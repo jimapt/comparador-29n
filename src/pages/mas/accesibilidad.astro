@@ -1,0 +1,25 @@
+---
+import Pagina from '../../layouts/Pagina.astro';
+import { CORREO_CORRECCIONES } from '../../config';
+---
+<Pagina titulo="Accesibilidad" descripcion="Declaración de accesibilidad.">
+  <p>Queremos que cualquier persona pueda usar esta web. La hemos diseñado para cumplir las pautas WCAG 2.2 en el nivel AA.</p>
+  <h2>Qué hemos hecho</h2>
+  <ul>
+    <li>Texto con un contraste de al menos 7 a 1 sobre todos los fondos.</li>
+    <li>Cada tema se distingue por su color, su forma y su nombre, y cada estado por una forma y un texto: nada depende solo del color.</li>
+    <li>Todo se puede usar con teclado, con el foco siempre visible.</li>
+    <li>Los botones y enlaces miden al menos 44 × 44 píxeles.</li>
+    <li>La web funciona con zoom al 200 % y en pantallas de 320 píxeles sin desplazamiento horizontal.</li>
+    <li>El simulador de escaños tiene una tabla alternativa, y las tarjetas para compartir llevan texto alternativo.</li>
+    <li>Si tu sistema pide reducir el movimiento, las animaciones se reducen a fundidos.</li>
+  </ul>
+  <h2>Lo que nos falta</h2>
+  <ul>
+    <li>[PENDIENTE] Probar la web con lectores de pantalla reales (VoiceOver y TalkBack).</li>
+    <li>Los documentos originales de los partidos (PDF) no dependen de nosotros y pueden no ser accesibles.</li>
+  </ul>
+  <h2>Cuéntanos si algo no funciona</h2>
+  <p>Escríbenos a <a href={`mailto:${CORREO_CORRECCIONES}`}>{CORREO_CORRECCIONES}</a> y lo arreglamos.</p>
+  <p class="pequeno secundario">Declaración preparada el 1 de noviembre de 2026.</p>
+</Pagina>

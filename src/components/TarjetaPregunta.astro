@@ -1,0 +1,16 @@
+---
+import EtiquetaTema from './EtiquetaTema.astro';
+import { tema as getTema, urlPregunta, type Pregunta } from '../lib/datos';
+interface Props { pregunta: Pregunta; i?: number }
+const { pregunta, i = 0 } = Astro.props;
+const t = getTema(pregunta.tema);
+---
+<li data-pregunta={pregunta.id} class="entra" style={`--i: ${i}`}>
+  <a class="tarjeta-enlace" href={urlPregunta(pregunta)} style={`--c: ${t.color}`}>
+    <span class="fila">
+      <EtiquetaTema tema={pregunta.tema} />
+      <span class="te-afecta" data-te-afecta hidden>★ Te afecta</span>
+    </span>
+    <span class="titulo">{pregunta.titulo}</span>
+  </a>
+</li>

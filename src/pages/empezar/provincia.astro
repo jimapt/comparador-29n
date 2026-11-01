@@ -1,0 +1,87 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icono from '../../components/Icono.astro';
+import { url, provincias } from '../../lib/datos';
+import { NOMBRE } from '../../config';
+const sinTildes = (s: string) => s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
+---
+<Base titulo="¿Dónde votas?" fondo="paper">
+  <div class="contenedor pila" style="--gap: 1rem; padding-bottom: 2rem">
+    <header class="cabecera">
+      <a class="boton-icono" href={url()} aria-label="Volver al paso 1"><Icono nombre="volver" /></a>
+      <span class="marca">{NOMBRE}</span>
+    </header>
+    <p class="pequeno"><strong>Paso 2 de 2</strong></p>
+    <h1 class="h1">¿Dónde votas?</h1>
+    <p class="secundario">Así te enseñamos solo los partidos que se presentan en tu provincia. No se guarda ni se envía a ningún sitio.</p>
+
+    <label class="buscador">
+      <span class="pequeno"><strong>Busca tu provincia</strong></span>
+      <input type="search" autocomplete="off" placeholder="Escribe, por ejemplo, Sevilla" data-buscar />
+    </label>
+    <p class="solo-lector" role="status" aria-live="polite" data-recuento></p>
+
+    <ul class="provincias" data-lista>
+      {provincias.map((p) => (
+        <li data-nombre={sinTildes(p.nombre)}>
+          <a class="chip" href={url('para-ti')} data-provincia={p.slug}>{p.nombre}</a>
+        </li>
+      ))}
+    </ul>
+    <a class="enlace" style="align-self: center" href={url('para-ti')} data-sin-provincia>Prefiero no decirlo</a>
+  </div>
+</Base>
+
+<style>
+  .buscador { display: flex; flex-direction: column; gap: 0.375rem; }
+  .buscador input {
+    min-height: 3.25rem; padding: 0 1rem; font: inherit; border: 2px solid var(--ink); border-radius: var(--r-control); background: var(--surface); color: var(--ink);
+  }
+  .provincias { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .provincias .chip { display: inline-flex; align-items: center; text-decoration: none; }
+  main { padding-bottom: 1rem; }
+</style>
+
+<script>
+  import { guardarPerfil, perfil, evento } from '../../scripts/perfil';
+
+  function destino() {
+    let volver: string | null = null;
+    try { volver = sessionStorage.getItem('ltt-volver'); sessionStorage.removeItem('ltt-volver'); } catch {}
+    return volver;
+  }
+  const actual = perfil().provincia;
+  document.querySelectorAll<HTMLAnchorElement>('[data-provincia]').forEach((a) => {
+    if (a.dataset.provincia === actual) a.setAttribute('aria-current', 'true'), a.setAttribute('aria-pressed', 'true');
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      guardarPerfil({ provincia: a.dataset.provincia! });
+      evento('perfil-completo');
+      const volver = destino();
+      // Si venías de la página de una provincia, vas a la de la nueva.
+      location.href = volver && /\/provincia\/[^/]+\/$/.test(volver)
+        ? volver.replace(/[^/]+\/$/, `${a.dataset.provincia}/`)
+        : volver ?? a.href;
+    });
+  });
+  document.querySelector<HTMLAnchorElement>('[data-sin-provincia]')!.addEventListener('click', (e) => {
+    e.preventDefault();
+    guardarPerfil({ provincia: null });
+    location.href = destino() ?? (e.currentTarget as HTMLAnchorElement).href;
+  });
+
+  const quitar = (s: string) => s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
+  const buscar = document.querySelector<HTMLInputElement>('[data-buscar]')!;
+  const recuento = document.querySelector('[data-recuento]')!;
+  const items = [...document.querySelectorAll<HTMLLIElement>('[data-lista] li')];
+  buscar.addEventListener('input', () => {
+    const q = quitar(buscar.value.trim());
+    let n = 0;
+    items.forEach((li) => {
+      const ver = !q || li.dataset.nombre!.includes(q);
+      li.hidden = !ver;
+      if (ver) n++;
+    });
+    recuento.textContent = n === 1 ? '1 provincia' : `${n} provincias`;
+  });
+</script>

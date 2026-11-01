@@ -1,0 +1,27 @@
+{
+  "name": "comparador-29n",
+  "version": "0.1.0",
+  "description": "Comparador de programas para las elecciones generales del 29N de 2026",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "contenido": "node scripts/importar-contenido.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimapt/comparador-29n.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jimapt/comparador-29n/issues"
+  },
+  "homepage": "https://github.com/jimapt/comparador-29n#readme",
+  "dependencies": {
+    "@fontsource-variable/figtree": "^5.3.0",
+    "@fontsource-variable/unbounded": "^5.3.0",
+    "astro": "^5.18.2"
+  },
+  "private": true,
+  "type": "module",
+  "license": "MIT"
+}

@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import { url } from '../../lib/datos';
+import { NOMBRE } from '../../config';
+const grupos = [
+  { titulo: 'Confianza', enlaces: [
+    ['mas/como-lo-hacemos', 'Cómo lo hacemos', 'Qué partidos salen, cómo resumimos y qué significa cada etiqueta'],
+    ['mas/fuentes', 'Fuentes', 'Todos los documentos que hemos leído, con fecha'],
+    ['mas/glosario', 'Glosario', 'Las palabras técnicas, en una frase'],
+    ['mas/cambios', 'Registro de cambios', 'Qué hemos cambiado y cuándo'],
+    ['mas/avisanos', '¿Ves un error? Avísanos', 'Lo revisamos contra el programa'],
+  ] },
+  { titulo: 'Legal', enlaces: [
+    ['mas/privacidad', 'Privacidad', 'No guardamos tus respuestas ni usamos cookies'],
+    ['mas/accesibilidad', 'Accesibilidad', 'Declaración de accesibilidad'],
+    ['mas/aviso-legal', 'Aviso legal', 'Quién está detrás'],
+  ] },
+];
+---
+<Base titulo="Más" nav="mas">
+  <div class="contenedor pila" style="--gap: 1.25rem">
+    <header class="cabecera"><a class="marca" href={url()}>{NOMBRE}</a></header>
+    <h1 class="h1">Más</h1>
+    <p>No te decimos qué votar. Te enseñamos qué propone cada uno y de dónde lo sacamos.</p>
+    {grupos.map((g) => (
+      <section class="pila" style="--gap: 0.75rem" aria-labelledby={`g-${g.titulo}`}>
+        <h2 class="h2" id={`g-${g.titulo}`}>{g.titulo}</h2>
+        <ul class="lista">
+          {g.enlaces.map(([ruta, t, d]) => (
+            <li><a class="tarjeta-enlace" href={url(ruta)} style="--c: var(--surface)"><span class="titulo">{t}</span><span class="pequeno secundario">{d}</span></a></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>

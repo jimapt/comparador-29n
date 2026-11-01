@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/datos';
+---
+<Base titulo="No encontramos esta página" nav="para-ti" fondo="paper">
+  <div class="contenedor pila" style="--gap: 1rem; padding-top: 2rem">
+    <h1 class="h1">No encontramos esta página</h1>
+    <p>Puede que el enlace esté mal copiado o que la pregunta haya cambiado de sitio.</p>
+    <a class="boton" href={url('para-ti')}>Ver todas las preguntas</a>
+  </div>
+</Base>

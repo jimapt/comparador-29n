@@ -1,0 +1,6 @@
+[
+  { "id": "vivienda", "nombre": "Vivienda", "color": "#FFC9A8", "forma": "cuadrado" },
+  { "id": "empleo", "nombre": "Empleo", "color": "#C9E7A7", "forma": "pildora" },
+  { "id": "inmigracion", "nombre": "Inmigración", "color": "#B8DAF5", "forma": "arco" },
+  { "id": "pensiones", "nombre": "Pensiones", "color": "#DCCBF3", "forma": "hoja" }
+]

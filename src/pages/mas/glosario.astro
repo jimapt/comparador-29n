@@ -1,0 +1,21 @@
+---
+import Pagina from '../../layouts/Pagina.astro';
+import { glosario } from '../../lib/datos';
+const ordenado = glosario.slice().sort((a, b) => a.termino.localeCompare(b.termino, 'es'));
+---
+<Pagina titulo="Glosario" descripcion="Las palabras técnicas de los programas, explicadas en una frase.">
+  <p>Cuando una respuesta usa una de estas palabras, sale subrayada: tócala para ver qué significa.</p>
+  <dl class="glosario">
+    {ordenado.map((t) => (
+      <div id={t.id}>
+        <dt>{t.termino}</dt>
+        <dd>{t.definicion}</dd>
+      </div>
+    ))}
+  </dl>
+</Pagina>
+<style>
+  .glosario { margin: 0; display: flex; flex-direction: column; gap: 0.875rem; }
+  dt { font-family: var(--display); font-weight: 700; font-size: 1rem; }
+  dd { margin: 0.25rem 0 0; }
+</style>

@@ -1,0 +1,357 @@
+---
+import Base from '../../layouts/Base.astro';
+import Pildora from '../../components/Pildora.astro';
+import Icono from '../../components/Icono.astro';
+import EtiquetaTema from '../../components/EtiquetaTema.astro';
+import ConGlosario from '../../components/ConGlosario.astro';
+import {
+  url, preguntas, partidos, partido as getPartido, tema as getTema, preguntasDeTema, respuestasDe,
+  enlaceFuente, urlPregunta, situaciones, fechaLarga, ETIQUETA_CONCRETA, partidosProvisional,
+  type Pregunta,
+} from '../../lib/datos';
+import { NOMBRE, DOMINIO, ACTUALIZADO } from '../../config';
+
+export function getStaticPaths() {
+  return preguntas.map((p) => ({ params: { tema: p.tema, pregunta: p.slug }, props: { pregunta: p } }));
+}
+const { pregunta } = Astro.props as { pregunta: Pregunta };
+const tema = getTema(pregunta.tema);
+const delTema = preguntasDeTema(tema.id);
+const n = delTema.findIndex((p) => p.id === pregunta.id);
+const siguiente = delTema[n + 1];
+// Orden alfabético en el HTML; el script en línea lo baraja antes de pintarse.
+const lista = respuestasDe(pregunta.id)
+  .map((r) => ({ r, p: getPartido(r.partido) }))
+  .sort((a, b) => a.p.id.localeCompare(b.p.id));
+
+const datosTarjeta = {
+  tema: tema.nombre,
+  color: tema.color,
+  pregunta: pregunta.titulo,
+  marca: NOMBRE,
+  url: `${DOMINIO}/${pregunta.tema}/${pregunta.slug}`,
+  respuestas: Object.fromEntries(
+    lista.filter(({ r }) => r.verificado).map(({ r, p }) => [p.id, {
+      partido: p.nombre, texto: r.texto, concreta: ETIQUETA_CONCRETA[r.concreta], origen: r.origen, fuente: r.fuente,
+    }]),
+  ),
+};
+const iconoConcreta = { si: 'lleno', vago: 'medio', no: 'vacio' } as const;
+---
+<Base titulo={pregunta.titulo} tema={tema.id} nav="para-ti" descripcion={`${pregunta.titulo} Lo que propone cada partido para el 29N, en 25 palabras y con la fuente.`}>
+  <div class="contenedor pila" style="--gap: 0.875rem">
+    <header class="cabecera">
+      <a class="boton-icono" href={url(tema.id)} aria-label={`Volver a ${tema.nombre}`}><Icono nombre="volver" /></a>
+      <Pildora />
+    </header>
+
+    <div class="fila-meta">
+      <EtiquetaTema tema={tema.id} />
+      <span class="pequeno"><strong>Pregunta {n + 1} de {delTema.length}</strong><span data-te-afecta hidden> · Te afecta</span></span>
+    </div>
+    <h1 class="h1-pregunta">{pregunta.titulo}</h1>
+
+    <div class="filtro">
+      <p class="pequeno" data-recuento>{lista.length} partidos · <span data-orden-texto>en orden alfabético</span></p>
+      <button type="button" class="enlace pequeno" data-ver-todos hidden aria-controls="otros" aria-expanded="false">Ver todos</button>
+    </div>
+    <div class="aviso" data-aviso-provincia hidden>
+      <a href={url('empezar/provincia')} data-cambiar>Elige dónde votas</a> para ver solo los partidos que se presentan allí.
+    </div>
+
+    <div class="respuestas" id="respuestas-tuyas" aria-describedby="nota-orden">
+      {lista.map(({ r, p }) => (
+        <article class:list={['respuesta', { 'respuesta--revision': !r.verificado }]} data-partido={p.id}
+          data-circ={p.circunscripciones === 'todas' ? 'todas' : p.circunscripciones.join(' ')}
+          aria-labelledby={`p-${p.id}`}>
+          <div class="respuesta__cabecera">
+            <h2 class="partido" id={`p-${p.id}`}>{p.nombre}</h2>
+            {r.verificado && <span class="etiqueta-origen">{r.origen}</span>}
+          </div>
+          {r.verificado ? (
+            <>
+              <p class="respuesta__texto"><ConGlosario texto={r.texto} /></p>
+              <div class="respuesta__pie">
+                <span class="estado">
+                  <span class={`estado__icono estado__icono--${iconoConcreta[r.concreta]}`} aria-hidden="true"></span>
+                  {ETIQUETA_CONCRETA[r.concreta]}
+                </span>
+                <button type="button" class="enlace pequeno" data-abrir-fuente={`fuente-${p.id}`} aria-haspopup="dialog">
+                  Fuente{r.pagina ? ` · p. ${r.pagina}` : ''}<span class="solo-lector"> de {p.nombre}</span>
+                </button>
+              </div>
+            </>
+          ) : (
+            <p class="respuesta__texto secundario">En revisión. Esta respuesta la estamos comprobando con el programa. Vuelve pronto.</p>
+          )}
+        </article>
+      ))}
+    </div>
+
+    <section id="otros" class="pila otros" style="--gap: 0.875rem" hidden aria-labelledby="otros-titulo">
+      <h2 class="h2" id="otros-titulo" data-otros-titulo>No se presentan en tu provincia</h2>
+      <div class="respuestas" id="respuestas-otras"></div>
+    </section>
+
+    <script is:inline define:vars={{ ids: partidos.map((x) => x.id).sort() }}>
+      // Orden aleatorio por sesión (el mismo en todas las preguntas) y filtro
+      // por provincia, antes de que se pinte la lista. Clave: 'ltt-orden'.
+      (function () {
+        function leer(k) { try { return JSON.parse(sessionStorage.getItem(k)); } catch (e) { return null; } }
+        var s = leer('ltt-orden');
+        if (typeof s !== 'number') {
+          var a = new Uint32Array(1); crypto.getRandomValues(a); s = a[0];
+          try { sessionStorage.setItem('ltt-orden', JSON.stringify(s)); } catch (e) {}
+        }
+        function azar(a) { return function () { a |= 0; a = a + 0x6d2b79f5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+        var r = azar(s);
+        var tuyas = document.getElementById('respuestas-tuyas');
+        var otras = document.getElementById('respuestas-otras');
+        var arts = [].slice.call(tuyas.children);
+        // Los pesos se reparten siempre en orden de id para que el orden sea estable en toda la sesión.
+        var peso = {};
+        ids.forEach(function (id) { peso[id] = r(); });
+        arts.sort(function (x, y) { return (peso[x.dataset.partido] || 0) - (peso[y.dataset.partido] || 0); });
+        var prov = (leer('ltt-perfil') || {}).provincia;
+        arts.forEach(function (el, i) {
+          var c = el.dataset.circ;
+          var aqui = !prov || c === 'todas' || c.split(' ').indexOf(prov) >= 0;
+          el.style.setProperty('--i', i);
+          el.classList.add('entra');
+          (aqui ? tuyas : otras).appendChild(el);
+        });
+        document.documentElement.dataset.orden = 'aleatorio';
+      })();
+    </script>
+
+    <p id="nota-orden" class="pequeno secundario" data-nota-orden>Los partidos salen en orden alfabético.</p>
+    {partidosProvisional && <p class="pequeno secundario">Lista de partidos provisional hasta la proclamación de candidaturas en el BOE.</p>}
+
+    <div class="pila acciones" style="--gap: 0.625rem">
+      <button type="button" class="boton" data-abrir-compartir aria-haspopup="dialog"><Icono nombre="compartir" />Compartir en stories</button>
+      {siguiente
+        ? <a class="boton boton--sec" href={urlPregunta(siguiente)}>Siguiente pregunta<Icono nombre="siguiente" /></a>
+        : <a class="boton boton--sec" href={`${url('para-ti')}#por-temas`}>Otro tema<Icono nombre="siguiente" /></a>}
+    </div>
+    <p class="pequeno secundario">Contenido revisado el {fechaLarga(ACTUALIZADO)}. <a href={url('mas/cambios')}>Registro de cambios</a></p>
+  </div>
+
+  {lista.filter(({ r }) => r.verificado).map(({ r, p }) => {
+    const enlace = enlaceFuente(r);
+    return (
+      <dialog class="hoja" id={`fuente-${p.id}`} aria-labelledby={`fuente-${p.id}-t`}>
+        <div class="hoja__panel">
+          <div class="hoja__asa" aria-hidden="true"></div>
+          <div class="hoja__cabecera">
+            <h2 class="h2" id={`fuente-${p.id}-t`}>{p.nombre} · Fuente</h2>
+            <button type="button" class="boton-icono" data-cerrar aria-label="Cerrar"><Icono nombre="cerrar" tam={18} /></button>
+          </div>
+          <div class="chips">
+            <span class="etiqueta-origen">{r.origen}</span>
+            {r.fuente && <span class="etiqueta-origen etiqueta-origen--larga">{r.fuente}</span>}
+          </div>
+          <p class="pequeno"><strong>Documento:</strong> {r.enlaces.length ? r.fuente : p.documento.titulo}</p>
+          {r.cita ? (
+            <>
+              <p class="mayus">Lo que dice, literal</p>
+              <blockquote class="cita">{r.cita}</blockquote>
+            </>
+          ) : (
+            <p class="cita">No hay cita: hemos buscado en el documento completo y no trata este tema.</p>
+          )}
+          {p.nota && <p class="pequeno">{p.nota}</p>}
+          {enlace
+            ? <a class="boton" href={enlace} target="_blank" rel="noopener noreferrer">Ver {r.pagina ? 'la página del programa' : 'la fuente'}<Icono nombre="externo" /><span class="solo-lector"> (se abre en otra pestaña)</span></a>
+            : <p class="aviso pequeno">[PENDIENTE] Enlace al documento original.</p>}
+          <a class="enlace" style="align-self: center" href={`${url('mas/avisanos')}?respuesta=${p.id}-${pregunta.id}`}>¿Ves un error? Avísanos</a>
+        </div>
+      </dialog>
+    );
+  })}
+
+  <dialog class="hoja" id="hoja-compartir" aria-labelledby="compartir-t">
+    <div class="hoja__panel">
+      <div class="hoja__asa" aria-hidden="true"></div>
+      <div class="hoja__cabecera">
+        <h2 class="h2" id="compartir-t">¿Qué partidos van en tu tarjeta?</h2>
+        <button type="button" class="boton-icono" data-cerrar aria-label="Cerrar"><Icono nombre="cerrar" tam={18} /></button>
+      </div>
+      <p class="secundario">Elige de 2 a 4. La tarjeta no lleva tu situación ni tu provincia.</p>
+      <div class="partidos-compartir" data-chips-compartir></div>
+      <p class="pequeno" role="status" data-estado-compartir>Elige de 2 a 4 partidos para tu tarjeta</p>
+      <img class="vista-previa" data-vista-previa alt="" hidden />
+      <button type="button" class="boton" data-compartir disabled>Compartir en stories</button>
+      <button type="button" class="boton boton--sec" data-descargar disabled>Descargar imagen</button>
+    </div>
+  </dialog>
+
+  <script type="application/json" id="datos-tarjeta" set:html={JSON.stringify(datosTarjeta)} />
+  <script type="application/json" id="datos-situaciones" set:html={JSON.stringify(situaciones)} />
+  <span hidden data-id-pregunta={pregunta.id}></span>
+</Base>
+
+<style>
+  .fila-meta { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+  .filtro { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+  .filtro p { font-weight: 500; }
+  .respuestas { display: flex; flex-direction: column; gap: 0.75rem; }
+  .respuesta {
+    background: var(--surface); border: 2px solid var(--ink); border-radius: var(--r-card); box-shadow: var(--shadow);
+    padding: 1rem 1.125rem; display: flex; flex-direction: column; gap: 0.5rem; min-height: 7.5rem;
+  }
+  .respuesta--revision { border-style: dashed; box-shadow: none; }
+  .respuesta__cabecera { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+  .partido { font-family: var(--display); font-weight: 700; font-size: 0.9375rem; }
+  .respuesta__texto { font-size: 1rem; line-height: 1.4; }
+  .respuesta__pie { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: auto; }
+  .estado { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.8125rem; font-weight: 600; }
+  .estado__icono { width: 0.875rem; height: 0.875rem; border-radius: 50%; border: 1.5px solid var(--ink); flex: none; }
+  .estado__icono--lleno { background: var(--ink); }
+  .estado__icono--medio { background: linear-gradient(90deg, var(--surface) 50%, var(--ink) 50%); }
+  .otros { margin-top: 0.75rem; }
+  .acciones { margin-top: 0.75rem; }
+  .etiqueta-origen--larga { white-space: normal; }
+  .partidos-compartir { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+  .partidos-compartir :global(.chip) { font-family: var(--display); font-weight: 700; font-size: 0.875rem; min-height: 3.25rem; }
+  .vista-previa { width: 11rem; aspect-ratio: 9 / 16; align-self: center; border: 2px solid var(--ink); border-radius: 0.875rem; }
+</style>
+
+<script>
+  import { perfil, evento } from '../../scripts/perfil';
+  import { abrirHoja, prepararHojas } from '../../scripts/hojas';
+  import { preguntasQueTeAfectan } from '../../scripts/orden';
+  import { generarTarjeta, textoAlternativo, type DatosTarjeta, type RespuestaTarjeta } from '../../scripts/tarjeta';
+
+  prepararHojas();
+  const p = perfil();
+  const nombres = JSON.parse(document.getElementById('datos-perfil')!.textContent!).provincias;
+  const tuyas = document.getElementById('respuestas-tuyas')!;
+  const otras = document.getElementById('respuestas-otras')!;
+  const seccionOtros = document.getElementById('otros')!;
+  const nTuyas = tuyas.children.length;
+  const nTotal = nTuyas + otras.children.length;
+
+  document.querySelector('[data-nota-orden]')!.textContent = 'Los partidos salen en orden aleatorio, el mismo durante toda tu visita.';
+  document.querySelector('[data-orden-texto]')!.textContent = 'en orden aleatorio';
+
+  // Filtro por provincia
+  const recuento = document.querySelector('[data-recuento]')!;
+  const verTodos = document.querySelector<HTMLButtonElement>('[data-ver-todos]')!;
+  if (p.provincia) {
+    const nombre = nombres[p.provincia] ?? 'tu provincia';
+    document.querySelector('[data-otros-titulo]')!.textContent = `No se presentan en ${nombre}`;
+    recuento.firstChild!.textContent = `${nTuyas} de ${nTotal} · `;
+    if (otras.children.length) {
+      verTodos.hidden = false;
+      verTodos.addEventListener('click', () => {
+        const abierto = seccionOtros.hidden;
+        seccionOtros.hidden = !abierto;
+        verTodos.setAttribute('aria-expanded', String(abierto));
+        verTodos.textContent = abierto ? `Ver solo los de ${nombre}` : 'Ver todos';
+      });
+    }
+  } else {
+    document.querySelector<HTMLElement>('[data-aviso-provincia]')!.hidden = false;
+  }
+
+  // "Te afecta"
+  const idPregunta = document.querySelector<HTMLElement>('[data-id-pregunta]')!.dataset.idPregunta!;
+  const sit = JSON.parse(document.getElementById('datos-situaciones')!.textContent!);
+  if (preguntasQueTeAfectan(sit, p.situaciones).includes(idPregunta)) {
+    document.querySelector<HTMLElement>('[data-te-afecta]')!.hidden = false;
+  }
+
+  // North Star: comparación vista (2 o más respuestas visibles)
+  if (tuyas.querySelectorAll('.respuesta:not(.respuesta--revision)').length >= 2) evento('comparacion-vista');
+
+  // Hojas de fuente
+  document.querySelectorAll<HTMLButtonElement>('[data-abrir-fuente]').forEach((b) =>
+    b.addEventListener('click', () => abrirHoja(document.getElementById(b.dataset.abrirFuente!) as HTMLDialogElement, b)),
+  );
+
+  // Compartir: quien comparte elige de 2 a 4 partidos, en el orden de la sesión
+  const datos = JSON.parse(document.getElementById('datos-tarjeta')!.textContent!) as Omit<DatosTarjeta, 'respuestas'> & { respuestas: Record<string, RespuestaTarjeta> };
+  const hoja = document.getElementById('hoja-compartir') as HTMLDialogElement;
+  const chips = hoja.querySelector('[data-chips-compartir]')!;
+  const estado = hoja.querySelector('[data-estado-compartir]')!;
+  const vista = hoja.querySelector<HTMLImageElement>('[data-vista-previa]')!;
+  const bCompartir = hoja.querySelector<HTMLButtonElement>('[data-compartir]')!;
+  const bDescargar = hoja.querySelector<HTMLButtonElement>('[data-descargar]')!;
+  const elegidos: string[] = [];
+  let imagen: Blob | null = null;
+  let turno = 0;
+
+  const ordenVisible = () => [...tuyas.children, ...otras.children].map((el) => (el as HTMLElement).dataset.partido!);
+  function pintarChips() {
+    chips.innerHTML = '';
+    for (const id of ordenVisible()) {
+      if (!datos.respuestas[id]) continue;
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.textContent = datos.respuestas[id].partido;
+      b.setAttribute('aria-pressed', String(elegidos.includes(id)));
+      b.addEventListener('click', () => {
+        const i = elegidos.indexOf(id);
+        if (i >= 0) elegidos.splice(i, 1);
+        else if (elegidos.length < 4) elegidos.push(id);
+        else { estado.textContent = 'Ya tienes 4. Quita uno para elegir otro.'; return; }
+        b.setAttribute('aria-pressed', String(elegidos.includes(id)));
+        actualizar();
+      });
+      chips.append(b);
+    }
+  }
+  async function actualizar() {
+    const listo = elegidos.length >= 2;
+    bCompartir.disabled = bDescargar.disabled = true;
+    imagen = null;
+    if (!listo) {
+      vista.hidden = true;
+      estado.textContent = 'Elige de 2 a 4 partidos para tu tarjeta';
+      return;
+    }
+    estado.textContent = 'Generando la imagen…';
+    const mio = ++turno;
+    const orden = ordenVisible().filter((id) => elegidos.includes(id));
+    const d: DatosTarjeta = { ...datos, respuestas: orden.map((id) => datos.respuestas[id]) };
+    try {
+      const blob = await generarTarjeta(d);
+      if (mio !== turno) return;
+      imagen = blob;
+      if (vista.src) URL.revokeObjectURL(vista.src);
+      vista.src = URL.createObjectURL(blob);
+      vista.alt = `Vista previa de la tarjeta. ${textoAlternativo(d)}`;
+      vista.hidden = false;
+      estado.textContent = `${elegidos.length} elegidos · en el orden aleatorio de esta visita`;
+      bDescargar.disabled = false;
+      const archivo = new File([blob], 'tarjeta.png', { type: 'image/png' });
+      bCompartir.disabled = !(navigator.canShare?.({ files: [archivo] }));
+      if (bCompartir.disabled) estado.textContent += '. Tu navegador no permite compartir directamente: descarga la imagen.';
+    } catch {
+      estado.textContent = 'No hemos podido crear la imagen. Prueba otra vez.';
+    }
+  }
+  document.querySelector('[data-abrir-compartir]')!.addEventListener('click', (e) => {
+    pintarChips();
+    abrirHoja(hoja, e.currentTarget as HTMLElement);
+  });
+  const nombreArchivo = () => `${location.pathname.split('/').filter(Boolean).slice(-2).join('-')}.png`;
+  bCompartir.addEventListener('click', async () => {
+    if (!imagen) return;
+    const archivo = new File([imagen], nombreArchivo(), { type: 'image/png' });
+    try {
+      await navigator.share({ files: [archivo], title: datos.pregunta, url: location.origin + location.pathname });
+      evento('tarjeta-compartida');
+    } catch { /* cancelado */ }
+  });
+  bDescargar.addEventListener('click', () => {
+    if (!imagen) return;
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(imagen);
+    a.download = nombreArchivo();
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    evento('tarjeta-compartida');
+  });
+</script>

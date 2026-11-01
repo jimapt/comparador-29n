@@ -1,0 +1,14 @@
+---
+import Pagina from '../../layouts/Pagina.astro';
+import { RESPONSABLE, NOMBRE } from '../../config';
+---
+<Pagina titulo="Aviso legal" descripcion="Quién está detrás de esta web.">
+  <p><strong>{NOMBRE}</strong> es un proyecto independiente y sin ánimo de lucro. No está vinculado a ningún partido político, medio de comunicación ni administración pública.</p>
+  <h2>Responsable</h2>
+  <p>{RESPONSABLE}</p>
+  <h2>Contenido</h2>
+  <p>Las respuestas resumen documentos públicos de los partidos. Cada una enlaza a su fuente para que puedas comprobarla. Los textos citados son propiedad de sus autores y se reproducen como cita, con fines informativos.</p>
+  <p>No publicamos encuestas, sondeos ni resultados de las personas que usan la web, tal como exige la Ley Orgánica del Régimen Electoral General.</p>
+  <h2>Código</h2>
+  <p>El código de la web es abierto (licencia MIT): <a href="https://github.com/jimapt/comparador-29n" target="_blank" rel="noopener noreferrer">github.com/jimapt/comparador-29n</a>.</p>
+</Pagina>

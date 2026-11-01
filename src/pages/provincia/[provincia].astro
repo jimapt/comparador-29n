@@ -1,0 +1,80 @@
+---
+import Base from '../../layouts/Base.astro';
+import Pildora from '../../components/Pildora.astro';
+import Icono from '../../components/Icono.astro';
+import Simulador from '../../components/Simulador.astro';
+import {
+  url, provincias, partidosEn, partidosProvisional, fuenteEscanos2023, fuenteEscanos2026, escanos2023Verificado,
+  type Provincia,
+} from '../../lib/datos';
+
+export function getStaticPaths() {
+  return provincias.map((p) => ({ params: { provincia: p.slug }, props: { provincia: p } }));
+}
+const { provincia } = Astro.props as { provincia: Provincia };
+const escanos = provincia.escanos2026 ?? provincia.escanos2023;
+const aqui = partidosEn(provincia.slug);
+---
+<Base titulo={`Lo que pesa tu voto en ${provincia.nombre}`} nav="provincia" descripcion={`Cuántos escaños reparte ${provincia.nombre} el 29N, cómo se reparten y qué partidos se presentan.`}>
+  <div class="contenedor pila" style="--gap: 1rem">
+    <header class="cabecera">
+      <a class="boton-icono" href={url('provincia')} aria-label="Elegir otra provincia"><Icono nombre="volver" /></a>
+      <Pildora />
+    </header>
+    <p class="pequeno"><strong>{provincia.nombre}</strong> · {provincia.comunidad}</p>
+    <h1 class="h1">Lo que pesa tu voto</h1>
+
+    <section class="tarjeta cifra" aria-labelledby="escanos-t">
+      <h2 class="solo-lector" id="escanos-t">Escaños</h2>
+      {provincia.escanos2026 !== null ? (
+        <>
+          <p class="cifra__n">{provincia.escanos2026}</p>
+          <p>escaños reparte {provincia.nombre} el 29N<br /><span class="pequeno"><strong>Fuente:</strong> {fuenteEscanos2026.titulo}</span></p>
+        </>
+      ) : (
+        <>
+          <p class="cifra__n">{provincia.escanos2023}</p>
+          <p>escaños repartió {provincia.nombre} en 2023.<br />
+            <span class="pequeno">Los del 29N se confirman con el BOE de la convocatoria. <strong>Fuente:</strong> {fuenteEscanos2023.url ? <a href={fuenteEscanos2023.url} target="_blank" rel="noopener noreferrer">{fuenteEscanos2023.titulo}</a> : fuenteEscanos2023.titulo}</span>
+            {!escanos2023Verificado && <span class="pequeno"> [PENDIENTE de cotejar]</span>}
+          </p>
+        </>
+      )}
+    </section>
+
+    <section class="tarjeta pila" style="--gap: 0.5rem; box-shadow: none" aria-labelledby="r2023-t">
+      <h2 class="h2" id="r2023-t">Cómo quedó en 2023</h2>
+      <p class="aviso aviso--error pequeno">Dato no disponible todavía. Lo añadiremos con los resultados oficiales del Ministerio del Interior. [PENDIENTE]</p>
+    </section>
+
+    <Simulador escanos={escanos} provincia={provincia.nombre} />
+
+    <section class="pila" style="--gap: 0.75rem" aria-labelledby="quien-t">
+      <h2 class="h2" id="quien-t">Quién se presenta aquí</h2>
+      {partidosProvisional && <p class="aviso pequeno">Lista provisional: se confirma con la proclamación de candidaturas en el BOE.</p>}
+      <ul class="lista">
+        {aqui.map((p) => (
+          <li class="tarjeta partido-fila">
+            <div>
+              <p class="partido">{p.nombre}</p>
+              {p.nombreLargo !== p.nombre && <p class="pequeno secundario">{p.nombreLargo}</p>}
+            </div>
+            {p.documento.url
+              ? <a class="pequeno" href={p.documento.url} target="_blank" rel="noopener noreferrer">{p.documento.titulo}<span class="solo-lector"> (se abre en otra pestaña)</span></a>
+              : <span class="pequeno secundario">{p.documento.titulo}</span>}
+          </li>
+        ))}
+      </ul>
+      <p class="pequeno secundario">Ordenados alfabéticamente.</p>
+    </section>
+
+    <a class="boton boton--sec" href={url('empezar/provincia')} data-cambiar>Cambiar de provincia</a>
+  </div>
+</Base>
+
+<style>
+  .cifra { display: flex; gap: 1rem; align-items: center; }
+  .cifra__n { font-family: var(--display); font-weight: 800; font-size: 2.75rem; line-height: 1; }
+  .partido-fila { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; flex-wrap: wrap; box-shadow: none; padding: 0.75rem 1rem; }
+  .partido { font-family: var(--display); font-weight: 700; font-size: 0.9375rem; }
+</style>
