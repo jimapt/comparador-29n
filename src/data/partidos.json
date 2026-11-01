@@ -187,21 +187,6 @@
         "url": null,
         "pdf": false
       }
-    },
-    {
-      "id": "democracia-21",
-      "nombre": "Democracia 21",
-      "nombreLargo": "Democracia 21",
-      "circunscripciones": [
-        "madrid",
-        "barcelona"
-      ],
-      "nota": "Partido nuevo (10/10/2026) sin programa publicado todavía. Usamos lo que presentó en público, según la prensa. Se presenta solo en Madrid y Barcelona.",
-      "documento": {
-        "titulo": "Presentación del 10/10/2026 (prensa)",
-        "url": null,
-        "pdf": false
-      }
     }
   ]
 }

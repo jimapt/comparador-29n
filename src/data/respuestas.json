@@ -36,20 +36,6 @@
     "verificado": true
   },
   {
-    "partido": "democracia-21",
-    "pregunta": "E1",
-    "texto": "No lo concreta. Habla de subir los salarios de forma \"sostenible\", sin mencionar el salario mínimo.",
-    "concreta": "no",
-    "origen": "Propuesta 2026",
-    "fuente": "Presentación, recogida por Diario de León, 10/10/2026",
-    "enlaces": [
-      "https://www.diariodeleon.es/nacional/261010/2099881/elecciones-generales-leon-2026-miriam-gonzalez-abogada-vallisoletana-mujer-nick-clegg-presenta-elecciones-democracia-21.html"
-    ],
-    "pagina": null,
-    "cita": "\"política sostenible de subidas de salarios\"",
-    "verificado": false
-  },
-  {
     "partido": "ehbildu",
     "pregunta": "E1",
     "texto": "Subirlo a 1.200 € y que Euskadi y Navarra puedan fijar uno propio, siempre por encima del estatal.",
@@ -206,18 +192,6 @@
     "pagina": 6,
     "cita": "\"demandaremos bonificaciones en la cuota empresarial de la Seguridad Social para contratos indefinidos para jóvenes entre 16 y 30 años\"",
     "verificado": true
-  },
-  {
-    "partido": "democracia-21",
-    "pregunta": "E2",
-    "texto": "No lo concreta.",
-    "concreta": "no",
-    "origen": "Propuesta 2026",
-    "fuente": null,
-    "enlaces": [],
-    "pagina": null,
-    "cita": null,
-    "verificado": false
   },
   {
     "partido": "ehbildu",
@@ -378,20 +352,6 @@
     "verificado": true
   },
   {
-    "partido": "democracia-21",
-    "pregunta": "E3",
-    "texto": "Quitar trabas para emprender, sin detallar cuáles. No habla de la cuota.",
-    "concreta": "vago",
-    "origen": "Propuesta 2026",
-    "fuente": "Presentación, recogida por El Español, 10/10/2026",
-    "enlaces": [
-      "https://www.elespanol.com/espana/20261010/democracia-presenta-elecciones-madrid-barcelona-liderados-miriam-gonzalez/1003744416434_0.html"
-    ],
-    "pagina": null,
-    "cita": "\"la eliminación de trabas para el emprendimiento\"",
-    "verificado": false
-  },
-  {
     "partido": "ehbildu",
     "pregunta": "E3",
     "texto": "No lo concreta. No menciona a los autónomos.",
@@ -550,20 +510,6 @@
     "verificado": true
   },
   {
-    "partido": "democracia-21",
-    "pregunta": "I1",
-    "texto": "Ve la inmigración como una ventaja para España, con el Estado decidiendo quién entra, cómo y cuándo. No da medidas.",
-    "concreta": "vago",
-    "origen": "Propuesta 2026",
-    "fuente": "Presentación, recogida por El Español, 10/10/2026",
-    "enlaces": [
-      "https://www.elespanol.com/espana/20261010/democracia-presenta-elecciones-madrid-barcelona-liderados-miriam-gonzalez/1003744416434_0.html"
-    ],
-    "pagina": null,
-    "cita": "\"decidiendo quién entra, cómo entra, cuándo entra y cuándo sale si tiene que salir\"",
-    "verificado": false
-  },
-  {
     "partido": "ehbildu",
     "pregunta": "I1",
     "texto": "Vías seguras de llegada (reabrir los pasos Irun-Hendaia), fin de las devoluciones en caliente y traspasar la competencia de migración a Euskadi y Navarra.",
@@ -720,18 +666,6 @@
     "pagina": null,
     "cita": null,
     "verificado": true
-  },
-  {
-    "partido": "democracia-21",
-    "pregunta": "I2",
-    "texto": "No lo concreta.",
-    "concreta": "no",
-    "origen": "Propuesta 2026",
-    "fuente": null,
-    "enlaces": [],
-    "pagina": null,
-    "cita": null,
-    "verificado": false
   },
   {
     "partido": "ehbildu",
@@ -893,18 +827,6 @@
     "verificado": true
   },
   {
-    "partido": "democracia-21",
-    "pregunta": "I3",
-    "texto": "No lo concreta.",
-    "concreta": "no",
-    "origen": "Propuesta 2026",
-    "fuente": null,
-    "enlaces": [],
-    "pagina": null,
-    "cita": null,
-    "verificado": false
-  },
-  {
     "partido": "ehbildu",
     "pregunta": "I3",
     "texto": "Garantizar el acceso a los servicios públicos básicos y una ley integral contra el racismo. No habla de idioma ni de empleo.",
@@ -1061,18 +983,6 @@
     "pagina": 7,
     "cita": "\"Garantizando pensiones dignas y actualizadas en función del coste de la vida.\"",
     "verificado": true
-  },
-  {
-    "partido": "democracia-21",
-    "pregunta": "P1",
-    "texto": "No lo concreta.",
-    "concreta": "no",
-    "origen": "Propuesta 2026",
-    "fuente": null,
-    "enlaces": [],
-    "pagina": null,
-    "cita": null,
-    "verificado": false
   },
   {
     "partido": "ehbildu",
@@ -1233,18 +1143,6 @@
     "verificado": true
   },
   {
-    "partido": "democracia-21",
-    "pregunta": "P2",
-    "texto": "No lo concreta.",
-    "concreta": "no",
-    "origen": "Propuesta 2026",
-    "fuente": null,
-    "enlaces": [],
-    "pagina": null,
-    "cita": null,
-    "verificado": false
-  },
-  {
     "partido": "ehbildu",
     "pregunta": "P2",
     "texto": "Traspasar la gestión económica de la Seguridad Social a Euskadi y Navarra. No explica cómo se financiarían.",
@@ -1401,18 +1299,6 @@
     "pagina": 7,
     "cita": "\"Reduciendo la actual brecha de género.\"",
     "verificado": true
-  },
-  {
-    "partido": "democracia-21",
-    "pregunta": "P3",
-    "texto": "No lo concreta.",
-    "concreta": "no",
-    "origen": "Propuesta 2026",
-    "fuente": null,
-    "enlaces": [],
-    "pagina": null,
-    "cita": null,
-    "verificado": false
   },
   {
     "partido": "ehbildu",
@@ -1573,20 +1459,6 @@
     "verificado": true
   },
   {
-    "partido": "democracia-21",
-    "pregunta": "V1",
-    "texto": "Objetivo: que un joven que gana 1.300 € no gaste más de 350 € en alquiler o vivienda. No dice con qué medida.",
-    "concreta": "vago",
-    "origen": "Propuesta 2026",
-    "fuente": "Presentación, recogida por El Español, 10/10/2026",
-    "enlaces": [
-      "https://www.elespanol.com/espana/20261010/democracia-presenta-elecciones-madrid-barcelona-liderados-miriam-gonzalez/1003744416434_0.html"
-    ],
-    "pagina": null,
-    "cita": "\"el máximo que deberían gastarse en alquiler de vivienda o en vivienda son 350 euros\"",
-    "verificado": false
-  },
-  {
     "partido": "ehbildu",
     "pregunta": "V1",
     "texto": "Que los contratos de alquiler se prorroguen solos al renovarse, sin cambiar condiciones ni renta, de forma indefinida.",
@@ -1745,20 +1617,6 @@
     "verificado": true
   },
   {
-    "partido": "democracia-21",
-    "pregunta": "V2",
-    "texto": "Quitar todos los impuestos sobre la vivienda a los menores de 35 años.",
-    "concreta": "si",
-    "origen": "Propuesta 2026",
-    "fuente": "Presentación, recogida por Catalunya Press, 10/10/2026",
-    "enlaces": [
-      "https://www.catalunyapress.es/articulo/politica-nacional/2026-10-10/6047450-miriam-gonzalez-irrumpe-29n-democracia-21-plan-vivienda-madrid-barcelona"
-    ],
-    "pagina": null,
-    "cita": "\"eliminar todos los impuestos relacionados con la vivienda para los menores de 35 años\" (texto del periodista)",
-    "verificado": false
-  },
-  {
     "partido": "ehbildu",
     "pregunta": "V2",
     "texto": "No lo concreta. No habla de comprar vivienda; solo de limitar al 15 % la subida de cuotas de hipotecas de menos de 250.000 €.",
@@ -1915,20 +1773,6 @@
     "pagina": null,
     "cita": null,
     "verificado": true
-  },
-  {
-    "partido": "democracia-21",
-    "pregunta": "V3",
-    "texto": "Plan nacional para construir barrios y un fondo para vivienda protegida con 10.000 millones de fondos europeos sin gastar. No dice cuántas viviendas.",
-    "concreta": "si",
-    "origen": "Propuesta 2026",
-    "fuente": "Presentación, recogida por Diario de León, 10/10/2026",
-    "enlaces": [
-      "https://www.diariodeleon.es/nacional/261010/2099881/elecciones-generales-leon-2026-miriam-gonzalez-abogada-vallisoletana-mujer-nick-clegg-presenta-elecciones-democracia-21.html"
-    ],
-    "pagina": null,
-    "cita": "\"un plan nacional de construcción de barrios con acuerdos transversales y que den seguridad jurídica durante diez años\"",
-    "verificado": false
   },
   {
     "partido": "ehbildu",

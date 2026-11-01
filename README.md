@@ -38,6 +38,6 @@ Todo lo pendiente está marcado como `[PENDIENTE]`.
 
 ## Reglas de contenido
 
-- Una respuesta marcada ⚠️ en las fichas (o de un partido sin verificar: Vox, Podemos, Democracia 21) sale como «En revisión» y no se publica. Para publicarla, quita la marca tras comprobar la cita y ejecuta `npm run contenido`.
+- Una respuesta marcada ⚠️ en las fichas (o de un partido en `SIN_VERIFICAR` del script de importación) sale como «En revisión» y no se publica. Para publicarla, quita la marca tras comprobar la cita y ejecuta `npm run contenido`.
 - Nada asocia un color a un partido: el color es del tema.
 - Nunca se guarda ni se envía la situación o la provincia. Viven en `sessionStorage` de la pestaña.
