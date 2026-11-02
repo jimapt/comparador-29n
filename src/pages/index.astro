@@ -28,7 +28,11 @@ const pasos = [
     <p class="antetitulo">Elecciones generales · 29 de noviembre</p>
     <h1 class="display">¿Qué proponen sobre lo tuyo?</h1>
     <p>Nos hemos leído los programas de {partidos.length} partidos: los que tienen diputados en el Congreso o en un parlamento autonómico. Te contamos qué proponen sobre vivienda, empleo, inmigración y pensiones, en corto y con la página de donde sale.</p>
-    <p class="sellos pequeno"><span>No te decimos qué votar</span><span>Sin cuentas</span><span>No guardamos nada</span></p>
+    <ul class="sellos pequeno" aria-label="Lo que prometemos">
+      {['No te decimos qué votar', 'Sin cuentas', 'No guardamos nada'].map((t) => (
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>{t}</li>
+      ))}
+    </ul>
 
     <div class="pila" style="--gap: 0.5rem">
       <a class="boton" href={url('empezar')}>Empezar</a>
@@ -76,8 +80,8 @@ const pasos = [
   .formas-temas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.375rem; margin-top: 0.375rem; }
   .formas-temas span { height: 4rem; border: 2px solid var(--ink); }
   .antetitulo { font-weight: 700; font-size: 0.9375rem; }
-  .sellos { display: flex; flex-wrap: wrap; gap: 0.375rem; }
-  .sellos span { padding: 0.25rem 0.625rem; border: 1.5px solid var(--ink); border-radius: 999px; font-weight: 600; }
+  .sellos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; color: var(--ink-2); }
+  .sellos li { display: inline-flex; align-items: center; gap: 0.3rem; }
   .bloque { margin-top: 1.5rem; }
   .pasos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.875rem; }
   .pasos li { display: grid; grid-template-columns: 2.5rem 1fr; gap: 0.75rem; align-items: start; }
