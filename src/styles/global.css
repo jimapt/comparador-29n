@@ -110,10 +110,10 @@ body[data-tema='paper'] .chip[aria-pressed='true'], body[data-fondo='paper'] .ch
   padding: 0.3rem 0.625rem; border-radius: 999px; background: var(--ink); color: var(--c, var(--tema));
 }
 .etiqueta-tema .forma { width: 0.75rem; height: 0.75rem; background: currentColor; }
-.forma--cuadrado { border-radius: 3px; }
-.forma--pildora { border-radius: 999px; width: 1.1rem !important; height: 0.6rem !important; }
-.forma--arco { border-radius: 4px 4px 999px 999px; }
-.forma--hoja { border-radius: 999px 3px; }
+.etiqueta-tema .forma--cuadrado { border-radius: 3px; }
+.etiqueta-tema .forma--pildora { border-radius: 999px; width: 1.1rem; height: 0.6rem; }
+.etiqueta-tema .forma--arco { border-radius: 4px 4px 999px 999px; }
+.etiqueta-tema .forma--hoja { border-radius: 999px 3px; }
 .etiqueta-origen { font-size: 0.8125rem; font-weight: 600; padding: 0.15rem 0.5rem; border: 1.5px solid var(--ink); border-radius: 999px; white-space: nowrap; }
 
 /* Tarjetas */

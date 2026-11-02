@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Bienvenida from '../../components/Bienvenida.astro';
 import Pildora from '../../components/Pildora.astro';
 import Icono from '../../components/Icono.astro';
 import EtiquetaTema from '../../components/EtiquetaTema.astro';
@@ -44,6 +45,7 @@ const iconoConcreta = { si: 'lleno', vago: 'medio', no: 'vacio' } as const;
       <a class="boton-icono" href={url(tema.id)} aria-label={`Volver a ${tema.nombre}`}><Icono nombre="volver" /></a>
       <Pildora />
     </header>
+    <Bienvenida />
 
     <div class="fila-meta">
       <EtiquetaTema tema={tema.id} />
@@ -250,7 +252,7 @@ const iconoConcreta = { si: 'lleno', vago: 'medio', no: 'vacio' } as const;
         verTodos.textContent = abierto ? `Ver solo los de ${nombre}` : 'Ver todos';
       });
     }
-  } else {
+  } else if (p.situaciones.length) {
     document.querySelector<HTMLElement>('[data-aviso-provincia]')!.hidden = false;
   }
 

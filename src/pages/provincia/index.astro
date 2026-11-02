@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Bienvenida from '../../components/Bienvenida.astro';
 import Pildora from '../../components/Pildora.astro';
 import { url, provinciasAlfabetico } from '../../lib/datos';
 import { NOMBRE } from '../../config';
@@ -10,8 +11,9 @@ import { NOMBRE } from '../../config';
       <a class="marca" href={url()}>{NOMBRE}</a>
       <Pildora />
     </header>
-    <h1 class="h1">Lo que pesa tu voto</h1>
-    <p>En las generales votas en tu provincia, y cada provincia reparte sus propios escaños. Elige la tuya para ver cuántos reparte, cómo se reparten y quién se presenta.</p>
+    <Bienvenida />
+    <h1 class="display">Lo que pesa tu voto</h1>
+    <p>En las generales no votas una lista para toda España: cada provincia elige sus propios diputados. Elige la tuya y te contamos cuántos elige, cómo se reparten (con un simulador) y qué partidos se presentan.</p>
     <ul class="provincias">
       {provinciasAlfabetico.map((p) => <li><a class="chip" href={url(`provincia/${p.slug}`)}>{p.nombre}</a></li>)}
     </ul>

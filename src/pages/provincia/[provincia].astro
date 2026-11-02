@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Bienvenida from '../../components/Bienvenida.astro';
 import Pildora from '../../components/Pildora.astro';
 import Icono from '../../components/Icono.astro';
 import Simulador from '../../components/Simulador.astro';
@@ -21,15 +22,17 @@ const aqui = partidosEn(provincia.slug);
       <a class="boton-icono" href={url('provincia')} aria-label="Elegir otra provincia"><Icono nombre="volver" /></a>
       <Pildora />
     </header>
+    <Bienvenida />
     <p class="pequeno"><strong>{provincia.nombre}</strong> · {provincia.comunidad}</p>
-    <h1 class="h1">Lo que pesa tu voto</h1>
+    <h1 class="display">Lo que pesa tu voto</h1>
+    <p>En las generales no votas una lista para toda España: cada provincia elige sus propios diputados y los reparte entre los partidos que más votos sacan allí. Por eso importa dónde votas.</p>
 
-    <section class="tarjeta cifra" aria-labelledby="escanos-t">
+    <section class="tarjeta cifra" aria-labelledby="escanos-t" style="background: var(--paper)">
       <h2 class="solo-lector" id="escanos-t">Escaños</h2>
       {provincia.escanos2026 !== null ? (
         <>
           <p class="cifra__n">{provincia.escanos2026}</p>
-          <p>escaños reparte {provincia.nombre} el 29N<br /><span class="pequeno"><strong>Fuente:</strong> {fuenteEscanos2026.titulo}</span></p>
+          <p>de los 350 diputados del Congreso se eligen en {provincia.nombre} el 29N.<br /><span class="pequeno"><strong>Fuente:</strong> {fuenteEscanos2026.url ? <a href={fuenteEscanos2026.url} target="_blank" rel="noopener noreferrer">{fuenteEscanos2026.titulo}</a> : fuenteEscanos2026.titulo}</span></p>
         </>
       ) : (
         <>
@@ -75,7 +78,7 @@ const aqui = partidosEn(provincia.slug);
 
 <style>
   .cifra { display: flex; gap: 1rem; align-items: center; }
-  .cifra__n { font-family: var(--display); font-weight: 800; font-size: 2.75rem; line-height: 1; }
+  .cifra__n { font-family: var(--display); font-weight: 800; font-size: 3.5rem; line-height: 1; flex: none; }
   .partido-fila { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; flex-wrap: wrap; box-shadow: none; padding: 0.75rem 1rem; }
   .partido { font-family: var(--display); font-weight: 700; font-size: 0.9375rem; }
 </style>

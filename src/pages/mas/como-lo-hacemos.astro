@@ -3,7 +3,7 @@ import Pagina from '../../layouts/Pagina.astro';
 import { url, partidos, preguntas, fechaLarga } from '../../lib/datos';
 import { ACTUALIZADO } from '../../config';
 ---
-<Pagina titulo="Cómo lo hacemos" descripcion="Qué partidos salen, cómo resumimos sus propuestas y qué significa cada etiqueta.">
+<Pagina resumen={["Las mismas 12 preguntas para todos los partidos, en 25 palabras como máximo.", "Cada respuesta enlaza a su documento, con página y cita literal.", "Lo resume una IA y lo revisa una persona contra el original.", "El orden de los partidos es aleatorio y no sumamos ni puntuamos a nadie."]} titulo="Cómo lo hacemos" descripcion="Qué partidos salen, cómo resumimos sus propuestas y qué significa cada etiqueta.">
   <p>Hemos leído los programas para que tú no tengas que hacerlo. Aquí te contamos cómo, para que puedas comprobarlo.</p>
 
   <h2>Qué partidos salen</h2>

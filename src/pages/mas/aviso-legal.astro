@@ -2,7 +2,7 @@
 import Pagina from '../../layouts/Pagina.astro';
 import { RESPONSABLE, NOMBRE } from '../../config';
 ---
-<Pagina titulo="Aviso legal" descripcion="Quién está detrás de esta web.">
+<Pagina resumen={["Proyecto independiente y sin ánimo de lucro.", "Sin relación con ningún partido, medio ni administración.", "No publicamos encuestas ni resultados de quienes usan la web."]} titulo="Aviso legal" descripcion="Quién está detrás de esta web.">
   <p><strong>{NOMBRE}</strong> es un proyecto independiente y sin ánimo de lucro. No está vinculado a ningún partido político, medio de comunicación ni administración pública.</p>
   <h2>Responsable</h2>
   <p>{RESPONSABLE}</p>

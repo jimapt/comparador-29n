@@ -20,7 +20,7 @@ export interface Respuesta {
   verificado: boolean;
 }
 export interface Pregunta { id: string; tema: string; slug: string; titulo: string }
-export interface Tema { id: string; nombre: string; color: string; forma: string }
+export interface Tema { id: string; nombre: string; color: string; forma: string; descripcion: string }
 export interface Partido {
   id: string;
   nombre: string;
