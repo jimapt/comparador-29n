@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import { url, situaciones } from '../../lib/datos';
+import Icono from '../../components/Icono.astro';
+import { NOMBRE } from '../../config';
+---
+<Base titulo="Tu situación" fondo="paper">
+  <div class="contenedor portada pila" style="--gap: 1.125rem">
+    <header class="cabecera">
+      <a class="boton-icono" href={url()} aria-label="Volver a la portada"><Icono nombre="volver" /></a>
+      <span class="marca">{NOMBRE}</span>
+    </header>
+
+    <p class="pequeno"><strong>Paso 1 de 2</strong></p>
+    <h1 class="h1" id="paso1">¿Cuál es tu situación?</h1>
+    <p class="secundario">Elige una o varias. Así te enseñamos primero las preguntas que más te afectan. No se guarda ni se envía a ningún sitio.</p>
+
+    <fieldset class="pila" style="--gap: 0.75rem" aria-labelledby="paso1">
+      <div class="chips" data-situaciones>
+        {situaciones.situaciones.map((s) => (
+          <button type="button" class="chip" aria-pressed="false" data-situacion={s.id}>{s.etiqueta}</button>
+        ))}
+      </div>
+    </fieldset>
+
+    <div class="pila acciones" style="--gap: 0.5rem">
+      <a class="boton" href={url('empezar/provincia')} data-siguiente>Siguiente: tu provincia</a>
+      <a class="enlace" style="align-self: center" href={url('para-ti')}>Ver todo sin elegir</a>
+    </div>
+
+  </div>
+</Base>
+
+<style>
+  .portada { padding-bottom: 2rem; }
+  fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .acciones { margin-top: 0.5rem; }
+  main { padding-bottom: 1rem; }
+</style>
+
+<script>
+  import { perfil, guardarPerfil } from '../../scripts/perfil';
+  const elegidas = new Set(perfil().situaciones);
+  document.querySelectorAll<HTMLButtonElement>('[data-situacion]').forEach((b) => {
+    const id = b.dataset.situacion!;
+    b.setAttribute('aria-pressed', String(elegidas.has(id)));
+    b.addEventListener('click', () => {
+      elegidas.has(id) ? elegidas.delete(id) : elegidas.add(id);
+      b.setAttribute('aria-pressed', String(elegidas.has(id)));
+      guardarPerfil({ situaciones: [...elegidas] });
+    });
+  });
+</script>

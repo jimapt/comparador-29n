@@ -2,8 +2,7 @@
 import Pagina from '../../layouts/Pagina.astro';
 import { RESPONSABLE } from '../../config';
 ---
-<Pagina titulo="Privacidad" descripcion="No guardamos tus respuestas, no hay cuentas y no usamos cookies.">
-  <p><strong>En corto:</strong> no sabemos quién eres ni qué eliges. No hay cuentas, no hay cookies y no guardamos tus respuestas.</p>
+<Pagina resumen={["No hay cuentas ni cookies.", "Lo que eliges se queda en tu navegador y se borra al cerrar la pestaña.", "Solo contamos visitas en total, nunca quién eres ni qué eliges."]} titulo="Privacidad" descripcion="No guardamos tus respuestas, no hay cuentas y no usamos cookies.">
   <h2>Tu situación y tu provincia</h2>
   <p>Lo que eliges al entrar se queda en tu navegador, solo en esta pestaña, y se borra al cerrarla. No se envía a ningún servidor, no va en los enlaces que compartes y no aparece en las tarjetas para stories.</p>
   <p>Lo hacemos así porque tu situación personal y tu interés político son datos especialmente protegidos (artículo 9 del Reglamento General de Protección de Datos).</p>

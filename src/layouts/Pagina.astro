@@ -2,15 +2,29 @@
 import Base from './Base.astro';
 import Icono from '../components/Icono.astro';
 import { url } from '../lib/datos';
-interface Props { titulo: string; descripcion?: string; volver?: string }
-const { titulo, descripcion, volver = 'mas' } = Astro.props;
+import { NOMBRE } from '../config';
+interface Props { titulo: string; descripcion?: string; volver?: string; resumen?: string[] }
+const { titulo, descripcion, volver = 'mas', resumen } = Astro.props;
 ---
 <Base titulo={titulo} descripcion={descripcion} nav="mas">
   <div class="contenedor pila" style="--gap: 1rem">
     <header class="cabecera">
       <a class="boton-icono" href={url(volver)} aria-label="Volver a Más"><Icono nombre="volver" /></a>
+      <a class="marca" href={url()}>{NOMBRE}</a>
     </header>
     <h1 class="h1">{titulo}</h1>
+    {resumen && (
+      <section class="tarjeta en-corto" aria-labelledby="en-corto-t">
+        <h2 class="mayus" id="en-corto-t">En corto</h2>
+        <ul>{resumen.map((r) => <li>{r}</li>)}</ul>
+      </section>
+    )}
     <div class="prosa"><slot /></div>
   </div>
 </Base>
+
+<style>
+  .en-corto { background: var(--neutral); display: flex; flex-direction: column; gap: 0.5rem; }
+  .en-corto h2 { font-family: var(--text); }
+  .en-corto ul { margin: 0; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.375rem; font-weight: 500; }
+</style>

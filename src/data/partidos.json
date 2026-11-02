@@ -37,10 +37,10 @@
     },
     {
       "id": "sumar",
-      "nombre": "Sumar",
-      "nombreLargo": "Sumar",
+      "nombre": "Frente Amplio",
+      "nombreLargo": "Sumar, IU, Más Madrid, Comuns y otros",
       "circunscripciones": "todas",
-      "nota": "En 2026 podría presentarse con otro nombre o coalición: revisar tras la proclamación.",
+      "nota": "Es la candidatura del espacio de Sumar para el 29N. Aún no ha publicado programa conjunto: usamos el programa de Sumar de 2023 y sus propuestas públicas fechadas.",
       "documento": {
         "titulo": "Programa electoral 2023 «Un programa para ti»",
         "url": "https://movimientosumar.es/wp-content/uploads/2023/07/Un-Programa-para-ti.pdf",
@@ -183,9 +183,9 @@
       ],
       "nota": "Usamos su programa autonómico de 2026: varias propuestas son competencia de la Junta o del Estado, y se dice en cada respuesta.",
       "documento": {
-        "titulo": "Programa autonómico 2026",
-        "url": null,
-        "pdf": false
+        "titulo": "Programa de Gobierno, elecciones andaluzas 2026",
+        "url": "https://adelanteandalucia.org/wp-content/uploads/2026/04/PROGRAMA-AA-2026-DEF.pdf",
+        "pdf": true
       }
     }
   ]

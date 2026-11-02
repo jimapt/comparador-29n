@@ -8,7 +8,7 @@ const sinTildes = (s: string) => s.toLowerCase().normalize('NFD').replace(/\p{Di
 <Base titulo="¿Dónde votas?" fondo="paper">
   <div class="contenedor pila" style="--gap: 1rem; padding-bottom: 2rem">
     <header class="cabecera">
-      <a class="boton-icono" href={url()} aria-label="Volver al paso 1"><Icono nombre="volver" /></a>
+      <a class="boton-icono" href={url('empezar')} aria-label="Volver al paso 1"><Icono nombre="volver" /></a>
       <span class="marca">{NOMBRE}</span>
     </header>
     <p class="pequeno"><strong>Paso 2 de 2</strong></p>
