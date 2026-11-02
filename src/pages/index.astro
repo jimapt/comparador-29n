@@ -1,13 +1,21 @@
 ---
 import Base from '../layouts/Base.astro';
-import { url, situaciones } from '../lib/datos';
+import { url, temas, partidos, preguntasDeTema, urlPregunta, situaciones } from '../lib/datos';
 import { NOMBRE } from '../config';
+
+// Una pregunta de ejemplo por tema: la primera de cada uno.
+const ejemplos = temas.map((t) => ({ tema: t, pregunta: preguntasDeTema(t.id)[0] }));
+const pasos = [
+  { n: 1, titulo: 'Cuéntanos tu situación', texto: `Si alquilas, estudias, trabajas, cobras pensión… Hay ${situaciones.situaciones.length} opciones y puedes elegir varias.` },
+  { n: 2, titulo: 'Elige dónde votas', texto: 'Así ves solo los partidos que se presentan en tu provincia.' },
+  { n: 3, titulo: 'Compara', texto: 'Cada partido responde a la misma pregunta en 25 palabras, con la página del programa de donde sale.' },
+];
 ---
 <Base titulo={NOMBRE} fondo="paper">
   <div class="contenedor portada pila" style="--gap: 1.125rem">
     <header class="cabecera">
       <span class="marca">{NOMBRE}</span>
-      <span class="chapa-29n" aria-label="Elecciones generales del 29 de noviembre">29N</span>
+      <span class="chapa-29n" aria-hidden="true">29N</span>
     </header>
 
     <div class="formas-temas" aria-hidden="true">
@@ -17,50 +25,64 @@ import { NOMBRE } from '../config';
       <span style="background: var(--pensiones); border-radius: 999px 16px"></span>
     </div>
 
+    <p class="antetitulo">Elecciones generales · 29 de noviembre</p>
     <h1 class="display">¿Qué proponen sobre lo tuyo?</h1>
-    <p>Dinos tu situación y te enseñamos qué dice cada partido sobre vivienda, empleo, inmigración y pensiones, con la fuente. Sin cuentas y sin guardar nada.</p>
+    <p>Nos hemos leído los programas de {partidos.length} partidos: los que tienen diputados en el Congreso o en un parlamento autonómico. Te contamos qué proponen sobre vivienda, empleo, inmigración y pensiones, en corto y con la página de donde sale.</p>
+    <p class="sellos pequeno"><span>No te decimos qué votar</span><span>Sin cuentas</span><span>No guardamos nada</span></p>
 
-    <fieldset class="pila" style="--gap: 0.75rem">
-      <legend class="paso"><strong>Paso 1 de 2 · ¿Cuál es tu situación?</strong> <span class="secundario">Elige una o varias</span></legend>
-      <div class="chips" data-situaciones>
-        {situaciones.situaciones.map((s) => (
-          <button type="button" class="chip" aria-pressed="false" data-situacion={s.id}>{s.etiqueta}</button>
-        ))}
-      </div>
-    </fieldset>
-
-    <div class="pila acciones" style="--gap: 0.5rem">
-      <a class="boton" href={url('empezar/provincia')} data-siguiente>Siguiente: tu provincia</a>
-      <a class="enlace" style="align-self: center" href={url('para-ti')}>Ver todo sin elegir</a>
+    <div class="pila" style="--gap: 0.5rem">
+      <a class="boton" href={url('empezar')}>Empezar</a>
+      <a class="enlace" style="align-self: center" href={url('para-ti')}>Ver todas las preguntas</a>
     </div>
 
+    <section class="pila bloque" style="--gap: 0.75rem" aria-labelledby="que-hay">
+      <h2 class="h2" id="que-hay">Qué vas a encontrar</h2>
+      <p class="secundario">12 preguntas concretas, 3 por tema. Por ejemplo:</p>
+      <ul class="lista">
+        {ejemplos.map(({ tema, pregunta }) => (
+          <li>
+            <a class="tarjeta-enlace" href={urlPregunta(pregunta)} style={`--c: ${tema.color}`}>
+              <span class="etiqueta-tema" style={`--c: ${tema.color}`}><span class={`forma forma--${tema.forma}`} aria-hidden="true"></span>{tema.nombre}</span>
+              <span class="titulo">{pregunta.titulo}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="pila bloque" style="--gap: 0.75rem" aria-labelledby="como">
+      <h2 class="h2" id="como">Cómo funciona</h2>
+      <ol class="pasos">
+        {pasos.map((p) => (
+          <li>
+            <span class="pasos__n" aria-hidden="true">{p.n}</span>
+            <span><strong>{p.titulo}.</strong> {p.texto}</span>
+          </li>
+        ))}
+      </ol>
+      <a class="boton" href={url('empezar')}>Empezar</a>
+    </section>
+
     <footer class="pie">
-      <p>No te decimos qué votar. Te enseñamos qué propone cada uno y de dónde lo sacamos.</p>
-      <p><a href={url('mas/como-lo-hacemos')}>Cómo lo hacemos</a> · <a href={url('mas/privacidad')}>Privacidad</a></p>
+      <p>Es un proyecto independiente, sin relación con ningún partido. Las respuestas las prepara una IA y las revisa una persona contra el programa original.</p>
+      <p><a href={url('mas/como-lo-hacemos')}>Cómo lo hacemos</a> · <a href={url('mas/fuentes')}>Fuentes</a> · <a href={url('mas/privacidad')}>Privacidad</a></p>
     </footer>
   </div>
 </Base>
 
 <style>
   .portada { padding-bottom: 2rem; }
+  main { padding-bottom: 1rem; }
   .formas-temas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.375rem; margin-top: 0.375rem; }
   .formas-temas span { height: 4rem; border: 2px solid var(--ink); }
-  fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
-  .paso { padding: 0; margin-bottom: 0.75rem; font-size: 0.9375rem; }
-  .acciones { margin-top: 0.5rem; }
-  main { padding-bottom: 1rem; }
+  .antetitulo { font-weight: 700; font-size: 0.9375rem; }
+  .sellos { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  .sellos span { padding: 0.25rem 0.625rem; border: 1.5px solid var(--ink); border-radius: 999px; font-weight: 600; }
+  .bloque { margin-top: 1.5rem; }
+  .pasos { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.875rem; }
+  .pasos li { display: grid; grid-template-columns: 2.5rem 1fr; gap: 0.75rem; align-items: start; }
+  .pasos__n {
+    width: 2.5rem; height: 2.5rem; border-radius: 999px; background: var(--ink); color: var(--paper);
+    display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 800;
+  }
 </style>
-
-<script>
-  import { perfil, guardarPerfil } from '../scripts/perfil';
-  const elegidas = new Set(perfil().situaciones);
-  document.querySelectorAll<HTMLButtonElement>('[data-situacion]').forEach((b) => {
-    const id = b.dataset.situacion!;
-    b.setAttribute('aria-pressed', String(elegidas.has(id)));
-    b.addEventListener('click', () => {
-      elegidas.has(id) ? elegidas.delete(id) : elegidas.add(id);
-      b.setAttribute('aria-pressed', String(elegidas.has(id)));
-      guardarPerfil({ situaciones: [...elegidas] });
-    });
-  });
-</script>
