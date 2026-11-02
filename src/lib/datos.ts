@@ -5,6 +5,7 @@ import partidosJson from '../data/partidos.json';
 import provinciasJson from '../data/provincias.json';
 import glosarioJson from '../data/glosario.json';
 import situacionesJson from '../data/situaciones.json';
+import resultados2023Json from '../data/resultados2023.json';
 
 export type Concreta = 'si' | 'vago' | 'no';
 export interface Respuesta {
@@ -43,6 +44,11 @@ export const partidosProvisional = partidosJson.provisional;
 export const provincias = (provinciasJson.provincias as Provincia[]).slice().sort((a, b) => a.orden - b.orden);
 export const provinciasAlfabetico = provincias.slice().sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
 export const fuenteEscanos2023 = provinciasJson.fuente2023;
+
+/** Votos de 2023 por provincia (solo candidaturas por encima del 3 %), para el simulador. */
+export interface Resultado2023 { blanco: number; partidos: { nombre: string; votos: number; escanos: number }[] }
+export const resultados2023 = resultados2023Json.provincias as Record<string, Resultado2023>;
+export const fuenteResultados2023 = resultados2023Json.fuente;
 export const fuenteEscanos2026 = provinciasJson.fuente2026;
 export const escanos2023Verificado = provinciasJson.escanos2023Verificado;
 export const glosario = glosarioJson.terminos as Termino[];

@@ -1,0 +1,1440 @@
+{
+ "fuente": {
+  "titulo": "Ministerio del Interior, escrutinio de las elecciones generales del 23 de julio de 2023 (vía Público)",
+  "url": "https://resultados.generales23j.es/",
+  "notaMadrid": "En Madrid usamos el resultado definitivo, con el voto desde el extranjero, que movió un escaño del PSOE al PP."
+ },
+ "nota": "Solo las candidaturas que pasaron del 3 % de los votos válidos en cada provincia. Los votos de las demás no se incluyen.",
+ "provincias": {
+  "almeria": {
+   "blanco": 2439,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 130652,
+     "escanos": 3
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 92221,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 67963,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 21127,
+     "escanos": 0
+    }
+   ]
+  },
+  "cadiz": {
+   "blanco": 7092,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 221020,
+     "escanos": 4
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 210596,
+     "escanos": 3
+    },
+    {
+     "nombre": "Vox",
+     "votos": 96391,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 81544,
+     "escanos": 1
+    }
+   ]
+  },
+  "cordoba": {
+   "blanco": 4329,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 169356,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 143291,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 62264,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 61063,
+     "escanos": 1
+    }
+   ]
+  },
+  "granada": {
+   "blanco": 4036,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 184492,
+     "escanos": 3
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 164330,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 80466,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 57842,
+     "escanos": 1
+    }
+   ]
+  },
+  "huelva": {
+   "blanco": 2403,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 93400,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 92098,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 37485,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 26607,
+     "escanos": 0
+    }
+   ]
+  },
+  "jaen": {
+   "blanco": 2490,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 137180,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 133280,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 54223,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 29208,
+     "escanos": 0
+    }
+   ]
+  },
+  "malaga": {
+   "blanco": 7495,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 299977,
+     "escanos": 5
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 236935,
+     "escanos": 3
+    },
+    {
+     "nombre": "Vox",
+     "votos": 128965,
+     "escanos": 2
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 95662,
+     "escanos": 1
+    }
+   ]
+  },
+  "sevilla": {
+   "blanco": 10902,
+   "partidos": [
+    {
+     "nombre": "PSOE",
+     "votos": 386513,
+     "escanos": 5
+    },
+    {
+     "nombre": "PP",
+     "votos": 352102,
+     "escanos": 4
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 147773,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 140522,
+     "escanos": 1
+    }
+   ]
+  },
+  "huesca": {
+   "blanco": 1213,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 45562,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 39899,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 15073,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 13624,
+     "escanos": 0
+    }
+   ]
+  },
+  "teruel": {
+   "blanco": 413,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 26495,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 22048,
+     "escanos": 1
+    },
+    {
+     "nombre": "Teruel Existe",
+     "votos": 11292,
+     "escanos": 0
+    },
+    {
+     "nombre": "Vox",
+     "votos": 9899,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 4081,
+     "escanos": 0
+    }
+   ]
+  },
+  "zaragoza": {
+   "blanco": 4668,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 185613,
+     "escanos": 3
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 158517,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 78915,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 69239,
+     "escanos": 1
+    }
+   ]
+  },
+  "asturias": {
+   "blanco": 5971,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 209581,
+     "escanos": 3
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 202280,
+     "escanos": 2
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 87534,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 73438,
+     "escanos": 1
+    }
+   ]
+  },
+  "baleares": {
+   "blanco": 4691,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 178715,
+     "escanos": 3
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 151134,
+     "escanos": 3
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 83116,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 76302,
+     "escanos": 1
+    }
+   ]
+  },
+  "las-palmas": {
+   "blanco": 3050,
+   "partidos": [
+    {
+     "nombre": "PSOE",
+     "votos": 174767,
+     "escanos": 3
+    },
+    {
+     "nombre": "PP",
+     "votos": 136287,
+     "escanos": 3
+    },
+    {
+     "nombre": "Vox",
+     "votos": 76982,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 53992,
+     "escanos": 1
+    },
+    {
+     "nombre": "Nueva Canarias",
+     "votos": 42422,
+     "escanos": 0
+    },
+    {
+     "nombre": "Coalición Canaria",
+     "votos": 33327,
+     "escanos": 0
+    }
+   ]
+  },
+  "santa-cruz-de-tenerife": {
+   "blanco": 5060,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 173222,
+     "escanos": 3
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 164533,
+     "escanos": 3
+    },
+    {
+     "nombre": "Coalición Canaria",
+     "votos": 81391,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 53330,
+     "escanos": 0
+    }
+   ]
+  },
+  "cantabria": {
+   "blanco": 3249,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 145937,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 115554,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 48788,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 29270,
+     "escanos": 0
+    }
+   ]
+  },
+  "albacete": {
+   "blanco": 1829,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 88144,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 75969,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 36698,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 15677,
+     "escanos": 0
+    }
+   ]
+  },
+  "ciudad-real": {
+   "blanco": 2344,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 114443,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 99800,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 45942,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 17256,
+     "escanos": 0
+    }
+   ]
+  },
+  "cuenca": {
+   "blanco": 967,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 45159,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 42358,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 17660,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 6282,
+     "escanos": 0
+    }
+   ]
+  },
+  "guadalajara": {
+   "blanco": 1138,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 50988,
+     "escanos": 1
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 46184,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 26981,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 12792,
+     "escanos": 0
+    }
+   ]
+  },
+  "toledo": {
+   "blanco": 2599,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 146036,
+     "escanos": 3
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 125440,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 75827,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 31620,
+     "escanos": 0
+    }
+   ]
+  },
+  "avila": {
+   "blanco": 620,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 42105,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 26481,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 14985,
+     "escanos": 0
+    },
+    {
+     "nombre": "Por Ávila",
+     "votos": 7321,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 4948,
+     "escanos": 0
+    }
+   ]
+  },
+  "burgos": {
+   "blanco": 1836,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 81626,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 69060,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 25577,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 17249,
+     "escanos": 0
+    }
+   ]
+  },
+  "leon": {
+   "blanco": 1543,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 100327,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 91239,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 34974,
+     "escanos": 0
+    },
+    {
+     "nombre": "UPL",
+     "votos": 22499,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 18147,
+     "escanos": 0
+    }
+   ]
+  },
+  "palencia": {
+   "blanco": 827,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 40263,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 33183,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 12417,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 5792,
+     "escanos": 0
+    }
+   ]
+  },
+  "salamanca": {
+   "blanco": 1636,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 92498,
+     "escanos": 3
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 59790,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 28959,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 10760,
+     "escanos": 0
+    }
+   ]
+  },
+  "segovia": {
+   "blanco": 861,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 39621,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 26791,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 12426,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 7020,
+     "escanos": 0
+    }
+   ]
+  },
+  "soria": {
+   "blanco": 281,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 18647,
+     "escanos": 1
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 14775,
+     "escanos": 1
+    },
+    {
+     "nombre": "Soria ¡Ya!",
+     "votos": 9626,
+     "escanos": 0
+    },
+    {
+     "nombre": "Vox",
+     "votos": 4894,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 1679,
+     "escanos": 0
+    }
+   ]
+  },
+  "valladolid": {
+   "blanco": 2410,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 128342,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 102860,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 47697,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 27693,
+     "escanos": 0
+    }
+   ]
+  },
+  "zamora": {
+   "blanco": 912,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 45550,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 32996,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 13448,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 5730,
+     "escanos": 0
+    }
+   ]
+  },
+  "barcelona": {
+   "blanco": 20899,
+   "partidos": [
+    {
+     "nombre": "PSC",
+     "votos": 946055,
+     "escanos": 13
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 402527,
+     "escanos": 5
+    },
+    {
+     "nombre": "PP",
+     "votos": 363857,
+     "escanos": 5
+    },
+    {
+     "nombre": "ERC",
+     "votos": 326388,
+     "escanos": 4
+    },
+    {
+     "nombre": "Junts",
+     "votos": 256231,
+     "escanos": 3
+    },
+    {
+     "nombre": "Vox",
+     "votos": 200138,
+     "escanos": 2
+    }
+   ]
+  },
+  "girona": {
+   "blanco": 2971,
+   "partidos": [
+    {
+     "nombre": "PSC",
+     "votos": 92609,
+     "escanos": 2
+    },
+    {
+     "nombre": "Junts",
+     "votos": 62809,
+     "escanos": 2
+    },
+    {
+     "nombre": "ERC",
+     "votos": 47234,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 35118,
+     "escanos": 1
+    },
+    {
+     "nombre": "PP",
+     "votos": 31042,
+     "escanos": 0
+    },
+    {
+     "nombre": "Vox",
+     "votos": 22514,
+     "escanos": 0
+    },
+    {
+     "nombre": "CUP",
+     "votos": 18106,
+     "escanos": 0
+    }
+   ]
+  },
+  "lleida": {
+   "blanco": 2047,
+   "partidos": [
+    {
+     "nombre": "PSC",
+     "votos": 53860,
+     "escanos": 2
+    },
+    {
+     "nombre": "ERC",
+     "votos": 34063,
+     "escanos": 1
+    },
+    {
+     "nombre": "Junts",
+     "votos": 33001,
+     "escanos": 1
+    },
+    {
+     "nombre": "PP",
+     "votos": 23428,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 14407,
+     "escanos": 0
+    },
+    {
+     "nombre": "Vox",
+     "votos": 12461,
+     "escanos": 0
+    },
+    {
+     "nombre": "CUP",
+     "votos": 5403,
+     "escanos": 0
+    }
+   ]
+  },
+  "tarragona": {
+   "blanco": 3162,
+   "partidos": [
+    {
+     "nombre": "PSC",
+     "votos": 120482,
+     "escanos": 2
+    },
+    {
+     "nombre": "ERC",
+     "votos": 55198,
+     "escanos": 1
+    },
+    {
+     "nombre": "PP",
+     "votos": 50790,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 41496,
+     "escanos": 1
+    },
+    {
+     "nombre": "Junts",
+     "votos": 40593,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 37910,
+     "escanos": 0
+    }
+   ]
+  },
+  "ceuta": {
+   "blanco": 332,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 12885,
+     "escanos": 1
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 11299,
+     "escanos": 0
+    },
+    {
+     "nombre": "Vox",
+     "votos": 7742,
+     "escanos": 0
+    }
+   ]
+  },
+  "melilla": {
+   "blanco": 253,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 13369,
+     "escanos": 1
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 6892,
+     "escanos": 0
+    },
+    {
+     "nombre": "Vox",
+     "votos": 4345,
+     "escanos": 0
+    },
+    {
+     "nombre": "Coalición por Melilla",
+     "votos": 1279,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 821,
+     "escanos": 0
+    }
+   ]
+  },
+  "alicante": {
+   "blanco": 6558,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 329167,
+     "escanos": 5
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 286424,
+     "escanos": 4
+    },
+    {
+     "nombre": "Vox",
+     "votos": 145562,
+     "escanos": 2
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 114973,
+     "escanos": 1
+    }
+   ]
+  },
+  "castellon": {
+   "blanco": 2748,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 107824,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 99856,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 48762,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 43720,
+     "escanos": 0
+    }
+   ]
+  },
+  "valencia": {
+   "blanco": 10892,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 481424,
+     "escanos": 6
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 458879,
+     "escanos": 5
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 240712,
+     "escanos": 3
+    },
+    {
+     "nombre": "Vox",
+     "votos": 217703,
+     "escanos": 2
+    }
+   ]
+  },
+  "badajoz": {
+   "blanco": 3217,
+   "partidos": [
+    {
+     "nombre": "PSOE",
+     "votos": 152922,
+     "escanos": 2
+    },
+    {
+     "nombre": "PP",
+     "votos": 147685,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 53304,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 26576,
+     "escanos": 0
+    }
+   ]
+  },
+  "caceres": {
+   "blanco": 1709,
+   "partidos": [
+    {
+     "nombre": "PSOE",
+     "votos": 91034,
+     "escanos": 2
+    },
+    {
+     "nombre": "PP",
+     "votos": 89251,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 31878,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 16170,
+     "escanos": 0
+    }
+   ]
+  },
+  "a-coruna": {
+   "blanco": 5005,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 287997,
+     "escanos": 4
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 188184,
+     "escanos": 2
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 81345,
+     "escanos": 1
+    },
+    {
+     "nombre": "BNG",
+     "votos": 66996,
+     "escanos": 1
+    },
+    {
+     "nombre": "Vox",
+     "votos": 33606,
+     "escanos": 0
+    }
+   ]
+  },
+  "lugo": {
+   "blanco": 1232,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 98105,
+     "escanos": 3
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 59053,
+     "escanos": 1
+    },
+    {
+     "nombre": "BNG",
+     "votos": 16975,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 10038,
+     "escanos": 0
+    },
+    {
+     "nombre": "Vox",
+     "votos": 8345,
+     "escanos": 0
+    }
+   ]
+  },
+  "ourense": {
+   "blanco": 1079,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 90185,
+     "escanos": 3
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 54919,
+     "escanos": 1
+    },
+    {
+     "nombre": "BNG",
+     "votos": 15110,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 9825,
+     "escanos": 0
+    },
+    {
+     "nombre": "Vox",
+     "votos": 8415,
+     "escanos": 0
+    }
+   ]
+  },
+  "pontevedra": {
+   "blanco": 3759,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 223226,
+     "escanos": 3
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 177199,
+     "escanos": 3
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 74605,
+     "escanos": 1
+    },
+    {
+     "nombre": "BNG",
+     "votos": 53246,
+     "escanos": 0
+    },
+    {
+     "nombre": "Vox",
+     "votos": 26648,
+     "escanos": 0
+    }
+   ]
+  },
+  "madrid": {
+   "blanco": 28960,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 1463183,
+     "escanos": 16
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 1004599,
+     "escanos": 10
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 557780,
+     "escanos": 6
+    },
+    {
+     "nombre": "Vox",
+     "votos": 506164,
+     "escanos": 5
+    }
+   ]
+  },
+  "murcia": {
+   "blanco": 5009,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 306999,
+     "escanos": 4
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 187971,
+     "escanos": 3
+    },
+    {
+     "nombre": "Vox",
+     "votos": 162481,
+     "escanos": 2
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 70900,
+     "escanos": 1
+    }
+   ]
+  },
+  "navarra": {
+   "blanco": 2838,
+   "partidos": [
+    {
+     "nombre": "PSOE",
+     "votos": 92798,
+     "escanos": 2
+    },
+    {
+     "nombre": "EH Bildu",
+     "votos": 58686,
+     "escanos": 1
+    },
+    {
+     "nombre": "PP",
+     "votos": 56483,
+     "escanos": 1
+    },
+    {
+     "nombre": "UPN",
+     "votos": 51764,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 43564,
+     "escanos": 0
+    },
+    {
+     "nombre": "Vox",
+     "votos": 19213,
+     "escanos": 0
+    }
+   ]
+  },
+  "alava": {
+   "blanco": 720,
+   "partidos": [
+    {
+     "nombre": "PSOE",
+     "votos": 46476,
+     "escanos": 1
+    },
+    {
+     "nombre": "EH Bildu",
+     "votos": 32844,
+     "escanos": 1
+    },
+    {
+     "nombre": "PP",
+     "votos": 29985,
+     "escanos": 1
+    },
+    {
+     "nombre": "PNV",
+     "votos": 27936,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 21407,
+     "escanos": 0
+    },
+    {
+     "nombre": "Vox",
+     "votos": 6500,
+     "escanos": 0
+    }
+   ]
+  },
+  "gipuzkoa": {
+   "blanco": 1991,
+   "partidos": [
+    {
+     "nombre": "EH Bildu",
+     "votos": 116414,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 86711,
+     "escanos": 2
+    },
+    {
+     "nombre": "PNV",
+     "votos": 84338,
+     "escanos": 2
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 39435,
+     "escanos": 0
+    },
+    {
+     "nombre": "PP",
+     "votos": 32033,
+     "escanos": 0
+    }
+   ]
+  },
+  "bizkaia": {
+   "blanco": 3371,
+   "partidos": [
+    {
+     "nombre": "PNV",
+     "votos": 163508,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 156639,
+     "escanos": 2
+    },
+    {
+     "nombre": "EH Bildu",
+     "votos": 125418,
+     "escanos": 2
+    },
+    {
+     "nombre": "PP",
+     "votos": 69771,
+     "escanos": 1
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 66189,
+     "escanos": 1
+    }
+   ]
+  },
+  "la-rioja": {
+   "blanco": 1596,
+   "partidos": [
+    {
+     "nombre": "PP",
+     "votos": 79113,
+     "escanos": 2
+    },
+    {
+     "nombre": "PSOE",
+     "votos": 61916,
+     "escanos": 2
+    },
+    {
+     "nombre": "Vox",
+     "votos": 16880,
+     "escanos": 0
+    },
+    {
+     "nombre": "Sumar",
+     "votos": 11320,
+     "escanos": 0
+    }
+   ]
+  }
+ }
+}

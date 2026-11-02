@@ -5,7 +5,7 @@ import Pildora from '../../components/Pildora.astro';
 import Icono from '../../components/Icono.astro';
 import Simulador from '../../components/Simulador.astro';
 import {
-  url, provincias, partidosEn, partidosProvisional, fuenteEscanos2023, fuenteEscanos2026, escanos2023Verificado,
+  url, provincias, provinciasAlfabetico, partidosEn, partidosProvisional, fuenteEscanos2023, fuenteEscanos2026, escanos2023Verificado,
   type Provincia,
 } from '../../lib/datos';
 
@@ -23,7 +23,15 @@ const aqui = partidosEn(provincia.slug);
       <Pildora />
     </header>
     <Bienvenida />
-    <p class="pequeno"><strong>{provincia.nombre}</strong> · {provincia.comunidad}</p>
+    <form class="elegir" data-elegir action={url('provincia')}>
+      <label for="elegir-provincia" class="pequeno"><strong>Estás viendo</strong></label>
+      <div class="elegir__fila">
+        <select id="elegir-provincia" name="p" class="campo">
+          {provinciasAlfabetico.map((p) => <option value={p.slug} selected={p.slug === provincia.slug}>{p.nombre}</option>)}
+        </select>
+        <button type="submit" class="boton boton--sec">Ver</button>
+      </div>
+    </form>
     <h1 class="display">Lo que pesa tu voto</h1>
     <p>En las generales no votas una lista para toda España: cada provincia elige sus propios diputados y los reparte entre los partidos que más votos sacan allí. Por eso importa dónde votas.</p>
 
@@ -45,13 +53,7 @@ const aqui = partidosEn(provincia.slug);
       )}
     </section>
 
-    <section class="tarjeta pila" style="--gap: 0.5rem; box-shadow: none" aria-labelledby="r2023-t">
-      <h2 class="h2" id="r2023-t">Cómo quedó en 2023</h2>
-      <p class="pequeno">Consulta los votos y escaños de cada partido en {provincia.nombre} en la web oficial de resultados del Ministerio del Interior.</p>
-      <a class="boton boton--sec" href="https://resultados.generales23j.es/" target="_blank" rel="noopener noreferrer">Ver los resultados de 2023<Icono nombre="externo" /><span class="solo-lector"> (se abre en otra pestaña)</span></a>
-    </section>
-
-    <Simulador escanos={escanos} provincia={provincia.nombre} />
+    <Simulador escanos={escanos} escanos2023={provincia.escanos2023} provincia={provincia.nombre} slug={provincia.slug} />
 
     <section class="pila" style="--gap: 0.75rem" aria-labelledby="quien-t">
       <h2 class="h2" id="quien-t">Quién se presenta aquí</h2>
@@ -76,7 +78,22 @@ const aqui = partidosEn(provincia.slug);
   </div>
 </Base>
 
+<script>
+  import { guardarPerfil } from '../../scripts/perfil';
+  const form = document.querySelector<HTMLFormElement>('[data-elegir]');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const slug = (form.elements.namedItem('p') as HTMLSelectElement).value;
+    guardarPerfil({ provincia: slug });
+    location.href = form.action.replace(/\/?$/, '/') + slug + '/';
+  });
+</script>
+
 <style>
+  .elegir { display: grid; gap: 0.375rem; }
+  .elegir__fila { display: flex; gap: 0.5rem; }
+  .elegir .boton { width: auto; flex: none; min-height: 3rem; }
+  .elegir select { flex: 1 1 auto; width: 100%; min-width: 0; min-height: 3rem; font: inherit; font-weight: 700; padding: 0 0.75rem; border: 2px solid var(--ink); border-radius: 12px; background: #fff; color: var(--ink); }
   .cifra { display: flex; gap: 1rem; align-items: center; }
   .cifra__n { font-family: var(--display); font-weight: 800; font-size: 3.5rem; line-height: 1; flex: none; }
   .partido-fila { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; flex-wrap: wrap; box-shadow: none; padding: 0.75rem 1rem; }
