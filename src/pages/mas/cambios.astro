@@ -1,0 +1,22 @@
+---
+import Pagina from '../../layouts/Pagina.astro';
+import { fechaLarga } from '../../lib/datos';
+// Añade aquí cada cambio de contenido (lo más nuevo, arriba).
+const cambios = [
+  { fecha: '2026-11-01', texto: 'Democracia 21 sale del comparador: se presenta solo en Madrid y Barcelona y no tiene representación, así que no cumple el criterio de partidos. Lo replantearemos si publica su programa.' },
+  { fecha: '2026-11-01', texto: 'Primera versión de la web. Comprobadas las citas de Vox y Podemos; Vox, primera vivienda: se concreta que quita el IVA a la primera vivienda habitual. Podemos, situación irregular: se añade la fuente del cierre de los CIE. Escaños de 2026 según el BOE.' },
+  { fecha: '2026-10-20', texto: 'Podemos: dos respuestas actualizadas con su web de campaña.' },
+  { fecha: '2026-10-19', texto: 'Revisión completa de las 168 respuestas (14 partidos × 12 preguntas) contra sus fuentes.' },
+];
+---
+<Pagina titulo="Registro de cambios" descripcion="Qué hemos cambiado en el contenido y cuándo.">
+  <p>Cada vez que cambia una respuesta (porque un partido publica su programa del 29N o porque corregimos un error), lo apuntamos aquí.</p>
+  <ol class="lista">
+    {cambios.map((c) => (
+      <li class="tarjeta" style="box-shadow: none">
+        <p class="pequeno"><strong><time datetime={c.fecha}>{fechaLarga(c.fecha)}</time></strong></p>
+        <p>{c.texto}</p>
+      </li>
+    ))}
+  </ol>
+</Pagina>

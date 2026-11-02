@@ -1,0 +1,14 @@
+[
+  { "id": "V1", "tema": "vivienda", "slug": "alquiler", "titulo": "¿Qué harían con el precio del alquiler?" },
+  { "id": "V2", "tema": "vivienda", "slug": "primera-vivienda", "titulo": "¿Cómo ayudarían a comprar la primera vivienda?" },
+  { "id": "V3", "tema": "vivienda", "slug": "vivienda-publica", "titulo": "¿Construirían más vivienda pública o asequible? ¿Cuánta?" },
+  { "id": "E1", "tema": "empleo", "slug": "salario-minimo", "titulo": "¿Qué harían con el salario mínimo?" },
+  { "id": "E2", "tema": "empleo", "slug": "temporalidad", "titulo": "¿Qué proponen contra la temporalidad y el paro juvenil?" },
+  { "id": "E3", "tema": "empleo", "slug": "autonomos", "titulo": "¿Qué cambiarían para los autónomos (cuota, trámites)?" },
+  { "id": "I1", "tema": "inmigracion", "slug": "llegada", "titulo": "¿Cómo regularían la llegada de personas migrantes?" },
+  { "id": "I2", "tema": "inmigracion", "slug": "situacion-irregular", "titulo": "¿Qué harían con las personas en situación irregular que ya viven aquí?" },
+  { "id": "I3", "tema": "inmigracion", "slug": "integracion", "titulo": "¿Cómo gestionarían la integración (idioma, empleo, servicios)?" },
+  { "id": "P1", "tema": "pensiones", "slug": "subida-ipc", "titulo": "¿Subirían las pensiones con el IPC?" },
+  { "id": "P2", "tema": "pensiones", "slug": "futuro", "titulo": "¿Cómo garantizarían que se puedan pagar en el futuro?" },
+  { "id": "P3", "tema": "pensiones", "slug": "jubilacion", "titulo": "¿Cambiarían la edad o las condiciones de jubilación?" }
+]

@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import Pildora from '../components/Pildora.astro';
+import TarjetaPregunta from '../components/TarjetaPregunta.astro';
+import { url, preguntas, temas, situaciones, pregunta } from '../lib/datos';
+import { NOMBRE } from '../config';
+const orden = situaciones.porDefecto.map(pregunta);
+---
+<Base titulo="Para ti" fondo="paper" nav="para-ti">
+  <div class="contenedor pila" style="--gap: 1.25rem">
+    <header class="cabecera">
+      <a class="marca" href={url()}>{NOMBRE}</a>
+      <Pildora />
+    </header>
+    <div class="pila" style="--gap: 0.375rem">
+      <h1 class="h1">Para ti</h1>
+      <p class="secundario" data-subtitulo>{preguntas.length} preguntas sobre 4 temas. Elige tu situación y te ponemos primero las que más te afectan.</p>
+    </div>
+
+    <ol class="lista" data-lista-preguntas aria-label="Preguntas">
+      {orden.map((p, i) => <TarjetaPregunta pregunta={p} i={i} />)}
+    </ol>
+
+    <section class="pila" style="--gap: 0.75rem" aria-labelledby="por-temas">
+      <h2 class="h2" id="por-temas">Por temas</h2>
+      <ul class="temas">
+        {temas.map((t) => (
+          <li><a class="tarjeta-enlace" href={url(t.id)} style={`--c: ${t.color}`}><span class="titulo">{t.nombre}</span></a></li>
+        ))}
+      </ul>
+    </section>
+  </div>
+  <script type="application/json" id="datos-situaciones" set:html={JSON.stringify(situaciones)} />
+</Base>
+
+<style>
+  .temas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+</style>
+
+<script>
+  import { perfil } from '../scripts/perfil';
+  import { ordenParaTi } from '../scripts/orden';
+  const datos = JSON.parse(document.getElementById('datos-situaciones')!.textContent!);
+  const { situaciones } = perfil();
+  if (situaciones.length) {
+    const { orden, afectan } = ordenParaTi(datos, situaciones);
+    const lista = document.querySelector('[data-lista-preguntas]')!;
+    const items = new Map([...lista.children].map((li) => [(li as HTMLElement).dataset.pregunta!, li as HTMLElement]));
+    orden.forEach((id, i) => {
+      const li = items.get(id)!;
+      li.style.setProperty('--i', String(i));
+      lista.append(li);
+      const marca = li.querySelector<HTMLElement>('[data-te-afecta]')!;
+      marca.hidden = !afectan.has(id);
+      li.querySelector('a')!.dataset.afecta = String(afectan.has(id));
+    });
+    document.querySelector('[data-subtitulo]')!.textContent =
+      `${orden.length} preguntas. Las que más te afectan, primero.`;
+  }
+</script>

@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+import { url, situaciones } from '../lib/datos';
+import { NOMBRE } from '../config';
+---
+<Base titulo={NOMBRE} fondo="paper">
+  <div class="contenedor portada pila" style="--gap: 1.125rem">
+    <header class="cabecera">
+      <span class="marca">{NOMBRE}</span>
+      <span class="chapa-29n" aria-label="Elecciones generales del 29 de noviembre">29N</span>
+    </header>
+
+    <div class="formas-temas" aria-hidden="true">
+      <span style="background: var(--vivienda); border-radius: 16px"></span>
+      <span style="background: var(--empleo); border-radius: 999px"></span>
+      <span style="background: var(--inmigracion); border-radius: 16px 16px 999px 999px"></span>
+      <span style="background: var(--pensiones); border-radius: 999px 16px"></span>
+    </div>
+
+    <h1 class="display">¿Qué proponen sobre lo tuyo?</h1>
+    <p>Dinos tu situación y te enseñamos qué dice cada partido sobre vivienda, empleo, inmigración y pensiones, con la fuente. Sin cuentas y sin guardar nada.</p>
+
+    <fieldset class="pila" style="--gap: 0.75rem">
+      <legend class="paso"><strong>Paso 1 de 2 · ¿Cuál es tu situación?</strong> <span class="secundario">Elige una o varias</span></legend>
+      <div class="chips" data-situaciones>
+        {situaciones.situaciones.map((s) => (
+          <button type="button" class="chip" aria-pressed="false" data-situacion={s.id}>{s.etiqueta}</button>
+        ))}
+      </div>
+    </fieldset>
+
+    <div class="pila acciones" style="--gap: 0.5rem">
+      <a class="boton" href={url('empezar/provincia')} data-siguiente>Siguiente: tu provincia</a>
+      <a class="enlace" style="align-self: center" href={url('para-ti')}>Ver todo sin elegir</a>
+    </div>
+
+    <footer class="pie">
+      <p>No te decimos qué votar. Te enseñamos qué propone cada uno y de dónde lo sacamos.</p>
+      <p><a href={url('mas/como-lo-hacemos')}>Cómo lo hacemos</a> · <a href={url('mas/privacidad')}>Privacidad</a></p>
+    </footer>
+  </div>
+</Base>
+
+<style>
+  .portada { padding-bottom: 2rem; }
+  .formas-temas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.375rem; margin-top: 0.375rem; }
+  .formas-temas span { height: 4rem; border: 2px solid var(--ink); }
+  fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .paso { padding: 0; margin-bottom: 0.75rem; font-size: 0.9375rem; }
+  .acciones { margin-top: 0.5rem; }
+  main { padding-bottom: 1rem; }
+</style>
+
+<script>
+  import { perfil, guardarPerfil } from '../scripts/perfil';
+  const elegidas = new Set(perfil().situaciones);
+  document.querySelectorAll<HTMLButtonElement>('[data-situacion]').forEach((b) => {
+    const id = b.dataset.situacion!;
+    b.setAttribute('aria-pressed', String(elegidas.has(id)));
+    b.addEventListener('click', () => {
+      elegidas.has(id) ? elegidas.delete(id) : elegidas.add(id);
+      b.setAttribute('aria-pressed', String(elegidas.has(id)));
+      guardarPerfil({ situaciones: [...elegidas] });
+    });
+  });
+</script>

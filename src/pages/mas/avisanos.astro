@@ -1,0 +1,47 @@
+---
+import Pagina from '../../layouts/Pagina.astro';
+import { CORREO_CORRECCIONES, PLAZO_CORRECCIONES } from '../../config';
+---
+<Pagina titulo="¿Ves un error? Avísanos" descripcion="Cuéntanos qué respuesta crees que está mal y lo revisamos contra el programa.">
+  <p>Si crees que una respuesta no refleja lo que dice el programa, cuéntanoslo. La revisamos contra el documento original y, si hay cambio, queda en el registro.</p>
+  <form class="pila formulario" style="--gap: 1rem" data-formulario>
+    <label>
+      <span><strong>¿Qué respuesta?</strong></span>
+      <input name="respuesta" required placeholder="Por ejemplo: PSOE, salario mínimo" data-campo-respuesta />
+    </label>
+    <label>
+      <span><strong>¿Qué falla?</strong></span>
+      <textarea name="que" rows="5" required></textarea>
+    </label>
+    <label>
+      <span><strong>Enlace a la fuente</strong> <span class="secundario">(opcional)</span></span>
+      <input name="enlace" type="url" inputmode="url" placeholder="https://" />
+    </label>
+    <p class="pequeno secundario">Al enviar se abre tu aplicación de correo con el mensaje escrito. No te pedimos nada más, y tu dirección solo la usaremos para responderte si hace falta.</p>
+    <button class="boton" type="submit">Abrir mi correo para enviarlo</button>
+    <p class="aviso" role="status" data-gracias hidden>Gracias. Lo revisamos contra el programa en {PLAZO_CORRECCIONES} y, si hay cambio, queda en el registro.</p>
+  </form>
+  <p class="pequeno">También puedes escribirnos directamente a <a href={`mailto:${CORREO_CORRECCIONES}`}>{CORREO_CORRECCIONES}</a>.</p>
+  <script type="application/json" id="correo" set:html={JSON.stringify(CORREO_CORRECCIONES)} />
+</Pagina>
+<style>
+  .formulario label { display: flex; flex-direction: column; gap: 0.375rem; }
+  .formulario input, .formulario textarea {
+    font: inherit; color: var(--ink); background: var(--surface); border: 2px solid var(--ink); border-radius: var(--r-control); padding: 0.75rem 1rem; min-height: 3.25rem;
+  }
+</style>
+<script>
+  // Si vienes desde la hoja de fuente, la respuesta ya está rellena.
+  const correo = JSON.parse(document.getElementById('correo')!.textContent!);
+  const campo = document.querySelector<HTMLInputElement>('[data-campo-respuesta]')!;
+  const r = new URLSearchParams(location.search).get('respuesta');
+  if (r) campo.value = r;
+  const form = document.querySelector<HTMLFormElement>('[data-formulario]')!;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const d = new FormData(form);
+    const cuerpo = `Respuesta: ${d.get('respuesta')}\n\nQué falla:\n${d.get('que')}\n\nEnlace: ${d.get('enlace') || '—'}`;
+    location.href = `mailto:${correo}?subject=${encodeURIComponent(`Corrección: ${d.get('respuesta')}`)}&body=${encodeURIComponent(cuerpo)}`;
+    form.querySelector<HTMLElement>('[data-gracias]')!.hidden = false;
+  });
+</script>

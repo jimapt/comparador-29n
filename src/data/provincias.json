@@ -1,0 +1,430 @@
+{
+  "_nota": "escanos2026: anexo del RD 806/2026 (BOE 6/10/2026), comprobado el 01/11/2026. escanos2023: reparto de 2023; coincide con 2026 salvo Madrid (37→38) y Cádiz (9→8). 'orden' = orden aproximado por población, solo para la lista de selección.",
+  "escanos2023Verificado": true,
+  "fuente2023": {
+    "titulo": "Real Decreto 400/2023, de convocatoria de elecciones generales (BOE)",
+    "url": "https://www.boe.es/eli/es/rd/2023/05/29/400"
+  },
+  "fuente2026": {
+    "titulo": "Real Decreto 806/2026, de 5 de octubre, de convocatoria de elecciones (BOE núm. 248, anexo)",
+    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742"
+  },
+  "provincias": [
+    {
+      "slug": "madrid",
+      "nombre": "Madrid",
+      "comunidad": "Comunidad de Madrid",
+      "escanos2023": 37,
+      "escanos2026": 38,
+      "orden": 1
+    },
+    {
+      "slug": "barcelona",
+      "nombre": "Barcelona",
+      "comunidad": "Cataluña",
+      "escanos2023": 32,
+      "escanos2026": 32,
+      "orden": 2
+    },
+    {
+      "slug": "valencia",
+      "nombre": "Valencia/València",
+      "comunidad": "Comunitat Valenciana",
+      "escanos2023": 16,
+      "escanos2026": 16,
+      "orden": 3
+    },
+    {
+      "slug": "alicante",
+      "nombre": "Alicante/Alacant",
+      "comunidad": "Comunitat Valenciana",
+      "escanos2023": 12,
+      "escanos2026": 12,
+      "orden": 4
+    },
+    {
+      "slug": "sevilla",
+      "nombre": "Sevilla",
+      "comunidad": "Andalucía",
+      "escanos2023": 12,
+      "escanos2026": 12,
+      "orden": 5
+    },
+    {
+      "slug": "malaga",
+      "nombre": "Málaga",
+      "comunidad": "Andalucía",
+      "escanos2023": 11,
+      "escanos2026": 11,
+      "orden": 6
+    },
+    {
+      "slug": "murcia",
+      "nombre": "Murcia",
+      "comunidad": "Región de Murcia",
+      "escanos2023": 10,
+      "escanos2026": 10,
+      "orden": 7
+    },
+    {
+      "slug": "cadiz",
+      "nombre": "Cádiz",
+      "comunidad": "Andalucía",
+      "escanos2023": 9,
+      "escanos2026": 8,
+      "orden": 8
+    },
+    {
+      "slug": "baleares",
+      "nombre": "Illes Balears",
+      "comunidad": "Illes Balears",
+      "escanos2023": 8,
+      "escanos2026": 8,
+      "orden": 9
+    },
+    {
+      "slug": "bizkaia",
+      "nombre": "Bizkaia",
+      "comunidad": "País Vasco",
+      "escanos2023": 8,
+      "escanos2026": 8,
+      "orden": 10
+    },
+    {
+      "slug": "las-palmas",
+      "nombre": "Las Palmas",
+      "comunidad": "Canarias",
+      "escanos2023": 8,
+      "escanos2026": 8,
+      "orden": 11
+    },
+    {
+      "slug": "a-coruna",
+      "nombre": "A Coruña",
+      "comunidad": "Galicia",
+      "escanos2023": 8,
+      "escanos2026": 8,
+      "orden": 12
+    },
+    {
+      "slug": "asturias",
+      "nombre": "Asturias",
+      "comunidad": "Principado de Asturias",
+      "escanos2023": 7,
+      "escanos2026": 7,
+      "orden": 13
+    },
+    {
+      "slug": "santa-cruz-de-tenerife",
+      "nombre": "Santa Cruz de Tenerife",
+      "comunidad": "Canarias",
+      "escanos2023": 7,
+      "escanos2026": 7,
+      "orden": 14
+    },
+    {
+      "slug": "zaragoza",
+      "nombre": "Zaragoza",
+      "comunidad": "Aragón",
+      "escanos2023": 7,
+      "escanos2026": 7,
+      "orden": 15
+    },
+    {
+      "slug": "pontevedra",
+      "nombre": "Pontevedra",
+      "comunidad": "Galicia",
+      "escanos2023": 7,
+      "escanos2026": 7,
+      "orden": 16
+    },
+    {
+      "slug": "granada",
+      "nombre": "Granada",
+      "comunidad": "Andalucía",
+      "escanos2023": 7,
+      "escanos2026": 7,
+      "orden": 17
+    },
+    {
+      "slug": "tarragona",
+      "nombre": "Tarragona",
+      "comunidad": "Cataluña",
+      "escanos2023": 6,
+      "escanos2026": 6,
+      "orden": 18
+    },
+    {
+      "slug": "cordoba",
+      "nombre": "Córdoba",
+      "comunidad": "Andalucía",
+      "escanos2023": 6,
+      "escanos2026": 6,
+      "orden": 19
+    },
+    {
+      "slug": "girona",
+      "nombre": "Girona",
+      "comunidad": "Cataluña",
+      "escanos2023": 6,
+      "escanos2026": 6,
+      "orden": 20
+    },
+    {
+      "slug": "almeria",
+      "nombre": "Almería",
+      "comunidad": "Andalucía",
+      "escanos2023": 6,
+      "escanos2026": 6,
+      "orden": 21
+    },
+    {
+      "slug": "gipuzkoa",
+      "nombre": "Gipuzkoa",
+      "comunidad": "País Vasco",
+      "escanos2023": 6,
+      "escanos2026": 6,
+      "orden": 22
+    },
+    {
+      "slug": "toledo",
+      "nombre": "Toledo",
+      "comunidad": "Castilla-La Mancha",
+      "escanos2023": 6,
+      "escanos2026": 6,
+      "orden": 23
+    },
+    {
+      "slug": "badajoz",
+      "nombre": "Badajoz",
+      "comunidad": "Extremadura",
+      "escanos2023": 5,
+      "escanos2026": 5,
+      "orden": 24
+    },
+    {
+      "slug": "navarra",
+      "nombre": "Navarra",
+      "comunidad": "Comunidad Foral de Navarra",
+      "escanos2023": 5,
+      "escanos2026": 5,
+      "orden": 25
+    },
+    {
+      "slug": "jaen",
+      "nombre": "Jaén",
+      "comunidad": "Andalucía",
+      "escanos2023": 5,
+      "escanos2026": 5,
+      "orden": 26
+    },
+    {
+      "slug": "cantabria",
+      "nombre": "Cantabria",
+      "comunidad": "Cantabria",
+      "escanos2023": 5,
+      "escanos2026": 5,
+      "orden": 27
+    },
+    {
+      "slug": "castellon",
+      "nombre": "Castellón/Castelló",
+      "comunidad": "Comunitat Valenciana",
+      "escanos2023": 5,
+      "escanos2026": 5,
+      "orden": 28
+    },
+    {
+      "slug": "valladolid",
+      "nombre": "Valladolid",
+      "comunidad": "Castilla y León",
+      "escanos2023": 5,
+      "escanos2026": 5,
+      "orden": 29
+    },
+    {
+      "slug": "ciudad-real",
+      "nombre": "Ciudad Real",
+      "comunidad": "Castilla-La Mancha",
+      "escanos2023": 5,
+      "escanos2026": 5,
+      "orden": 30
+    },
+    {
+      "slug": "huelva",
+      "nombre": "Huelva",
+      "comunidad": "Andalucía",
+      "escanos2023": 5,
+      "escanos2026": 5,
+      "orden": 31
+    },
+    {
+      "slug": "leon",
+      "nombre": "León",
+      "comunidad": "Castilla y León",
+      "escanos2023": 4,
+      "escanos2026": 4,
+      "orden": 32
+    },
+    {
+      "slug": "lleida",
+      "nombre": "Lleida",
+      "comunidad": "Cataluña",
+      "escanos2023": 4,
+      "escanos2026": 4,
+      "orden": 33
+    },
+    {
+      "slug": "caceres",
+      "nombre": "Cáceres",
+      "comunidad": "Extremadura",
+      "escanos2023": 4,
+      "escanos2026": 4,
+      "orden": 34
+    },
+    {
+      "slug": "albacete",
+      "nombre": "Albacete",
+      "comunidad": "Castilla-La Mancha",
+      "escanos2023": 4,
+      "escanos2026": 4,
+      "orden": 35
+    },
+    {
+      "slug": "burgos",
+      "nombre": "Burgos",
+      "comunidad": "Castilla y León",
+      "escanos2023": 4,
+      "escanos2026": 4,
+      "orden": 36
+    },
+    {
+      "slug": "lugo",
+      "nombre": "Lugo",
+      "comunidad": "Galicia",
+      "escanos2023": 4,
+      "escanos2026": 4,
+      "orden": 37
+    },
+    {
+      "slug": "salamanca",
+      "nombre": "Salamanca",
+      "comunidad": "Castilla y León",
+      "escanos2023": 4,
+      "escanos2026": 4,
+      "orden": 38
+    },
+    {
+      "slug": "ourense",
+      "nombre": "Ourense",
+      "comunidad": "Galicia",
+      "escanos2023": 4,
+      "escanos2026": 4,
+      "orden": 39
+    },
+    {
+      "slug": "la-rioja",
+      "nombre": "La Rioja",
+      "comunidad": "La Rioja",
+      "escanos2023": 4,
+      "escanos2026": 4,
+      "orden": 40
+    },
+    {
+      "slug": "alava",
+      "nombre": "Araba/Álava",
+      "comunidad": "País Vasco",
+      "escanos2023": 4,
+      "escanos2026": 4,
+      "orden": 41
+    },
+    {
+      "slug": "guadalajara",
+      "nombre": "Guadalajara",
+      "comunidad": "Castilla-La Mancha",
+      "escanos2023": 3,
+      "escanos2026": 3,
+      "orden": 42
+    },
+    {
+      "slug": "huesca",
+      "nombre": "Huesca",
+      "comunidad": "Aragón",
+      "escanos2023": 3,
+      "escanos2026": 3,
+      "orden": 43
+    },
+    {
+      "slug": "cuenca",
+      "nombre": "Cuenca",
+      "comunidad": "Castilla-La Mancha",
+      "escanos2023": 3,
+      "escanos2026": 3,
+      "orden": 44
+    },
+    {
+      "slug": "zamora",
+      "nombre": "Zamora",
+      "comunidad": "Castilla y León",
+      "escanos2023": 3,
+      "escanos2026": 3,
+      "orden": 45
+    },
+    {
+      "slug": "avila",
+      "nombre": "Ávila",
+      "comunidad": "Castilla y León",
+      "escanos2023": 3,
+      "escanos2026": 3,
+      "orden": 46
+    },
+    {
+      "slug": "palencia",
+      "nombre": "Palencia",
+      "comunidad": "Castilla y León",
+      "escanos2023": 3,
+      "escanos2026": 3,
+      "orden": 47
+    },
+    {
+      "slug": "segovia",
+      "nombre": "Segovia",
+      "comunidad": "Castilla y León",
+      "escanos2023": 3,
+      "escanos2026": 3,
+      "orden": 48
+    },
+    {
+      "slug": "teruel",
+      "nombre": "Teruel",
+      "comunidad": "Aragón",
+      "escanos2023": 3,
+      "escanos2026": 3,
+      "orden": 49
+    },
+    {
+      "slug": "soria",
+      "nombre": "Soria",
+      "comunidad": "Castilla y León",
+      "escanos2023": 2,
+      "escanos2026": 2,
+      "orden": 50
+    },
+    {
+      "slug": "melilla",
+      "nombre": "Melilla",
+      "comunidad": "Melilla",
+      "escanos2023": 1,
+      "escanos2026": 1,
+      "orden": 51
+    },
+    {
+      "slug": "ceuta",
+      "nombre": "Ceuta",
+      "comunidad": "Ceuta",
+      "escanos2023": 1,
+      "escanos2026": 1,
+      "orden": 52
+    }
+  ]
+}
