@@ -1,14 +1,15 @@
 ---
 // Forma de cada tema (Laura, 03/11/2026): cada una hace un guiño a su tema.
-// casa = vivienda, maletín = empleo, mundo = inmigración, reloj de arena = pensiones.
+// casa = vivienda, peldaños = empleo (abstracto: subir), mundo = inmigración,
+// reloj de arena = pensiones. Esquinas muy redondeadas, formas orgánicas.
 // Con `trazo` lleva el borde negro de 2 px, que no cambia con el tamaño.
 interface Props { forma: string; color?: string; trazo?: boolean; class?: string }
 const { forma, color = 'currentColor', trazo = false, class: clase } = Astro.props;
 const trazos: Record<string, string> = {
-  casa: 'M50 4 L96 42 V88 a8 8 0 0 1 -8 8 H12 a8 8 0 0 1 -8 -8 V42 Z',
-  maletin: 'M34 24 V14 a8 8 0 0 1 8 -8 H58 a8 8 0 0 1 8 8 V24 H57 V15 H43 V24 Z M4 34 a10 10 0 0 1 10 -10 H86 a10 10 0 0 1 10 10 V84 a10 10 0 0 1 -10 10 H14 a10 10 0 0 1 -10 -10 Z',
+  casa: 'M40 11 Q50 3 60 11 L90 35 Q96 40 96 50 V80 Q96 96 80 96 H20 Q4 96 4 80 V50 Q4 40 10 35 Z',
+  peldanos: 'M4 80 V66 Q4 52 18 52 H32 Q44 52 44 40 V22 Q44 6 60 6 H80 Q96 6 96 22 V80 Q96 96 80 96 H20 Q4 96 4 80 Z',
   mundo: 'M50 4 a46 46 0 1 0 0.01 0 Z',
-  reloj: 'M10 4 H90 a5 5 0 0 1 4 8 L58 50 L94 88 a5 5 0 0 1 -4 8 H10 a5 5 0 0 1 -4 -8 L42 50 L6 12 a5 5 0 0 1 4 -8 Z',
+  reloj: 'M18 4 H82 Q98 4 92 18 C86 34 62 40 62 50 C62 60 86 66 92 82 Q98 96 82 96 H18 Q2 96 8 82 C14 66 38 60 38 50 C38 40 14 34 8 18 Q2 4 18 4 Z',
 };
 ---
 <svg class={clase} viewBox="0 0 100 100" aria-hidden="true" focusable="false" style="overflow: visible">
