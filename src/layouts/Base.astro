@@ -105,6 +105,12 @@ const datosPerfil = {
           a.href = `${datos.base}provincia/${p.provincia}/`;
         });
       }
+      // Modo sin conexión: guarda la web en el navegador (ver integraciones/sin-conexion.mjs).
+      if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register(`${datos.base}sw.js`, { scope: datos.base }).catch(() => {});
+        });
+      }
     </script>
   </body>
 </html>

@@ -2,7 +2,7 @@
 
 Entra por el criterio de representación (tres eurodiputados desde 2024), según la decisión de Laura del 03/11. Se presenta en 46 de las 52 circunscripciones; no se presenta en Bizkaia, Cantabria, Ciudad Real, Gipuzkoa, Girona ni Lleida (BOE-A-2026-23103).
 
-Programa: a 03/11/2026 no ha publicado programa para las generales. El documento base es su **Contrato electoral de Castilla y León** (marzo de 2026, elecciones autonómicas del 8/02/2026), publicado en [su web](https://www.seacabolafiesta.com/images/Contrato_Electoral_CyL.pdf) (desde aquí se ha leído la [copia de The Objective](https://theobjective.com/wp-content/uploads/2026/03/Programa-electoral-CyL-de-Alvise-Pe%CC%81rez.pdf)). Para inmigración y pensiones se usa su acto de Vistalegre (12/10/2025), en el que lanzó la candidatura a las generales. **Estado: borrador de Claude, pendiente de que lo revise Laura.**
+Programa: a 03/11/2026 no ha publicado programa para las generales. El documento base es su **Contrato electoral de Castilla y León** (marzo de 2026, elecciones autonómicas del 8/02/2026), publicado en [su web](https://www.seacabolafiesta.com/images/Contrato_Electoral_CyL.pdf) (desde aquí se ha leído la [copia de The Objective](https://theobjective.com/wp-content/uploads/2026/03/Programa-electoral-CyL-de-Alvise-Pe%CC%81rez.pdf)). Para inmigración y pensiones se usa su acto de Vistalegre (12/10/2025), en el que lanzó la candidatura a las generales. **Estado: revisado y confirmado por Laura el 03/11/2026.**
 
 - El documento no tiene números de página: se cita por apartado.
 - Las citas del contrato pasan por un resumidor automático. Hay que comprobarlas contra el PDF antes de publicar.

@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sinConexion from './integraciones/sin-conexion.mjs';
 
 // Dirección pública: estotetoca.pages.dev (Cloudflare Pages). SITE y BASE permiten
 // cambiarlo sin tocar el código (por ejemplo, con un dominio propio).
@@ -11,4 +12,5 @@ export default defineConfig({
   trailingSlash: 'always',
   build: { format: 'directory' },
   devToolbar: { enabled: false },
+  integrations: [sinConexion()],
 });
