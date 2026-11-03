@@ -20,9 +20,9 @@
   --shadow: 4px 4px 0 var(--ink);
   --shadow-sm: 3px 3px 0 var(--ink);
   --nav-h: 5.5rem;
-  --semaforo-verde: #2e9d4f;
-  --semaforo-ambar: #f2b705;
-  --semaforo-rojo: #e0412f;
+  --semaforo-verde: #8fd3a0;
+  --semaforo-ambar: #f6cf6a;
+  --semaforo-rojo: #f3a196;
   color-scheme: light;
 }
 
