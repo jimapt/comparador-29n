@@ -3,6 +3,8 @@
 // - Solas: cada 3-7 s (al azar) dos formas se cambian de sitio.
 // - En móvil, al tocar una forma, esa forma se cambia con otra.
 // - En ordenador, solo responde al pasar el ratón (no al hacer clic).
+// - Con data-visibles="8" (portada), las que sobran esperan al final, ocultas por CSS,
+//   y de vez en cuando una entra en el sitio de otra, que pasa a esperar.
 // Nada de esto ocurre si el sistema pide reducir el movimiento.
 
 // Muelle (rigidez 90, amortiguación 14): llega con un rebote de un 3 %.
@@ -14,11 +16,35 @@ export function animarFormas(fila: HTMLElement) {
   const muelle = CSS.supports('animation-timing-function', 'linear(0, 1)') ? MUELLE : 'cubic-bezier(0.22, 1, 0.36, 1)';
   const propias = 'translate' in document.body.style;
   let ocupado = false;
-  const formas = () => [...fila.querySelectorAll<SVGElement>('.forma-tema')];
+  const visibles = Number(fila.dataset.visibles) || Infinity;
+  const todasLasFormas = () => [...fila.querySelectorAll<SVGElement>('.forma-tema')];
+  const formas = () => todasLasFormas().slice(0, visibles);
+  const reservas = () => todasLasFormas().slice(visibles);
   const azar = (min: number, max: number) => min + Math.random() * (max - min);
+
+  // Una forma de reserva entra en el sitio de fa: fa se encoge y se va, la otra crece con muelle.
+  function relevo(fa: SVGElement) {
+    const fuera = reservas();
+    const fb = fuera[Math.floor(Math.random() * fuera.length)];
+    ocupado = true;
+    const sale = fa.animate({ scale: [1, 0], rotate: ['0deg', `${azar(-25, 25)}deg`], opacity: [1, 0] }, { duration: 380, easing: 'cubic-bezier(0.55, 0, 1, 0.45)', fill: 'forwards' });
+    sale.finished.then(() => {
+      fa.replaceWith(fb);
+      fila.append(fa);
+      sale.cancel();
+      const entra = fb.animate({ scale: [0, 1], rotate: [`${azar(-20, 20)}deg`, '0deg'], opacity: [0, 1] }, { duration: azar(1100, 1400), easing: muelle, fill: 'backwards' });
+      entra.finished.then(() => { ocupado = false; });
+    });
+  }
 
   function intercambiar(fa?: SVGElement) {
     if (ocupado || document.hidden) return;
+    if (fa && !formas().includes(fa)) return;
+    if (reservas().length && propias && Math.random() < 0.4) {
+      const vis = formas();
+      relevo(fa ?? vis[Math.floor(Math.random() * vis.length)]);
+      return;
+    }
     const todas = formas();
     if (todas.length < 2) return;
     fa ??= todas[Math.floor(Math.random() * todas.length)];
