@@ -60,7 +60,7 @@
     "color": "#C7E59A",
     "forma": "hoja",
     "descripcion": "Las nucleares y de dónde saldría la energía, el transporte público y el coche, y cómo prepararse para sequías, incendios e inundaciones.",
-    "publicado": false
+    "publicado": true
   },
   {
     "id": "inmigracion",
