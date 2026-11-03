@@ -5,7 +5,7 @@ import Pildora from '../../components/Pildora.astro';
 import Icono from '../../components/Icono.astro';
 import Simulador from '../../components/Simulador.astro';
 import {
-  url, provincias, provinciasAlfabetico, partidosEn, partidosProvisional, fuenteEscanos2023, fuenteEscanos2026, escanos2023Verificado,
+  url, provincias, provinciasAlfabetico, partidosEn, partidosProvisional, listaEn, fuentePartidos, fuenteEscanos2023, fuenteEscanos2026, escanos2023Verificado,
   type Provincia,
 } from '../../lib/datos';
 
@@ -63,7 +63,9 @@ const aqui = partidosEn(provincia.slug);
           <li class="tarjeta partido-fila">
             <div>
               <p class="partido">{p.nombre}</p>
-              {p.nombreLargo !== p.nombre && <p class="pequeno secundario">{p.nombreLargo}</p>}
+              {listaEn(p, provincia.slug)
+                ? <p class="pequeno secundario">Aquí se presenta como <strong>{listaEn(p, provincia.slug)}</strong></p>
+                : p.nombreLargo !== p.nombre && <p class="pequeno secundario">{p.nombreLargo}</p>}
             </div>
             {p.documento.url
               ? <a class="pequeno" href={p.documento.url} target="_blank" rel="noopener noreferrer">{p.documento.titulo}<span class="solo-lector"> (se abre en otra pestaña)</span></a>
@@ -71,7 +73,7 @@ const aqui = partidosEn(provincia.slug);
           </li>
         ))}
       </ul>
-      <p class="pequeno secundario">Ordenados alfabéticamente.</p>
+      <p class="pequeno secundario">Ordenados alfabéticamente. Solo los partidos del comparador; en {provincia.nombre} se presentan más. <strong>Fuente:</strong> <a href={fuentePartidos.url} target="_blank" rel="noopener noreferrer">{fuentePartidos.titulo}<span class="solo-lector"> (se abre en otra pestaña)</span></a></p>
     </section>
 
     <a class="boton boton--sec" href={url('empezar/provincia')} data-cambiar>Cambiar de provincia</a>
