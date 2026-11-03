@@ -1,4 +1,4 @@
-# Cabeceras para Cloudflare Pages (y Netlify, que también lee este archivo).
+# Cabeceras para Cloudflare Pages.
 /*
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff

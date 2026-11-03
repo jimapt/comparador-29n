@@ -69,7 +69,6 @@ const iconoConcreta = { si: 'lleno', vago: 'medio', no: 'vacio' } as const;
           aria-labelledby={`p-${p.id}`}>
           <div class="respuesta__cabecera">
             <h2 class="partido" id={`p-${p.id}`}>{p.nombre}</h2>
-            {r.verificado && <span class="etiqueta-origen">{r.origen}</span>}
           </div>
           {p.listas && <p class="pequeno secundario" data-lista hidden></p>}
           {r.verificado ? (
@@ -80,8 +79,8 @@ const iconoConcreta = { si: 'lleno', vago: 'medio', no: 'vacio' } as const;
                   <span class={`estado__icono estado__icono--${iconoConcreta[r.concreta]}`} aria-hidden="true"></span>
                   {ETIQUETA_CONCRETA[r.concreta]}
                 </span>
-                <button type="button" class="enlace pequeno" data-abrir-fuente={`fuente-${p.id}`} aria-haspopup="dialog">
-                  Fuente{r.pagina ? ` · p. ${r.pagina}` : ''}<span class="solo-lector"> de {p.nombre}</span>
+                <button type="button" class="enlace pequeno fuente-boton" data-abrir-fuente={`fuente-${p.id}`} aria-haspopup="dialog">
+                  Fuente<span class="solo-lector"> de {p.nombre}</span>: {r.origen}
                 </button>
               </div>
             </>
@@ -211,11 +210,14 @@ const iconoConcreta = { si: 'lleno', vago: 'medio', no: 'vacio' } as const;
   .respuesta__cabecera { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
   .partido { font-family: var(--display); font-weight: 700; font-size: 0.9375rem; }
   .respuesta__texto { font-size: 1rem; line-height: 1.4; }
-  .respuesta__pie { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: auto; }
+  .respuesta__pie { display: flex; flex-direction: column; align-items: flex-start; gap: 0.375rem; margin-top: auto; }
+  .fuente-boton { text-align: left; min-height: 1.75rem; }
   .estado { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.8125rem; font-weight: 600; }
-  .estado__icono { width: 0.875rem; height: 0.875rem; border-radius: 50%; border: 1.5px solid var(--ink); flex: none; }
-  .estado__icono--lleno { background: var(--ink); }
-  .estado__icono--medio { background: linear-gradient(90deg, var(--surface) 50%, var(--ink) 50%); }
+  .estado__icono { width: 0.75rem; height: 0.75rem; border-radius: 50%; flex: none; }
+  /* Semáforo (decisión de Laura, 03/11). El texto siempre acompaña al color. */
+  .estado__icono--lleno { background: var(--semaforo-verde); }
+  .estado__icono--medio { background: var(--semaforo-ambar); }
+  .estado__icono--vacio { background: var(--semaforo-rojo); }
   .otros { margin-top: 0.75rem; }
   .acciones { margin-top: 0.75rem; }
   .etiqueta-origen--larga { white-space: normal; }

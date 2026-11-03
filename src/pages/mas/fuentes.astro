@@ -1,6 +1,6 @@
 ---
 import Pagina from '../../layouts/Pagina.astro';
-import { partidos, respuestas, fuenteEscanos2023 } from '../../lib/datos';
+import { partidos, respuestas, fuenteEscanos2023, fuenteEscanos2026 } from '../../lib/datos';
 // Fuentes extra (prensa, webs) que usan algunas respuestas, por partido.
 const extra = (id: string) => [...new Set(respuestas.filter((r) => r.partido === id && r.enlaces.length).map((r) => JSON.stringify({ url: r.enlaces[0], texto: r.fuente })))].map((s) => JSON.parse(s) as { url: string; texto: string });
 ---
@@ -19,5 +19,5 @@ const extra = (id: string) => [...new Set(respuestas.filter((r) => r.partido ===
     </section>
   ))}
   <h2>Escaños por provincia</h2>
-  <p>{fuenteEscanos2023.url ? <a href={fuenteEscanos2023.url} target="_blank" rel="noopener noreferrer">{fuenteEscanos2023.titulo}</a> : fuenteEscanos2023.titulo}. Los del 29N se actualizarán con el real decreto de convocatoria. [PENDIENTE]</p>
+  <p>Los del 29N: <a href={fuenteEscanos2026.url} target="_blank" rel="noopener noreferrer">{fuenteEscanos2026.titulo}</a>. Los de 2023: {fuenteEscanos2023.url ? <a href={fuenteEscanos2023.url} target="_blank" rel="noopener noreferrer">{fuenteEscanos2023.titulo}</a> : fuenteEscanos2023.titulo}.</p>
 </Pagina>
