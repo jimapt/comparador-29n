@@ -6,10 +6,17 @@
   --paper: #fffbf7;
   --surface: #ffffff;
   --neutral: #f3eee8;
-  --vivienda: #ffc9a8;
-  --empleo: #c9e7a7;
-  --inmigracion: #b8daf5;
-  --pensiones: #dccbf3;
+  /* 03/11/2026: tres familias de color (Laura, opción B). Tu bolsillo: amarillos y
+     naranjas; servicios públicos y planeta: verdes y aguamarina; convivencia: lilas y rosas. */
+  --economia: #f7de7e;
+  --empleo: #f8c47a;
+  --vivienda: #fdbfa6;
+  --pensiones: #f4a3a0;
+  --sanidad: #9fd9b8;
+  --educacion: #9ed6d8;
+  --clima: #c7e59a;
+  --inmigracion: #dcc0f0;
+  --igualdad: #f5badd;
   --tema: var(--neutral);
 
   --display: 'Unbounded Variable', 'Unbounded', system-ui, sans-serif;
@@ -41,6 +48,11 @@ body[data-tema='vivienda'] { --tema: var(--vivienda); }
 body[data-tema='empleo'] { --tema: var(--empleo); }
 body[data-tema='inmigracion'] { --tema: var(--inmigracion); }
 body[data-tema='pensiones'] { --tema: var(--pensiones); }
+body[data-tema='economia'] { --tema: var(--economia); }
+body[data-tema='sanidad'] { --tema: var(--sanidad); }
+body[data-tema='educacion'] { --tema: var(--educacion); }
+body[data-tema='clima'] { --tema: var(--clima); }
+body[data-tema='igualdad'] { --tema: var(--igualdad); }
 body[data-fondo='paper'] { --tema: var(--paper); }
 
 img, svg { display: block; max-width: 100%; }

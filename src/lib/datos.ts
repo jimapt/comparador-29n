@@ -5,6 +5,7 @@ import partidosJson from '../data/partidos.json';
 import provinciasJson from '../data/provincias.json';
 import glosarioJson from '../data/glosario.json';
 import situacionesJson from '../data/situaciones.json';
+import familiasJson from '../data/familias.json';
 import resultados2023Json from '../data/resultados2023.json';
 
 export type Concreta = 'si' | 'vago' | 'no';
@@ -21,7 +22,8 @@ export interface Respuesta {
   verificado: boolean;
 }
 export interface Pregunta { id: string; tema: string; slug: string; titulo: string }
-export interface Tema { id: string; nombre: string; color: string; forma: string; descripcion: string }
+export interface Tema { id: string; familia: string; nombre: string; color: string; forma: string; descripcion: string; publicado: boolean }
+export interface Familia { id: string; nombre: string; descripcion: string }
 export interface Partido {
   id: string;
   nombre: string;
@@ -38,9 +40,16 @@ export interface Provincia {
 }
 export interface Termino { id: string; termino: string; formas: string[]; definicion: string }
 
-export const respuestas = respuestasJson as Respuesta[];
-export const preguntas = preguntasJson as Pregunta[];
-export const temas = temasJson as Tema[];
+// Los temas se publican por fases (03/11/2026): solo salen los que tienen `publicado`,
+// con sus preguntas y respuestas. Lo demás se filtra aquí y no llega a ninguna página.
+export const temas = (temasJson as Tema[]).filter((t) => t.publicado);
+const temaPublicado = new Set(temas.map((t) => t.id));
+export const preguntas = (preguntasJson as Pregunta[]).filter((p) => temaPublicado.has(p.tema));
+const preguntaPublicada = new Set(preguntas.map((p) => p.id));
+export const respuestas = (respuestasJson as Respuesta[]).filter((r) => preguntaPublicada.has(r.pregunta));
+export const familias = (familiasJson as Familia[])
+  .map((f) => ({ ...f, temas: temas.filter((t) => t.familia === f.id) }))
+  .filter((f) => f.temas.length);
 export const partidos = (partidosJson.partidos as Partido[]).slice().sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
 export const partidosProvisional = partidosJson.provisional;
 export const provincias = (provinciasJson.provincias as Provincia[]).slice().sort((a, b) => a.orden - b.orden);
@@ -54,7 +63,18 @@ export const fuenteResultados2023 = resultados2023Json.fuente;
 export const fuenteEscanos2026 = provinciasJson.fuente2026;
 export const escanos2023Verificado = provinciasJson.escanos2023Verificado;
 export const glosario = glosarioJson.terminos as Termino[];
-export const situaciones = situacionesJson;
+const soloPublicadas = (ids: string[]) => ids.filter((id) => preguntaPublicada.has(id));
+export const situaciones = {
+  ...situacionesJson,
+  porDefecto: soloPublicadas(situacionesJson.porDefecto),
+  situaciones: situacionesJson.situaciones.map((s) => ({ ...s, preguntas: soloPublicadas(s.preguntas) })),
+  combinaciones: situacionesJson.combinaciones.map((c) => ({ ...c, preguntas: soloPublicadas(c.preguntas) })),
+};
+/** "vivienda, empleo y pensiones": los temas publicados, en minúscula y en el orden de las familias. */
+export const listaTemas = (() => {
+  const n = familias.flatMap((f) => f.temas).map((t) => t.nombre.toLowerCase());
+  return n.length > 1 ? `${n.slice(0, -1).join(', ')} y ${n.at(-1)}` : n.join('');
+})();
 
 export const ETIQUETA_CONCRETA: Record<Concreta, string> = {
   si: 'Con cifra o medida',

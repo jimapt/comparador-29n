@@ -1,30 +1,83 @@
 [
   {
-    "id": "vivienda",
-    "nombre": "Vivienda",
-    "color": "#FFC9A8",
-    "forma": "casa",
-    "descripcion": "El precio del alquiler, cómo comprar la primera vivienda y cuánta vivienda pública construirían."
+    "id": "economia",
+    "familia": "bolsillo",
+    "nombre": "Economía",
+    "color": "#F7DE7E",
+    "forma": "monedas",
+    "descripcion": "El IRPF, el IVA de la compra, la luz y el gas, y si subirían los impuestos a las grandes fortunas, la banca o las eléctricas.",
+    "publicado": true
   },
   {
     "id": "empleo",
+    "familia": "bolsillo",
     "nombre": "Empleo",
-    "color": "#C9E7A7",
+    "color": "#F8C47A",
     "forma": "peldanos",
-    "descripcion": "El salario mínimo, la temporalidad y el paro juvenil, y qué cambiarían para los autónomos."
+    "descripcion": "El salario mínimo, la temporalidad y el paro juvenil, y qué cambiarían para los autónomos.",
+    "publicado": true
   },
   {
-    "id": "inmigracion",
-    "nombre": "Inmigración",
-    "color": "#B8DAF5",
-    "forma": "mundo",
-    "descripcion": "Cómo regularían la llegada, qué harían con quien ya vive aquí sin papeles y cómo sería la integración."
+    "id": "vivienda",
+    "familia": "bolsillo",
+    "nombre": "Vivienda",
+    "color": "#FDBFA6",
+    "forma": "casa",
+    "descripcion": "El precio del alquiler, cómo comprar la primera vivienda y cuánta vivienda pública construirían.",
+    "publicado": true
   },
   {
     "id": "pensiones",
+    "familia": "bolsillo",
     "nombre": "Pensiones",
-    "color": "#DCCBF3",
+    "color": "#F4A3A0",
     "forma": "reloj",
-    "descripcion": "Si subirían con el IPC, cómo garantizarían que se puedan pagar y si cambiarían la edad de jubilación."
+    "descripcion": "Si subirían con el IPC, cómo garantizarían que se puedan pagar y si cambiarían la edad de jubilación.",
+    "publicado": true
+  },
+  {
+    "id": "sanidad",
+    "familia": "servicios",
+    "nombre": "Sanidad",
+    "color": "#9FD9B8",
+    "forma": "cruz",
+    "descripcion": "Las listas de espera, los centros de salud y los médicos de familia, y la salud mental.",
+    "publicado": false
+  },
+  {
+    "id": "educacion",
+    "familia": "servicios",
+    "nombre": "Educación",
+    "color": "#9ED6D8",
+    "forma": "libro",
+    "descripcion": "Las becas y el precio de la universidad y la FP, los alumnos por clase y la escuela de 0 a 3 años.",
+    "publicado": false
+  },
+  {
+    "id": "clima",
+    "familia": "servicios",
+    "nombre": "Cambio climático",
+    "color": "#C7E59A",
+    "forma": "hoja",
+    "descripcion": "Las nucleares y de dónde saldría la energía, el transporte público y el coche, y cómo prepararse para sequías, incendios e inundaciones.",
+    "publicado": false
+  },
+  {
+    "id": "inmigracion",
+    "familia": "convivencia",
+    "nombre": "Inmigración",
+    "color": "#DCC0F0",
+    "forma": "mundo",
+    "descripcion": "Cómo regularían la llegada, qué harían con quien ya vive aquí sin papeles y cómo sería la integración.",
+    "publicado": true
+  },
+  {
+    "id": "igualdad",
+    "familia": "convivencia",
+    "nombre": "Igualdad",
+    "color": "#F5BADD",
+    "forma": "igual",
+    "descripcion": "La violencia de género, la brecha salarial y la conciliación, y los derechos LGTBI.",
+    "publicado": false
   }
 ]

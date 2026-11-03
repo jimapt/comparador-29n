@@ -4,7 +4,7 @@ import FormaTema from '../components/FormaTema.astro';
 import Bienvenida from '../components/Bienvenida.astro';
 import Pildora from '../components/Pildora.astro';
 import TarjetaPregunta from '../components/TarjetaPregunta.astro';
-import { url, preguntas, temas, situaciones, pregunta } from '../lib/datos';
+import { url, preguntas, temas, familias, situaciones, pregunta } from '../lib/datos';
 import { NOMBRE } from '../config';
 const orden = situaciones.porDefecto.map(pregunta);
 ---
@@ -20,7 +20,7 @@ const orden = situaciones.porDefecto.map(pregunta);
     </div>
     <div class="pila" style="--gap: 0.375rem">
       <h1 class="display">Para ti</h1>
-      <p class="secundario" data-subtitulo>{preguntas.length} preguntas sobre 4 temas. Elige tu situación y te ponemos primero las que más te afectan.</p>
+      <p class="secundario" data-subtitulo>{preguntas.length} preguntas sobre {temas.length} temas. Elige tu situación y te ponemos primero las que más te afectan.</p>
     </div>
 
     <ol class="lista" data-lista-preguntas aria-label="Preguntas">
@@ -29,18 +29,24 @@ const orden = situaciones.porDefecto.map(pregunta);
 
     <section class="pila" style="--gap: 0.75rem" aria-labelledby="por-temas">
       <h2 class="h2" id="por-temas">Por temas</h2>
-      <ul class="temas">
-        {temas.map((t) => (
-          <li><a class="tarjeta-enlace" href={url(t.id)} style={`--c: ${t.color}`}><span class="titulo">{t.nombre}</span></a></li>
-        ))}
-      </ul>
+      {familias.map((f) => (
+        <div class="pila" style="--gap: 0.5rem">
+          <h3 class="familia">{f.nombre}</h3>
+          <ul class="temas">
+            {f.temas.map((t) => (
+              <li><a class="tarjeta-enlace" href={url(t.id)} style={`--c: ${t.color}`}><span class="titulo">{t.nombre}</span></a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
   </div>
   <script type="application/json" id="datos-situaciones" set:html={JSON.stringify(situaciones)} />
 </Base>
 
 <style>
-  .formas-mini { display: flex; gap: 0.375rem; margin-top: 0.25rem; }
+  .formas-mini { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-top: 0.25rem; }
+  .familia { font-size: 1rem; font-weight: 800; margin: 0; }
   .formas-mini :global(svg) { width: 2.25rem; height: 2.25rem; }
   .temas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
 </style>

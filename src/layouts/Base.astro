@@ -4,7 +4,7 @@ import '@fontsource-variable/figtree';
 import '../styles/global.css';
 import '../styles/movimiento.css';
 import Icono from '../components/Icono.astro';
-import { url, situaciones, provincias } from '../lib/datos';
+import { url, situaciones, provincias, listaTemas } from '../lib/datos';
 import { NOMBRE, GOATCOUNTER } from '../config';
 
 interface Props {
@@ -14,7 +14,7 @@ interface Props {
   fondo?: 'paper' | 'neutral';
   nav?: 'para-ti' | 'provincia' | 'mas' | null;
 }
-const { titulo, descripcion = 'Qué propone cada partido sobre vivienda, empleo, inmigración y pensiones, en corto y con la fuente. Sin cuentas y sin guardar nada.', tema, fondo, nav = null } = Astro.props;
+const { titulo, descripcion = `Qué propone cada partido sobre ${listaTemas}, en corto y con la fuente. Sin cuentas y sin guardar nada.`, tema, fondo, nav = null } = Astro.props;
 const tituloCompleto = titulo === NOMBRE ? `${NOMBRE} · elecciones generales 29N` : `${titulo} · ${NOMBRE}`;
 const canonica = new URL(Astro.url.pathname, Astro.site);
 const datosPerfil = {

@@ -1,11 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
 import FormaTema from '../components/FormaTema.astro';
-import { url, temas, partidos, preguntasDeTema, urlPregunta, situaciones } from '../lib/datos';
+import { url, temas, familias, partidos, preguntas, preguntasDeTema, urlPregunta, situaciones, listaTemas } from '../lib/datos';
 import { NOMBRE } from '../config';
 
-// Una pregunta de ejemplo por tema: la primera de cada uno.
-const ejemplos = temas.map((t) => ({ tema: t, pregunta: preguntasDeTema(t.id)[0] }));
+// Una pregunta de ejemplo por tema (la primera), agrupadas por familia.
+const grupos = familias.map((f) => ({ ...f, ejemplos: f.temas.map((t) => ({ tema: t, pregunta: preguntasDeTema(t.id)[0] })) }));
 const pasos = [
   { n: 1, titulo: 'Cuéntanos tu situación', texto: `Si alquilas, estudias, trabajas, cobras pensión… Hay ${situaciones.situaciones.length} opciones y puedes elegir varias.` },
   { n: 2, titulo: 'Elige dónde votas', texto: 'Así ves solo los partidos que se presentan en tu provincia.' },
@@ -27,13 +27,13 @@ const pasos = [
         </svg>29N</span>
     </header>
 
-    <div class="formas-temas" aria-hidden="true">
+    <div class="formas-temas" aria-hidden="true" style={`--n: ${temas.length > 5 ? Math.ceil(temas.length / 2) : temas.length}`}>
       {temas.map((t) => <FormaTema forma={t.forma} color={t.color} trazo />)}
     </div>
 
     <p class="antetitulo">Elecciones generales · 29 de noviembre</p>
     <h1 class="display">¿Qué proponen sobre lo tuyo?</h1>
-    <p>Nos hemos leído los programas de {partidos.length} partidos: los que tienen representación en el Congreso, en un parlamento autonómico o en el Parlamento Europeo. Te contamos qué proponen sobre vivienda, empleo, inmigración y pensiones, en corto y con la página de donde sale.</p>
+    <p>Nos hemos leído los programas de {partidos.length} partidos: los que tienen representación en el Congreso, en un parlamento autonómico o en el Parlamento Europeo. Te contamos qué proponen sobre {listaTemas}, en corto y con la página de donde sale.</p>
     <ul class="sellos pequeno" aria-label="Lo que prometemos">
       {['No te decimos qué votar', 'Sin cuentas', 'No guardamos nada'].map((t) => (
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>{t}</li>
@@ -47,17 +47,22 @@ const pasos = [
 
     <section class="pila bloque" style="--gap: 0.75rem" aria-labelledby="que-hay">
       <h2 class="h2" id="que-hay">Qué vas a encontrar</h2>
-      <p class="secundario">12 preguntas concretas, 3 por tema. Por ejemplo:</p>
-      <ul class="lista">
-        {ejemplos.map(({ tema, pregunta }) => (
-          <li>
-            <a class="tarjeta-enlace" href={urlPregunta(pregunta)} style={`--c: ${tema.color}`}>
-              <span class="etiqueta-tema" style={`--c: ${tema.color}`}><FormaTema forma={tema.forma} class="forma" />{tema.nombre}</span>
-              <span class="titulo">{pregunta.titulo}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
+      <p class="secundario">{preguntas.length} preguntas concretas, 3 por tema, en {familias.length} grupos. Por ejemplo:</p>
+      {grupos.map((g) => (
+        <div class="familia pila" style="--gap: 0.5rem">
+          <h3 class="familia__titulo">{g.nombre} <span class="secundario">· {g.descripcion}</span></h3>
+          <ul class="lista">
+            {g.ejemplos.map(({ tema, pregunta }) => (
+              <li>
+                <a class="tarjeta-enlace" href={urlPregunta(pregunta)} style={`--c: ${tema.color}`}>
+                  <span class="etiqueta-tema" style={`--c: ${tema.color}`}><FormaTema forma={tema.forma} class="forma" />{tema.nombre}</span>
+                  <span class="titulo">{pregunta.titulo}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
 
     <section class="pila bloque" style="--gap: 0.75rem" aria-labelledby="como">
@@ -84,8 +89,11 @@ const pasos = [
 <style>
   .portada { padding-bottom: 2rem; }
   main { padding-bottom: 1rem; }
-  .formas-temas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.375rem; margin-top: 0.375rem; }
+  .formas-temas { display: grid; grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr)); gap: 0.375rem; margin-top: 0.375rem; }
   .formas-temas :global(svg) { width: 100%; height: 4.5rem; }
+  .familia { margin-top: 0.375rem; }
+  .familia__titulo { font-size: 1rem; font-weight: 800; margin: 0; }
+  .familia__titulo .secundario { font-weight: 400; }
   .antetitulo { font-weight: 700; font-size: 0.9375rem; }
   .sellos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; color: var(--ink-2); }
   .sellos li { display: inline-flex; align-items: center; gap: 0.3rem; }
