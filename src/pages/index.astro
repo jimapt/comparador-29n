@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import FormaTema from '../components/FormaTema.astro';
-import { url, temas, familias, partidos, preguntas, preguntasDeTema, urlPregunta, situaciones, listaTemas } from '../lib/datos';
+import { url, temas, familias, preguntas, preguntasDeTema, urlPregunta, situaciones, listaTemas } from '../lib/datos';
 import { NOMBRE } from '../config';
 
 // Una pregunta de ejemplo por tema (la primera), agrupadas por familia.
@@ -33,7 +33,7 @@ const pasos = [
 
     <p class="antetitulo">Elecciones generales · 29 de noviembre</p>
     <h1 class="display">¿Qué proponen sobre lo tuyo?</h1>
-    <p>Nos hemos leído los programas de {partidos.length} partidos: los que tienen representación en el Congreso, en un parlamento autonómico o en el Parlamento Europeo. Te contamos qué proponen sobre {listaTemas}, en corto y con la página de donde sale.</p>
+    <p>Nos hemos leído los programas de los partidos y te contamos en corto y sin rodeos lo que más te toca. Qué propone cada uno sobre {listaTemas}.</p>
     <ul class="sellos pequeno" aria-label="Lo que prometemos">
       {['No te decimos qué votar', 'Sin cuentas', 'No guardamos nada'].map((t) => (
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>{t}</li>
