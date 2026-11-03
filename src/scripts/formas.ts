@@ -1,10 +1,18 @@
 // Intercambio de las formas de los temas (Laura, 03/11/2026).
-// - Solas: cada 2-6 s (al azar) dos formas se cambian de sitio con un salto y un giro al azar.
+// Movimiento de muelle, suave y desacompasado (referencia: animejs.com).
+// - Solas: cada 3-7 s (al azar) dos formas se cambian de sitio.
 // - En móvil, al tocar una forma, esa forma se cambia con otra.
 // - En ordenador, solo responde al pasar el ratón (no al hacer clic).
 // Nada de esto ocurre si el sistema pide reducir el movimiento.
+
+// Muelle (rigidez 90, amortiguación 14): llega con un rebote de un 3 %.
+const MUELLE = 'linear(0, 0.067, 0.207, 0.374, 0.538, 0.681, 0.798, 0.886, 0.949, 0.99, 1.014, 1.027, 1.031, 1.03, 1.026, 1.021, 1.016, 1.011, 1.007, 1.004, 1.002, 1.001, 1, 0.999, 1)';
+const SUAVE = 'cubic-bezier(0.37, 0, 0.63, 1)';
+
 export function animarFormas(fila: HTMLElement) {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const muelle = CSS.supports('animation-timing-function', 'linear(0, 1)') ? MUELLE : 'cubic-bezier(0.22, 1, 0.36, 1)';
+  const propias = 'translate' in document.body.style;
   let ocupado = false;
   const formas = () => [...fila.querySelectorAll<SVGElement>('.forma-tema')];
   const azar = (min: number, max: number) => min + Math.random() * (max - min);
@@ -22,22 +30,25 @@ export function animarFormas(fila: HTMLElement) {
     fb.replaceWith(fa);
     marcador.replaceWith(fb);
     ocupado = true;
-    const duracion = azar(700, 1100);
-    const anims = [fa, fb].map((f, i) => {
+    const anims: Animation[] = [];
+    [fa, fb].forEach((f, i) => {
       const r0 = antes.get(f)!;
       const r1 = f.getBoundingClientRect();
       const dx = r0.left - r1.left;
       const dy = r0.top - r1.top;
-      const vueltas = [180, 360, 540][Math.floor(Math.random() * 3)] * (Math.random() < 0.5 ? 1 : -1);
-      // Las formas no simétricas (casa, peldaños) terminan siempre derechas
-      const giro = f.matches('.forma-tema--mundo, .forma-tema--reloj') ? vueltas : Math.round(vueltas / 360) * 360 || 360;
-      const salto = (i === 0 ? -1 : 1) * azar(10, 30);
-      const escala = azar(0.75, 0.95);
-      return f.animate([
-        { transform: `translate(${dx}px, ${dy}px) rotate(0deg)` },
-        { transform: `translate(${dx / 2}px, ${dy / 2 + salto}px) rotate(${giro / 2}deg) scale(${escala})`, offset: azar(0.4, 0.6) },
-        { transform: `translate(0, 0) rotate(${giro}deg)` },
-      ], { duration: duracion, easing: 'cubic-bezier(0.45, 0, 0.25, 1)' });
+      const duracion = azar(1100, 1500);
+      const retraso = i === 0 ? 0 : azar(60, 160);
+      const inclina = azar(5, 12) * (Math.random() < 0.5 ? 1 : -1);
+      const opciones = { duration: duracion, delay: retraso, fill: 'backwards' as FillMode };
+      if (propias) {
+        anims.push(f.animate({ translate: [`${dx}px ${dy}px`, '0px 0px'] }, { ...opciones, easing: muelle }));
+        anims.push(f.animate({ rotate: ['0deg', `${inclina}deg`, '0deg'], scale: [1, 0.94, 1] }, { ...opciones, easing: SUAVE }));
+        // Una pasa por arriba y otra por abajo, para que no se atraviesen de frente
+        const arco = (i === 0 ? -1 : 1) * azar(6, 12);
+        anims.push(f.animate({ transform: ['translateY(0)', `translateY(${arco}px)`, 'translateY(0)'] }, { ...opciones, duration: duracion * 0.6, easing: SUAVE }));
+      } else {
+        anims.push(f.animate({ transform: [`translate(${dx}px, ${dy}px)`, 'none'] }, { ...opciones, easing: muelle }));
+      }
     });
     Promise.all(anims.map((a) => a.finished)).then(() => { ocupado = false; });
   }
@@ -53,7 +64,7 @@ export function animarFormas(fila: HTMLElement) {
     if (f) intercambiar(f);
   });
 
-  const siguiente = () => setTimeout(() => { intercambiar(); siguiente(); }, azar(2000, 6000));
+  const siguiente = () => setTimeout(() => { intercambiar(); siguiente(); }, azar(3000, 7000));
   // Espera a que acabe la entrada; después se apaga, porque mover una forma en el DOM la repetiría.
   setTimeout(() => { fila.classList.add('quieta'); siguiente(); }, 1800);
 }

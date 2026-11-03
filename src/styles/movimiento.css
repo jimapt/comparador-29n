@@ -4,14 +4,15 @@
 @media (prefers-reduced-motion: no-preference) {
   .forma-tema { transform-box: fill-box; transform-origin: 50% 60%; }
 
-  /* Entrada de las formas: aparecen una a una con un pequeño rebote */
+  /* Entrada de las formas: aparecen una a una, con muelle suave (mismo que scripts/formas.ts) */
   .formas-temas .forma-tema, .formas-mini .forma-tema, .heroe .forma-tema:not(.forma) {
-    animation: forma-entra 600ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    animation: forma-entra 1000ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-timing-function: linear(0, 0.067, 0.207, 0.374, 0.538, 0.681, 0.798, 0.886, 0.949, 0.99, 1.014, 1.027, 1.031, 1.03, 1.026, 1.021, 1.016, 1.011, 1.007, 1.004, 1.002, 1.001, 1, 0.999, 1);
   }
-  .formas-temas .forma-tema:nth-child(2), .formas-mini .forma-tema:nth-child(2) { animation-delay: 90ms; }
-  .formas-temas .forma-tema:nth-child(3), .formas-mini .forma-tema:nth-child(3) { animation-delay: 180ms; }
-  .formas-temas .forma-tema:nth-child(4), .formas-mini .forma-tema:nth-child(4) { animation-delay: 270ms; }
-  @keyframes forma-entra { from { opacity: 0; transform: scale(0.4) rotate(-8deg); } }
+  .formas-temas .forma-tema:nth-child(2), .formas-mini .forma-tema:nth-child(2) { animation-delay: 70ms; }
+  .formas-temas .forma-tema:nth-child(3), .formas-mini .forma-tema:nth-child(3) { animation-delay: 140ms; }
+  .formas-temas .forma-tema:nth-child(4), .formas-mini .forma-tema:nth-child(4) { animation-delay: 210ms; }
+  @keyframes forma-entra { from { opacity: 0; transform: translateY(14px) scale(0.9); } }
 
   /* Tras la entrada se apagan las animaciones CSS: el intercambio va por JS (scripts/formas.ts) */
   .quieta .forma-tema { animation: none; }
