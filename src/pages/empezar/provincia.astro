@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Icono from '../../components/Icono.astro';
-import { url, provincias } from '../../lib/datos';
+import { url, provinciasAlfabetico } from '../../lib/datos';
 import { NOMBRE } from '../../config';
 const sinTildes = (s: string) => s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
 ---
@@ -22,7 +22,7 @@ const sinTildes = (s: string) => s.toLowerCase().normalize('NFD').replace(/\p{Di
     <p class="solo-lector" role="status" aria-live="polite" data-recuento></p>
 
     <ul class="provincias" data-lista>
-      {provincias.map((p) => (
+      {provinciasAlfabetico.map((p) => (
         <li data-nombre={sinTildes(p.nombre)}>
           <a class="chip" href={url('para-ti')} data-provincia={p.slug}>{p.nombre}</a>
         </li>
