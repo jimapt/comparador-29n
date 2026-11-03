@@ -13,33 +13,8 @@
   .formas-temas .forma-tema:nth-child(4), .formas-mini .forma-tema:nth-child(4) { animation-delay: 270ms; }
   @keyframes forma-entra { from { opacity: 0; transform: scale(0.4) rotate(-8deg); } }
 
-  /* Cada forma tiene su gesto al tocarla o pasar el ratón */
-  .forma-tema.juega { cursor: default; }
-  .forma-tema--casa.juega { animation: casa-salta 650ms cubic-bezier(0.3, 0.7, 0.4, 1); }
-  .forma-tema--peldanos.juega { animation: peldanos-suben 700ms ease-in-out; }
-  .forma-tema--mundo.juega { animation: mundo-gelatina 700ms ease-out; }
-  .forma-tema--reloj.juega { animation: reloj-gira 800ms cubic-bezier(0.5, 0, 0.3, 1.3); }
-  @keyframes casa-salta {
-    30% { transform: translateY(-18%) scale(0.96, 1.06); }
-    60% { transform: translateY(0) scale(1.08, 0.9); }
-    80% { transform: translateY(-4%) scale(0.98, 1.02); }
-  }
-  @keyframes peldanos-suben {
-    30% { transform: translate(-6%, 6%) scale(1.04, 0.94); }
-    65% { transform: translate(6%, -12%) scale(0.97, 1.04); }
-  }
-  @keyframes mundo-gelatina {
-    25% { transform: scale(1.14, 0.88); }
-    50% { transform: scale(0.92, 1.1); }
-    75% { transform: scale(1.04, 0.97); }
-  }
-  @keyframes reloj-gira { to { transform: rotate(180deg); } }
-
-  /* El reloj de arena se da la vuelta solo, una vez, al llegar a la portada */
-  .formas-temas .forma-tema--reloj { animation: forma-entra 600ms 270ms cubic-bezier(0.34, 1.56, 0.64, 1) both, reloj-gira 800ms 1400ms cubic-bezier(0.5, 0, 0.3, 1.3); }
-  .formas-temas .forma-tema--reloj.juega { animation: reloj-gira 800ms cubic-bezier(0.5, 0, 0.3, 1.3); }
-
-  .formas-temas.quieta .forma-tema:not(.juega) { animation: none; }
+  /* Tras la entrada se apagan las animaciones CSS: el intercambio va por JS (scripts/formas.ts) */
+  .quieta .forma-tema { animation: none; }
 
   /* Tarjetas que aparecen al hacer scroll (solo las que empiezan fuera de pantalla) */
   .por-revelar { opacity: 0; transform: translateY(18px); }

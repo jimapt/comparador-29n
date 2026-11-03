@@ -72,6 +72,7 @@ const datosPerfil = {
     <script>
       import { prepararHojas, prepararGlosario } from '../scripts/hojas';
       import { perfil } from '../scripts/perfil';
+      import { animarFormas } from '../scripts/formas';
 
       prepararHojas();
       prepararGlosario();
@@ -108,15 +109,7 @@ const datosPerfil = {
       }
       // Microinteracciones (ver styles/movimiento.css). Nada si se pide menos movimiento.
       if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.querySelectorAll<SVGElement>('.formas-temas .forma-tema, .formas-mini .forma-tema, .heroe .forma-tema').forEach((f) => {
-          const jugar = () => {
-            if (f.classList.contains('juega')) return;
-            f.classList.add('juega');
-            f.addEventListener('animationend', () => f.classList.remove('juega'), { once: true });
-          };
-          f.addEventListener('pointerenter', jugar);
-          f.addEventListener('pointerdown', jugar);
-        });
+        document.querySelectorAll<HTMLElement>('.formas-temas, .formas-mini').forEach(animarFormas);
         const porRevelar = [...document.querySelectorAll<HTMLElement>('main .tarjeta, main .tarjeta-enlace, main .respuesta')]
           .filter((el) => el.getBoundingClientRect().top > innerHeight);
         if ('IntersectionObserver' in window && porRevelar.length) {
