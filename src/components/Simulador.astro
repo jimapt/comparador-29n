@@ -44,7 +44,7 @@ const con2023 = partidos.filter((p) => p.escanos > 0).map((p) => `${p.nombre} ${
     El voto en blanco ({fmt(blanco)} % en 2023) cuenta para el umbral y no se mueve.
   </p>
   <p class="pequeno secundario">
-    <strong>Fuente:</strong> <a href={fuenteResultados2023.url} target="_blank" rel="noopener noreferrer">{fuenteResultados2023.titulo}<span class="solo-lector"> (se abre en otra pestaña)</span></a>.
+    <strong>Fuente:</strong> <a href={r.url} target="_blank" rel="noopener noreferrer">resultados de {provincia} en 2023<span class="solo-lector"> (se abre en otra pestaña)</span></a>, del escrutinio del Ministerio del Interior publicado por Público.
     {slug === 'madrid' && fuenteResultados2023.notaMadrid}
     Solo aparecen los partidos que pasaron del 3 % en {provincia}, y los porcentajes se calculan sin los demás, así que pueden variar unas décimas respecto a los oficiales.
   </p>
