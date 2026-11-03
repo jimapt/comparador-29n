@@ -1,9 +1,10 @@
 ---
 import { tema as getTema } from '../lib/datos';
+import FormaTema from './FormaTema.astro';
 interface Props { tema: string; extra?: string }
 const { tema, extra } = Astro.props;
 const t = getTema(tema);
 ---
 <span class="etiqueta-tema" style={`--c: ${t.color}`}>
-  <span class={`forma forma--${t.forma}`} aria-hidden="true"></span>{t.nombre}{extra ? ` · ${extra}` : ''}
+  <FormaTema forma={t.forma} class="forma" />{t.nombre}{extra ? ` · ${extra}` : ''}
 </span>

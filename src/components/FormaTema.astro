@@ -1,0 +1,17 @@
+---
+// Forma de cada tema (Laura, 03/11/2026): cada una hace un guiño a su tema.
+// casa = vivienda, maletín = empleo, mundo = inmigración, reloj de arena = pensiones.
+// Con `trazo` lleva el borde negro de 2 px, que no cambia con el tamaño.
+interface Props { forma: string; color?: string; trazo?: boolean; class?: string }
+const { forma, color = 'currentColor', trazo = false, class: clase } = Astro.props;
+const trazos: Record<string, string> = {
+  casa: 'M50 4 L96 42 V88 a8 8 0 0 1 -8 8 H12 a8 8 0 0 1 -8 -8 V42 Z',
+  maletin: 'M34 24 V14 a8 8 0 0 1 8 -8 H58 a8 8 0 0 1 8 8 V24 H57 V15 H43 V24 Z M4 34 a10 10 0 0 1 10 -10 H86 a10 10 0 0 1 10 10 V84 a10 10 0 0 1 -10 10 H14 a10 10 0 0 1 -10 -10 Z',
+  mundo: 'M50 4 a46 46 0 1 0 0.01 0 Z',
+  reloj: 'M10 4 H90 a5 5 0 0 1 4 8 L58 50 L94 88 a5 5 0 0 1 -4 8 H10 a5 5 0 0 1 -4 -8 L42 50 L6 12 a5 5 0 0 1 4 -8 Z',
+};
+---
+<svg class={clase} viewBox="0 0 100 100" aria-hidden="true" focusable="false" style="overflow: visible">
+  <path d={trazos[forma]} fill={color} fill-rule="evenodd"
+    stroke={trazo ? 'var(--ink)' : 'none'} stroke-width={trazo ? 2 : 0} stroke-linejoin="round" vector-effect="non-scaling-stroke" />
+</svg>

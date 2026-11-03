@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import FormaTema from '../../components/FormaTema.astro';
 import Bienvenida from '../../components/Bienvenida.astro';
 import Pildora from '../../components/Pildora.astro';
 import Icono from '../../components/Icono.astro';
@@ -22,7 +23,7 @@ const otros = temas.filter((t) => t.id !== tema.id);
     </header>
     <Bienvenida />
     <div class="heroe">
-      <span class={`heroe__forma heroe__forma--${tema.forma}`} aria-hidden="true"></span>
+      <FormaTema forma={tema.forma} color="var(--surface)" trazo class="heroe__forma" />
       <div class="pila" style="--gap: 0.5rem">
         <EtiquetaTema tema={tema.id} extra={`${lista.length} preguntas`} />
         <h1 class="display">{tema.nombre}</h1>
@@ -42,10 +43,6 @@ const otros = temas.filter((t) => t.id !== tema.id);
 </Base>
 <style>
   .heroe { display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem; }
-  .heroe__forma { flex: none; width: 5.5rem; height: 5.5rem; background: var(--surface); border: 2px solid var(--ink); box-shadow: var(--shadow); }
-  .heroe__forma--cuadrado { border-radius: 22px; }
-  .heroe__forma--pildora { border-radius: 999px; height: 3.5rem; }
-  .heroe__forma--arco { border-radius: 22px 22px 999px 999px; }
-  .heroe__forma--hoja { border-radius: 999px 22px; }
+  .heroe :global(.heroe__forma) { flex: none; width: 5.5rem; height: 5.5rem; filter: drop-shadow(4px 4px 0 var(--ink)); }
   .preguntas :global(.tarjeta-enlace) { background: var(--surface); box-shadow: var(--shadow); }
 </style>
