@@ -7,7 +7,7 @@ Comparador de programas para las elecciones generales del 29 de noviembre de 202
 
 - [Astro](https://astro.build) en modo estático: cada pregunta, tema y provincia es una página HTML ya generada (82 páginas). JavaScript mínimo y sin framework para el perfil, el orden aleatorio, las hojas, el simulador y la tarjeta para stories.
 - Tipografías Unbounded y Figtree servidas desde la propia web (sin Google Fonts, por privacidad).
-- Despliegue gratuito en Netlify (`netlify.toml`): se publica sola en cada push a `main`.
+- Despliegue gratuito en Cloudflare Pages: se publica sola en cada push a `main`. Configuración: preajuste Astro, `npm run build`, carpeta `dist`; Node 22 sale de `.node-version` y las cabeceras de `public/_headers`. (`netlify.toml` queda de la primera versión en Netlify y se puede borrar cuando se cierre ese proyecto.)
 - Estadísticas sin cookies con GoatCounter (se activan poniendo el código en `src/config.ts`).
 
 ## Comandos
@@ -19,7 +19,7 @@ npm run build      # genera dist/
 npm run contenido  # vuelve a generar src/data/respuestas.json desde contenido/fuentes/
 ```
 
-Con dominio propio: añadirlo en Netlify (Domain management) y cambiar `DOMINIO` en `src/config.ts`.
+Con dominio propio: añadirlo en Cloudflare Pages (Custom domains) y cambiar `DOMINIO` en `src/config.ts`.
 
 ## Dónde está cada cosa
 

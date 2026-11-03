@@ -1,0 +1,8 @@
+# Cabeceras para Cloudflare Pages (y Netlify, que también lee este archivo).
+/*
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

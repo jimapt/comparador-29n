@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
-// Netlify define URL con la dirección del sitio. SITE y BASE permiten
+// Dirección pública: estotetoca.pages.dev (Cloudflare Pages). SITE y BASE permiten
 // cambiarlo sin tocar el código (por ejemplo, con un dominio propio).
-const site = process.env.SITE ?? process.env.URL ?? 'https://estotetoca.netlify.app';
+const site = process.env.SITE ?? 'https://estotetoca.pages.dev';
 const base = process.env.BASE ?? '/';
 
 export default defineConfig({
