@@ -80,6 +80,50 @@ const pasos = [
   </div>
 </Base>
 
+<script>
+  // Las formas de la portada se cambian de sitio girando (Laura, 03/11/2026).
+  // Cada 3,5 s se intercambian dos al azar. Se para si se pide menos movimiento
+  // o si la pestaña no está a la vista.
+  const fila = document.querySelector<HTMLElement>('.formas-temas');
+  if (fila && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let ocupado = false;
+    const intercambiar = () => {
+      if (ocupado || document.hidden) return;
+      const formas = [...fila.querySelectorAll<SVGElement>('.forma-tema')];
+      if (formas.some((f) => f.classList.contains('juega'))) return;
+      const a = Math.floor(Math.random() * formas.length);
+      let b = Math.floor(Math.random() * (formas.length - 1));
+      if (b >= a) b++;
+      const [fa, fb] = [formas[a], formas[b]];
+      const antes = new Map(formas.map((f) => [f, f.getBoundingClientRect()]));
+      // Intercambio en el DOM
+      const marcador = document.createComment('');
+      fa.replaceWith(marcador);
+      fb.replaceWith(fa);
+      marcador.replaceWith(fb);
+      ocupado = true;
+      const giro = Math.random() < 0.5 ? 360 : -360;
+      const anims = [fa, fb].map((f, i) => {
+        const r0 = antes.get(f)!;
+        const r1 = f.getBoundingClientRect();
+        const dx = r0.left - r1.left;
+        const salto = i === 0 ? -22 : 22;
+        return f.animate([
+          { transform: `translate(${dx}px, 0) rotate(0deg)` },
+          { transform: `translate(${dx / 2}px, ${salto}px) rotate(${giro / 2}deg) scale(0.85)`, offset: 0.5 },
+          { transform: 'translate(0, 0) rotate(' + giro + 'deg)' },
+        ], { duration: 900, easing: 'cubic-bezier(0.45, 0, 0.25, 1)' });
+      });
+      Promise.all(anims.map((x) => x.finished)).then(() => { ocupado = false; });
+    };
+    setTimeout(() => {
+      // Al mover una forma en el DOM se repetiría su animación de entrada: se apaga.
+      fila.classList.add('quieta');
+      setInterval(intercambiar, 3500);
+    }, 2600);
+  }
+</script>
+
 <style>
   .portada { padding-bottom: 2rem; }
   main { padding-bottom: 1rem; }
