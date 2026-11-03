@@ -1,16 +1,115 @@
 {
-  "_nota": "Orden de 'Para ti' según la situación (03-definir/arquitectura-informacion.md). Con varias situaciones se combinan en el orden en que aparecen aquí, sin duplicar. 'pension+alquilo' se aplica cuando se eligen las dos.",
-  "porDefecto": ["V1", "E1", "I1", "P1", "V2", "E2", "I2", "P2", "V3", "E3", "I3", "P3"],
+  "_nota": "Orden de 'Para ti' según la situación (03-definir/arquitectura-informacion.md). Con varias situaciones se combinan en el orden en que aparecen aquí, sin duplicar. 'pension+alquilo' se aplica cuando se eligen las dos. 03/11/2026 (Laura): se añaden 'Soy propietario/a' y 'Tengo varias viviendas'; 'Cobro pensión' pasa a 'Estoy jubilado/a'.",
+  "porDefecto": [
+    "V1",
+    "E1",
+    "I1",
+    "P1",
+    "V2",
+    "E2",
+    "I2",
+    "P2",
+    "V3",
+    "E3",
+    "I3",
+    "P3"
+  ],
   "situaciones": [
-    { "id": "alquilo", "etiqueta": "Alquilo", "corta": "Alquilo", "preguntas": ["V1", "V3"] },
-    { "id": "familia", "etiqueta": "Vivo con mi familia", "corta": "Con mi familia", "preguntas": ["V2", "V1", "E2"] },
-    { "id": "estudio", "etiqueta": "Estudio", "corta": "Estudio", "preguntas": ["E2", "V1", "V2"] },
-    { "id": "ajena", "etiqueta": "Trabajo por cuenta ajena", "corta": "Trabajo", "preguntas": ["E1", "E2"] },
-    { "id": "paro", "etiqueta": "Estoy en paro", "corta": "En paro", "preguntas": ["E2", "E1"] },
-    { "id": "autonomo", "etiqueta": "Soy autónomo/a", "corta": "Autónomo/a", "preguntas": ["E3"] },
-    { "id": "pension", "etiqueta": "Cobro pensión", "corta": "Pensión", "preguntas": ["P1", "P2", "P3"] }
+    {
+      "id": "alquilo",
+      "etiqueta": "Alquilo",
+      "corta": "Alquilo",
+      "preguntas": [
+        "V1",
+        "V3"
+      ]
+    },
+    {
+      "id": "propietario",
+      "etiqueta": "Soy propietario/a",
+      "corta": "Propietario/a",
+      "preguntas": [
+        "V3",
+        "V1"
+      ]
+    },
+    {
+      "id": "varias",
+      "etiqueta": "Tengo varias viviendas",
+      "corta": "Varias viviendas",
+      "preguntas": [
+        "V1",
+        "V3"
+      ]
+    },
+    {
+      "id": "familia",
+      "etiqueta": "Vivo con mi familia",
+      "corta": "Con mi familia",
+      "preguntas": [
+        "V2",
+        "V1",
+        "E2"
+      ]
+    },
+    {
+      "id": "estudio",
+      "etiqueta": "Estudio",
+      "corta": "Estudio",
+      "preguntas": [
+        "E2",
+        "V1",
+        "V2"
+      ]
+    },
+    {
+      "id": "ajena",
+      "etiqueta": "Trabajo por cuenta ajena",
+      "corta": "Trabajo",
+      "preguntas": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "id": "paro",
+      "etiqueta": "Estoy en paro",
+      "corta": "En paro",
+      "preguntas": [
+        "E2",
+        "E1"
+      ]
+    },
+    {
+      "id": "autonomo",
+      "etiqueta": "Soy autónomo/a",
+      "corta": "Autónomo/a",
+      "preguntas": [
+        "E3"
+      ]
+    },
+    {
+      "id": "pension",
+      "etiqueta": "Estoy jubilado/a",
+      "corta": "Jubilado/a",
+      "preguntas": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    }
   ],
   "combinaciones": [
-    { "si": ["pension", "alquilo"], "preguntas": ["P1", "V1", "V3"] }
+    {
+      "si": [
+        "pension",
+        "alquilo"
+      ],
+      "preguntas": [
+        "P1",
+        "V1",
+        "V3"
+      ]
+    }
   ]
 }
