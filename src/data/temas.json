@@ -42,7 +42,7 @@
     "color": "#9FD9B8",
     "forma": "cruz",
     "descripcion": "Las listas de espera, los centros de salud y los médicos de familia, y la salud mental.",
-    "publicado": false
+    "publicado": true
   },
   {
     "id": "educacion",
