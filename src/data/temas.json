@@ -51,7 +51,7 @@
     "color": "#9ED6D8",
     "forma": "libro",
     "descripcion": "Las becas y el precio de la universidad y la FP, los alumnos por clase y la escuela de 0 a 3 años.",
-    "publicado": false
+    "publicado": true
   },
   {
     "id": "clima",
