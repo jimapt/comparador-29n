@@ -2,6 +2,7 @@
 import '@fontsource-variable/unbounded';
 import '@fontsource-variable/figtree';
 import '../styles/global.css';
+import '../styles/movimiento.css';
 import Icono from '../components/Icono.astro';
 import { url, situaciones, provincias } from '../lib/datos';
 import { NOMBRE, GOATCOUNTER } from '../config';
@@ -104,6 +105,33 @@ const datosPerfil = {
         document.querySelectorAll<HTMLAnchorElement>('[data-enlace-provincia]').forEach((a) => {
           a.href = `${datos.base}provincia/${p.provincia}/`;
         });
+      }
+      // Microinteracciones (ver styles/movimiento.css). Nada si se pide menos movimiento.
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll<SVGElement>('.formas-temas .forma-tema, .formas-mini .forma-tema, .heroe .forma-tema').forEach((f) => {
+          const jugar = () => {
+            if (f.classList.contains('juega')) return;
+            f.classList.add('juega');
+            f.addEventListener('animationend', () => f.classList.remove('juega'), { once: true });
+          };
+          f.addEventListener('pointerenter', jugar);
+          f.addEventListener('pointerdown', jugar);
+        });
+        const porRevelar = [...document.querySelectorAll<HTMLElement>('main .tarjeta, main .tarjeta-enlace, main .respuesta')]
+          .filter((el) => el.getBoundingClientRect().top > innerHeight);
+        if ('IntersectionObserver' in window && porRevelar.length) {
+          const io = new IntersectionObserver((entradas) => {
+            entradas.forEach((e) => {
+              if (!e.isIntersecting) return;
+              const el = e.target as HTMLElement;
+              el.classList.add('revelado');
+              requestAnimationFrame(() => el.classList.remove('por-revelar'));
+              setTimeout(() => el.classList.remove('revelado'), 700);
+              io.unobserve(el);
+            });
+          }, { rootMargin: '0px 0px -8% 0px' });
+          porRevelar.forEach((el) => { el.classList.add('por-revelar'); io.observe(el); });
+        }
       }
       // Modo sin conexión: guarda la web en el navegador (ver integraciones/sin-conexion.mjs).
       if (import.meta.env.PROD && 'serviceWorker' in navigator) {

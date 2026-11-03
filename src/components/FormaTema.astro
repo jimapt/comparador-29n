@@ -12,7 +12,7 @@ const trazos: Record<string, string> = {
   reloj: 'M18 4 H82 Q98 4 92 18 C86 34 62 40 62 50 C62 60 86 66 92 82 Q98 96 82 96 H18 Q2 96 8 82 C14 66 38 60 38 50 C38 40 14 34 8 18 Q2 4 18 4 Z',
 };
 ---
-<svg class={clase} viewBox="0 0 100 100" aria-hidden="true" focusable="false" style="overflow: visible">
+<svg class:list={["forma-tema", `forma-tema--${forma}`, clase]} viewBox="0 0 100 100" aria-hidden="true" focusable="false" style="overflow: visible">
   <path d={trazos[forma]} fill={color} fill-rule="evenodd"
     stroke={trazo ? 'var(--ink)' : 'none'} stroke-width={trazo ? 2 : 0} stroke-linejoin="round" vector-effect="non-scaling-stroke" />
 </svg>
