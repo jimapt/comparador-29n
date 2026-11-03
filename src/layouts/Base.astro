@@ -73,6 +73,7 @@ const datosPerfil = {
       import { prepararHojas, prepararGlosario } from '../scripts/hojas';
       import { perfil } from '../scripts/perfil';
       import { animarFormas } from '../scripts/formas';
+      import { faviconAnimado } from '../scripts/favicon';
 
       prepararHojas();
       prepararGlosario();
@@ -110,6 +111,42 @@ const datosPerfil = {
       // Microinteracciones (ver styles/movimiento.css). Nada si se pide menos movimiento.
       if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.querySelectorAll<HTMLElement>('.formas-temas, .formas-mini').forEach(animarFormas);
+        // Entrada de cada pantalla: los elementos visibles se colocan uno detrás de otro
+        const cont = document.querySelector<HTMLElement>('main > .contenedor');
+        if (cont) {
+          let n = 0;
+          [...cont.children].forEach((el) => {
+            const h = el as HTMLElement;
+            if (h.getBoundingClientRect().top < innerHeight) h.style.setProperty('--n', String(n++));
+            else h.style.animation = 'none';
+          });
+          cont.classList.add('escena');
+          setTimeout(() => cont.classList.remove('escena'), 900 + n * 55 + 100);
+        }
+        // Logo: ola de letras
+        document.querySelectorAll<HTMLElement>('.marca').forEach((m) => {
+          const texto = m.textContent ?? '';
+          m.innerHTML = `<span class="solo-lector">${texto}</span>` + [...texto].map((c, i) => `<span class="letra" aria-hidden="true" style="--l:${i}">${c}</span>`).join('');
+          const ola = () => {
+            if (m.classList.contains('ola')) return;
+            m.classList.add('ola');
+            setTimeout(() => m.classList.remove('ola'), 700 + texto.length * 28);
+          };
+          m.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') ola(); });
+          if (m.closest('.portada')) setTimeout(ola, 500);
+        });
+        // La tarjeta pulsada viaja hasta el titular de la siguiente pantalla
+        document.addEventListener('click', (e) => {
+          const a = (e.target as Element).closest<HTMLAnchorElement>('a.tarjeta-enlace');
+          const t = a?.querySelector<HTMLElement>('.titulo');
+          if (!t) return;
+          t.style.viewTransitionName = 'titular';
+          try { sessionStorage.setItem('transicion-titular', '1'); } catch {}
+        });
+        // Al volver atrás (bfcache), quita el nombre puesto a mano
+        addEventListener('pageshow', () => {
+          document.querySelectorAll<HTMLElement>('.tarjeta-enlace .titulo').forEach((el) => (el.style.viewTransitionName = ''));
+        });
         const porRevelar = [...document.querySelectorAll<HTMLElement>('main .tarjeta, main .tarjeta-enlace, main .respuesta')]
           .filter((el) => el.getBoundingClientRect().top > innerHeight);
         if ('IntersectionObserver' in window && porRevelar.length) {
@@ -126,12 +163,25 @@ const datosPerfil = {
           porRevelar.forEach((el) => { el.classList.add('por-revelar'); io.observe(el); });
         }
       }
+      faviconAnimado();
       // Modo sin conexión: guarda la web en el navegador (ver integraciones/sin-conexion.mjs).
       if (import.meta.env.PROD && 'serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register(`${datos.base}sw.js`, { scope: datos.base }).catch(() => {});
         });
       }
+    </script>
+    <script is:inline>
+      // Transición entre pantallas: si se llegó pulsando una tarjeta, su título se convierte en el titular.
+      addEventListener('pagereveal', function () {
+        try {
+          if (sessionStorage.getItem('transicion-titular')) {
+            sessionStorage.removeItem('transicion-titular');
+            var h = document.querySelector('h1');
+            if (h) h.style.viewTransitionName = 'titular';
+          }
+        } catch (e) {}
+      });
     </script>
   </body>
 </html>
