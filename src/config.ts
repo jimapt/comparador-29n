@@ -2,7 +2,7 @@
 // se cambia aquí y se propaga a toda la web.
 
 export const NOMBRE = 'esto te toca';
-export const DOMINIO = 'estotetoca.netlify.app'; // se muestra en las tarjetas para compartir; cambiar si Netlify da otro nombre
+export const DOMINIO = 'estotetoca.pages.dev'; // se muestra en las tarjetas para compartir; cambiar si Cloudflare da otro nombre
 export const CORREO_CORRECCIONES = '[correo-de-correcciones]'; // [PENDIENTE] buzón para "¿Ves un error? Avísanos"
 export const PLAZO_CORRECCIONES = '48 horas'; // [PENDIENTE] confirmar con Laura
 export const RESPONSABLE = '[nombre y contacto del responsable]'; // [PENDIENTE] aviso legal

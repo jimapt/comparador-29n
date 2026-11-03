@@ -1,6 +1,6 @@
 {
-  "_nota": "Lista provisional hasta la proclamación de candidaturas en el BOE. 'circunscripciones' = dónde se presenta; 'todas' = las 52. Revisar coaliciones y nombres definitivos tras el cierre de listas (26/10).",
-  "provisional": true,
+  "_nota": "Según las candidaturas proclamadas (BOE-A-2026-23103, 3/11/2026). 'circunscripciones' = dónde se presenta; 'todas' = las 52. 'listas' = nombre de la lista en las provincias donde va con otro nombre o en coalición.",
+  "provisional": false,
   "partidos": [
     {
       "id": "pp",
@@ -11,6 +11,9 @@
         "titulo": "Programa electoral 2023",
         "url": "https://www.pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf",
         "pdf": true
+      },
+      "listas": {
+        "navarra": "UPN-PP (en coalición con UPN)"
       }
     },
     {
@@ -39,24 +42,156 @@
       "id": "sumar",
       "nombre": "Frente Amplio",
       "nombreLargo": "Sumar, IU, Más Madrid, Comuns y otros",
-      "circunscripciones": "todas",
+      "circunscripciones": [
+        "madrid",
+        "barcelona",
+        "valencia",
+        "alicante",
+        "sevilla",
+        "malaga",
+        "murcia",
+        "cadiz",
+        "baleares",
+        "bizkaia",
+        "las-palmas",
+        "a-coruna",
+        "asturias",
+        "santa-cruz-de-tenerife",
+        "zaragoza",
+        "pontevedra",
+        "granada",
+        "tarragona",
+        "cordoba",
+        "girona",
+        "almeria",
+        "gipuzkoa",
+        "toledo",
+        "badajoz",
+        "navarra",
+        "jaen",
+        "cantabria",
+        "castellon",
+        "valladolid",
+        "ciudad-real",
+        "huelva",
+        "leon",
+        "lleida",
+        "caceres",
+        "albacete",
+        "burgos",
+        "lugo",
+        "salamanca",
+        "ourense",
+        "la-rioja",
+        "alava",
+        "guadalajara",
+        "huesca",
+        "cuenca",
+        "zamora",
+        "avila",
+        "palencia",
+        "segovia",
+        "soria"
+      ],
       "nota": "Es la candidatura del espacio de Sumar para el 29N. Aún no ha publicado programa conjunto: usamos el programa de Sumar de 2023 y sus propuestas públicas fechadas.",
       "documento": {
         "titulo": "Programa electoral 2023 «Un programa para ti»",
         "url": "https://movimientosumar.es/wp-content/uploads/2023/07/Un-Programa-para-ti.pdf",
         "pdf": true
+      },
+      "listas": {
+        "almeria": "Frente Amplio Andaluz",
+        "cadiz": "Frente Amplio Andaluz",
+        "cordoba": "Frente Amplio Andaluz",
+        "granada": "Frente Amplio Andaluz",
+        "huelva": "Frente Amplio Andaluz",
+        "malaga": "Frente Amplio Andaluz",
+        "sevilla": "Frente Amplio Andaluz",
+        "huesca": "Chunta Aragonesista-Frente Amplio Aragón (CHA, IU y Movimiento Sumar)",
+        "zaragoza": "Chunta Aragonesista-Frente Amplio Aragón (CHA, IU y Movimiento Sumar)",
+        "asturias": "Frente Ampliu por Asturies",
+        "baleares": "Aramés-Front Ampli (Aramés, EU y Movimiento Sumar)",
+        "barcelona": "Comuns-Front Ampli",
+        "girona": "Comuns-Front Ampli",
+        "lleida": "Comuns-Front Ampli",
+        "tarragona": "Comuns-Front Ampli",
+        "a-coruna": "Frente Amplio-Fronte Ampla",
+        "lugo": "Frente Amplio-Fronte Ampla",
+        "ourense": "Frente Amplio-Fronte Ampla",
+        "pontevedra": "Frente Amplio-Fronte Ampla",
+        "alava": "Frente Amplio-Fronte Zabala",
+        "navarra": "Frente Amplio-Fronte Zabala",
+        "alicante": "Compromís: Front Valencià (coalición de Compromís, EUPV-IU, Podem y ERPV)",
+        "castellon": "Compromís: Front Valencià (coalición de Compromís, EUPV-IU, Podem y ERPV)",
+        "valencia": "Compromís: Front Valencià (coalición de Compromís, EUPV-IU, Podem y ERPV)",
+        "las-palmas": "Unidad del Pueblo Canario (coalición de NC-BC, Podemos, IU y Sumar)",
+        "santa-cruz-de-tenerife": "Unidad del Pueblo Canario (coalición de NC-BC, Podemos, IU y Sumar)"
       }
     },
     {
       "id": "podemos",
       "nombre": "Podemos",
       "nombreLargo": "Podemos",
-      "circunscripciones": "todas",
+      "circunscripciones": [
+        "madrid",
+        "valencia",
+        "alicante",
+        "sevilla",
+        "malaga",
+        "murcia",
+        "cadiz",
+        "bizkaia",
+        "las-palmas",
+        "a-coruna",
+        "asturias",
+        "santa-cruz-de-tenerife",
+        "zaragoza",
+        "pontevedra",
+        "granada",
+        "cordoba",
+        "almeria",
+        "gipuzkoa",
+        "toledo",
+        "badajoz",
+        "navarra",
+        "jaen",
+        "cantabria",
+        "castellon",
+        "valladolid",
+        "ciudad-real",
+        "huelva",
+        "leon",
+        "caceres",
+        "albacete",
+        "burgos",
+        "lugo",
+        "salamanca",
+        "ourense",
+        "la-rioja",
+        "alava",
+        "guadalajara",
+        "huesca",
+        "cuenca",
+        "zamora",
+        "avila",
+        "palencia",
+        "segovia",
+        "teruel",
+        "soria",
+        "ceuta"
+      ],
       "nota": "En 2023 se presentó dentro de Sumar y no tiene programa propio de generales. Usamos propuestas públicas fechadas de 2024 a 2026.",
       "documento": {
         "titulo": "Programa de las europeas 2024",
         "url": "https://podemos.info/programa-podemos-elecciones-europeas-2024",
         "pdf": false
+      },
+      "listas": {
+        "alicante": "Compromís: Front Valencià (coalición de Compromís, EUPV-IU, Podem y ERPV)",
+        "castellon": "Compromís: Front Valencià (coalición de Compromís, EUPV-IU, Podem y ERPV)",
+        "valencia": "Compromís: Front Valencià (coalición de Compromís, EUPV-IU, Podem y ERPV)",
+        "las-palmas": "Unidad del Pueblo Canario (coalición de NC-BC, Podemos, IU y Sumar)",
+        "santa-cruz-de-tenerife": "Unidad del Pueblo Canario (coalición de NC-BC, Podemos, IU y Sumar)"
       }
     },
     {
@@ -67,12 +202,16 @@
         "barcelona",
         "girona",
         "lleida",
-        "tarragona"
+        "tarragona",
+        "navarra"
       ],
       "documento": {
         "titulo": "Programa electoral 2023 (en catalán)",
         "url": "https://defensacatalunya.esquerrarepublicana.cat/documents/e2023-programa.pdf",
         "pdf": true
+      },
+      "listas": {
+        "navarra": "EH Bildu-ERC (en coalición con EH Bildu)"
       }
     },
     {
@@ -105,6 +244,9 @@
         "titulo": "Compromiso de Euskal Herria Bildu 2023",
         "url": "https://ehbildu.eus/dokumentuak/23J-COMPROMISO-DE-EUSKAL-HERRIA-BILDU.pdf",
         "pdf": true
+      },
+      "listas": {
+        "navarra": "EH Bildu-ERC (en coalición con ERC)"
       }
     },
     {
@@ -151,6 +293,10 @@
         "titulo": "Manifiesto 2023 «Un objetivo común, la defensa de Canarias»",
         "url": "https://coalicioncanaria.org/wp-content/uploads/2023/06/COALICION_POR_CANARIAS.pdf",
         "pdf": true
+      },
+      "listas": {
+        "las-palmas": "Municipalistas Primero Canarias-Coalición Canaria",
+        "santa-cruz-de-tenerife": "Coalición Canaria-Municipalistas Primero Canarias"
       }
     },
     {
@@ -165,6 +311,9 @@
         "titulo": "Programa electoral 2023",
         "url": "https://www.upn.org/wp-content/uploads/2023/07/Programa-Generales-23J_V2-1.pdf",
         "pdf": true
+      },
+      "listas": {
+        "navarra": "UPN-PP (en coalición con el PP)"
       }
     },
     {
@@ -187,6 +336,69 @@
         "url": "https://adelanteandalucia.org/wp-content/uploads/2026/04/PROGRAMA-AA-2026-DEF.pdf",
         "pdf": true
       }
+    },
+    {
+      "id": "salf",
+      "nombre": "Se Acabó La Fiesta",
+      "nombreLargo": "Se Acabó La Fiesta (SALF)",
+      "circunscripciones": [
+        "a-coruna",
+        "alava",
+        "albacete",
+        "alicante",
+        "almeria",
+        "asturias",
+        "avila",
+        "badajoz",
+        "baleares",
+        "barcelona",
+        "burgos",
+        "caceres",
+        "cadiz",
+        "castellon",
+        "ceuta",
+        "cordoba",
+        "cuenca",
+        "granada",
+        "guadalajara",
+        "huelva",
+        "huesca",
+        "jaen",
+        "la-rioja",
+        "las-palmas",
+        "leon",
+        "lugo",
+        "madrid",
+        "malaga",
+        "melilla",
+        "murcia",
+        "navarra",
+        "ourense",
+        "palencia",
+        "pontevedra",
+        "salamanca",
+        "santa-cruz-de-tenerife",
+        "segovia",
+        "sevilla",
+        "soria",
+        "tarragona",
+        "teruel",
+        "toledo",
+        "valencia",
+        "valladolid",
+        "zamora",
+        "zaragoza"
+      ],
+      "nota": "No ha publicado programa para el 29N. Usamos su contrato electoral de Castilla y León (2026) y su acto de Vistalegre (octubre de 2025).",
+      "documento": {
+        "titulo": "Contrato electoral de Castilla y León 2026",
+        "url": "https://www.seacabolafiesta.com/images/Contrato_Electoral_CyL.pdf",
+        "pdf": true
+      }
     }
-  ]
+  ],
+  "fuente": {
+    "titulo": "Candidaturas proclamadas (BOE núm. 273, 3 de noviembre de 2026)",
+    "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23103"
+  }
 }

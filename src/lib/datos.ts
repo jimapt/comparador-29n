@@ -27,6 +27,8 @@ export interface Partido {
   nombre: string;
   nombreLargo: string;
   circunscripciones: 'todas' | string[];
+  /** Nombre de la lista donde se presenta con otro nombre o en coalición, por provincia. */
+  listas?: Record<string, string>;
   nota?: string;
   documento: { titulo: string; url: string | null; pdf: boolean };
 }
@@ -69,6 +71,11 @@ export const respuestasDe = (idPregunta: string) => respuestas.filter((r) => r.p
 export function sePresentaEn(p: Partido, provincia: string) {
   return p.circunscripciones === 'todas' || p.circunscripciones.includes(provincia);
 }
+/** Nombre de la lista en esa provincia, si no es el habitual. */
+export function listaEn(p: Partido, provincia: string) {
+  return p.listas?.[provincia] ?? null;
+}
+export const fuentePartidos = partidosJson.fuente;
 export function partidosEn(provincia: string) {
   return partidos.filter((p) => sePresentaEn(p, provincia));
 }

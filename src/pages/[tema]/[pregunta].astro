@@ -65,11 +65,13 @@ const iconoConcreta = { si: 'lleno', vago: 'medio', no: 'vacio' } as const;
       {lista.map(({ r, p }) => (
         <article class:list={['respuesta', { 'respuesta--revision': !r.verificado }]} data-partido={p.id}
           data-circ={p.circunscripciones === 'todas' ? 'todas' : p.circunscripciones.join(' ')}
+          data-listas={p.listas ? JSON.stringify(p.listas) : undefined}
           aria-labelledby={`p-${p.id}`}>
           <div class="respuesta__cabecera">
             <h2 class="partido" id={`p-${p.id}`}>{p.nombre}</h2>
             {r.verificado && <span class="etiqueta-origen">{r.origen}</span>}
           </div>
+          {p.listas && <p class="pequeno secundario" data-lista hidden></p>}
           {r.verificado ? (
             <>
               <p class="respuesta__texto"><ConGlosario texto={r.texto} /></p>
@@ -118,6 +120,11 @@ const iconoConcreta = { si: 'lleno', vago: 'medio', no: 'vacio' } as const;
         arts.forEach(function (el, i) {
           var c = el.dataset.circ;
           var aqui = !prov || c === 'todas' || c.split(' ').indexOf(prov) >= 0;
+          if (prov && el.dataset.listas) {
+            var l = JSON.parse(el.dataset.listas)[prov];
+            var pl = el.querySelector('[data-lista]');
+            if (l && pl) { pl.textContent = 'En tu provincia se presenta como ' + l; pl.hidden = false; }
+          }
           el.style.setProperty('--i', i);
           el.classList.add('entra');
           (aqui ? tuyas : otras).appendChild(el);
@@ -127,7 +134,6 @@ const iconoConcreta = { si: 'lleno', vago: 'medio', no: 'vacio' } as const;
     </script>
 
     <p id="nota-orden" class="pequeno secundario" data-nota-orden>Los partidos salen en orden alfabético.</p>
-    {partidosProvisional && <p class="pequeno secundario">Lista de partidos provisional hasta la proclamación de candidaturas en el BOE.</p>}
 
     <div class="pila acciones" style="--gap: 0.625rem">
       <button type="button" class="boton" data-abrir-compartir aria-haspopup="dialog"><Icono nombre="compartir" />Compartir en stories</button>
