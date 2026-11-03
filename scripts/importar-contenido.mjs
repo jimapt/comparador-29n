@@ -23,12 +23,13 @@ const ID_PARTIDO = {
   erc: 'erc', junts: 'junts', 'eh bildu': 'ehbildu', pnv: 'pnv', bng: 'bng',
   cc: 'cc', 'coalición canaria': 'cc', upn: 'upn',
   'adelante andalucía': 'adelante-andalucia', 'democracia 21': 'democracia-21',
+  'se acabó la fiesta': 'salf', salf: 'salf',
 };
 
 const POR_ARCHIVO = {
   'adelante-andalucia.md': 'adelante-andalucia', 'bng.md': 'bng', 'cc.md': 'cc',
   'democracia-21.md': 'democracia-21', 'ehbildu.md': 'ehbildu', 'erc.md': 'erc',
-  'junts.md': 'junts', 'pnv.md': 'pnv', 'podemos.md': 'podemos', 'upn.md': 'upn',
+  'junts.md': 'junts', 'pnv.md': 'pnv', 'podemos.md': 'podemos', 'upn.md': 'upn', 'salf.md': 'salf',
 };
 
 function idPregunta(texto) {

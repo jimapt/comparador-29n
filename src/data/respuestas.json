@@ -122,6 +122,18 @@
     "verificado": true
   },
   {
+    "partido": "salf",
+    "pregunta": "E1",
+    "texto": "No lo concreta. No habla del salario mínimo (competencia del Estado).",
+    "concreta": "no",
+    "origen": "Programa autonómico 2026",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
+    "verificado": true
+  },
+  {
     "partido": "sumar",
     "pregunta": "E1",
     "texto": "Subirlo cada año por encima de la inflación (IPC).",
@@ -277,6 +289,18 @@
     "enlaces": [],
     "pagina": 130,
     "cita": "\"Plan de Choque contra el desempleo juvenil con el mecanismo Pack “FORMACIÓN + EMPLEO” en 12 meses\"",
+    "verificado": true
+  },
+  {
+    "partido": "salf",
+    "pregunta": "E2",
+    "texto": "Rebajas de impuestos a las empresas que creen empleo indefinido, sin decir cuánto.",
+    "concreta": "vago",
+    "origen": "Programa autonómico 2026",
+    "fuente": "Contrato electoral de Castilla y León, apdo. 2 «Rebaja de impuestos»",
+    "enlaces": [],
+    "pagina": null,
+    "cita": "\"para las empresas que generen empleo indefinido en Castilla y León\"",
     "verificado": true
   },
   {
@@ -438,6 +462,18 @@
     "verificado": true
   },
   {
+    "partido": "salf",
+    "pregunta": "E3",
+    "texto": "Pagar la cuota de autónomos los tres primeros años a quien empiece, y devolver hasta el 50 % de la cuota en el IRPF autonómico.",
+    "concreta": "si",
+    "origen": "Programa autonómico 2026",
+    "fuente": "Contrato electoral de Castilla y León, apdo. 2",
+    "enlaces": [],
+    "pagina": null,
+    "cita": "\"Bonificación en cuota de IRPF de hasta un 50% de las cuotas de autónomos\"",
+    "verificado": true
+  },
+  {
     "partido": "sumar",
     "pregunta": "E3",
     "texto": "Cuota fija rebajada para quien gane menos del salario mínimo, sin perder derechos, y rebajas en el IRPF.",
@@ -593,6 +629,20 @@
     "enlaces": [],
     "pagina": 233,
     "cita": "\"Aplicaremos una política migratoria que reduzca llegadas irregulares y que salve vidas\"",
+    "verificado": true
+  },
+  {
+    "partido": "salf",
+    "pregunta": "I1",
+    "texto": "Un plan de deportación masiva de inmigrantes irregulares, pagado recortando la ayuda al desarrollo a países como Marruecos.",
+    "concreta": "si",
+    "origen": "Propuesta 2024-26",
+    "fuente": "Acto de Vistalegre, recogido por Demócrata, 12/10/2025",
+    "enlaces": [
+      "https://www.democrata.es/politica/alvise-perez-acabo-fiesta-elecciones-generales-deportaciones-referendum-ue/"
+    ],
+    "pagina": null,
+    "cita": "\"el mayor plan de deportación masiva de inmigrantes ilegales de la historia reciente de España\"",
     "verificado": true
   },
   {
@@ -755,6 +805,18 @@
     "verificado": true
   },
   {
+    "partido": "salf",
+    "pregunta": "I2",
+    "texto": "Repatriar a todas las personas en situación irregular.",
+    "concreta": "si",
+    "origen": "Programa autonómico 2026",
+    "fuente": "Contrato electoral de Castilla y León, apdo. 3 «Inmigración y Seguridad»",
+    "enlaces": [],
+    "pagina": null,
+    "cita": "\"el que esté ilegal, será repatriado sin excusas\"",
+    "verificado": true
+  },
+  {
     "partido": "sumar",
     "pregunta": "I2",
     "texto": "Crear una vía de regularización permanente y cerrar los centros de internamiento (CIE).",
@@ -910,6 +972,18 @@
     "enlaces": [],
     "pagina": 93,
     "cita": "\"Activaremos programas de integración de población inmigrante y refugiada\"",
+    "verificado": true
+  },
+  {
+    "partido": "salf",
+    "pregunta": "I3",
+    "texto": "No lo concreta. No propone medidas de integración. Plantea dar prioridad a españoles y residentes legales en las ayudas sociales.",
+    "concreta": "no",
+    "origen": "Programa autonómico 2026",
+    "fuente": "Contrato electoral de Castilla y León, apdo. 3",
+    "enlaces": [],
+    "pagina": null,
+    "cita": "\"se otorguen prioritariamente a españoles y residentes legales\"",
     "verificado": true
   },
   {
@@ -1071,6 +1145,18 @@
     "verificado": true
   },
   {
+    "partido": "salf",
+    "pregunta": "P1",
+    "texto": "No lo concreta. No habla del IPC. Propone que la mayoría de pensionistas deje de pagar el IRPF autonómico.",
+    "concreta": "no",
+    "origen": "Programa autonómico 2026",
+    "fuente": "Contrato electoral de Castilla y León, apdo. 2",
+    "enlaces": [],
+    "pagina": null,
+    "cita": "\"la gran mayoría de trabajadores y pensionistas dejarán de pagar IRPF a la Comunidad\"",
+    "verificado": true
+  },
+  {
     "partido": "sumar",
     "pregunta": "P1",
     "texto": "Mantener la subida con el IPC y subir más las mínimas y no contributivas hasta el umbral de pobreza.",
@@ -1226,6 +1312,20 @@
     "enlaces": [],
     "pagina": 167,
     "cita": "\"El Fondo de Reserva de la Seguridad Social estará dotado con más de 20.000 millones de euros en 2027\"",
+    "verificado": true
+  },
+  {
+    "partido": "salf",
+    "pregunta": "P2",
+    "texto": "Reformar el sistema, al que llama «estafa piramidal», sin decir cómo.",
+    "concreta": "vago",
+    "origen": "Propuesta 2024-26",
+    "fuente": "Acto de Vistalegre, recogido por Demócrata, 12/10/2025",
+    "enlaces": [
+      "https://www.democrata.es/politica/alvise-perez-acabo-fiesta-elecciones-generales-deportaciones-referendum-ue/"
+    ],
+    "pagina": null,
+    "cita": "\"estafa piramidal\"",
     "verificado": true
   },
   {
@@ -1387,6 +1487,18 @@
     "verificado": true
   },
   {
+    "partido": "salf",
+    "pregunta": "P3",
+    "texto": "No lo concreta. No habla de la edad de jubilación.",
+    "concreta": "no",
+    "origen": "Programa autonómico 2026",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
+    "verificado": true
+  },
+  {
     "partido": "sumar",
     "pregunta": "P3",
     "texto": "No lo concreta. No propone cambiar la edad de jubilación.",
@@ -1542,6 +1654,18 @@
     "enlaces": [],
     "pagina": 215,
     "cita": "\"Desarrollaremos las medidas contempladas para la contención de los precios de la vivienda\"; \"Consolidaremos el Bono Alquiler Joven\"",
+    "verificado": true
+  },
+  {
+    "partido": "salf",
+    "pregunta": "V1",
+    "texto": "Rechaza los topes al alquiler porque dice que reducen la oferta. Prefiere incentivos para sacar más pisos en alquiler, sin detallarlos.",
+    "concreta": "vago",
+    "origen": "Programa autonómico 2026",
+    "fuente": "Contrato electoral de Castilla y León, apdo. 1 «Vivienda, Alquiler y Okupación»",
+    "enlaces": [],
+    "pagina": null,
+    "cita": "\"Frente a fracasos como los topes de alquiler (que reducen la oferta), apostamos por incentivos positivos.\"",
     "verificado": true
   },
   {
@@ -1703,6 +1827,18 @@
     "verificado": true
   },
   {
+    "partido": "salf",
+    "pregunta": "V2",
+    "texto": "Quitar los impuestos autonómicos a la compra de la primera vivienda y ayudar a jóvenes y familias a pagar la entrada.",
+    "concreta": "si",
+    "origen": "Programa autonómico 2026",
+    "fuente": "Contrato electoral de Castilla y León, apdo. 1",
+    "enlaces": [],
+    "pagina": null,
+    "cita": "\"Cero impuestos para la primera vivienda\"",
+    "verificado": true
+  },
+  {
     "partido": "sumar",
     "pregunta": "V2",
     "texto": "No lo concreta. Propone una ayuda de 1.000 € para hogares con hipoteca variable, no para la primera compra.",
@@ -1858,6 +1994,18 @@
     "enlaces": [],
     "pagina": 127,
     "cita": "\"Queremos construir 183.000 viviendas públicas para alquiler y garantizando que la mitad vaya destinada a jóvenes\"",
+    "verificado": true
+  },
+  {
+    "partido": "salf",
+    "pregunta": "V3",
+    "texto": "No da cifras. Plantea estudiar vivienda protegida para jóvenes y familias junto con empresas privadas.",
+    "concreta": "vago",
+    "origen": "Programa autonómico 2026",
+    "fuente": "Contrato electoral de Castilla y León, apdo. 1",
+    "enlaces": [],
+    "pagina": null,
+    "cita": "\"explorando la colaboración público-privada para desarrollar vivienda protegida para jóvenes y familias\"",
     "verificado": true
   },
   {
