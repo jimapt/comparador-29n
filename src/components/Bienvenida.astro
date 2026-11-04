@@ -2,7 +2,7 @@
 // Franja de contexto para quien llega directamente a una página interior
 // (por ejemplo, desde una story) sin pasar por la portada.
 import Icono from './Icono.astro';
-import { url } from '../lib/datos';
+import { url, listaTemas } from '../lib/datos';
 import { NOMBRE } from '../config';
 ---
 <aside class="bienvenida" data-bienvenida hidden aria-labelledby="bienvenida-t">
@@ -10,7 +10,7 @@ import { NOMBRE } from '../config';
     <p class="bienvenida__marca" id="bienvenida-t"><a href={url()}>{NOMBRE}</a> · elecciones del 29N</p>
     <button type="button" class="boton-icono bienvenida__cerrar" data-cerrar-bienvenida aria-label="Cerrar esta explicación"><Icono nombre="cerrar" tam={16} /></button>
   </div>
-  <p>Comparamos lo que propone cada partido sobre vivienda, empleo, inmigración y pensiones, en 25 palabras y con la página del programa. No te decimos qué votar.</p>
+  <p>Comparamos lo que propone cada partido sobre {listaTemas}, en 25 palabras y con la página del programa. No te decimos qué votar.</p>
   <a class="boton boton--sec" href={url('empezar')} data-cambiar>Empezar por mi situación</a>
 </aside>
 

@@ -1,11 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
 import FormaTema from '../components/FormaTema.astro';
-import { url, temas, partidos, preguntasDeTema, urlPregunta, situaciones } from '../lib/datos';
+import Icono from '../components/Icono.astro';
+import { url, temas, familias, preguntas, preguntasDeTema, urlPregunta, situaciones, listaTemas } from '../lib/datos';
 import { NOMBRE } from '../config';
 
-// Una pregunta de ejemplo por tema: la primera de cada uno.
-const ejemplos = temas.map((t) => ({ tema: t, pregunta: preguntasDeTema(t.id)[0] }));
+// Una pregunta de ejemplo por tema (la primera), agrupadas por familia.
+const grupos = familias.map((f) => ({ ...f, ejemplos: f.temas.map((t) => ({ tema: t, pregunta: preguntasDeTema(t.id)[0] })) }));
 const pasos = [
   { n: 1, titulo: 'Cuéntanos tu situación', texto: `Si alquilas, estudias, trabajas, cobras pensión… Hay ${situaciones.situaciones.length} opciones y puedes elegir varias.` },
   { n: 2, titulo: 'Elige dónde votas', texto: 'Así ves solo los partidos que se presentan en tu provincia.' },
@@ -16,7 +17,7 @@ const pasos = [
   <div class="contenedor portada pila" style="--gap: 1.125rem">
     <header class="cabecera">
       <span class="marca">{NOMBRE}</span>
-      <span class="chapa-29n" aria-hidden="true">
+      <button type="button" class="chapa-29n" data-abrir-29n aria-haspopup="dialog" aria-label="29N: qué se vota el 29 de noviembre">
         <svg class="urna" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <g class="urna__papeleta">
             <path fill="#fff" d="M8 11V3.5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V11" />
@@ -24,18 +25,18 @@ const pasos = [
           </g>
           <path fill="#fff" d="M3.5 11h17v8.5a1.5 1.5 0 0 1-1.5 1.5H5a1.5 1.5 0 0 1-1.5-1.5z" />
           <path d="M9 15h6" />
-        </svg>29N</span>
+        </svg>29N</button>
     </header>
 
-    <div class="formas-temas" aria-hidden="true">
+    <div class="formas-temas" aria-hidden="true" data-visibles="8">
       {temas.map((t) => <FormaTema forma={t.forma} color={t.color} trazo />)}
     </div>
 
     <p class="antetitulo">Elecciones generales · 29 de noviembre</p>
     <h1 class="display">¿Qué proponen sobre lo tuyo?</h1>
-    <p>Nos hemos leído los programas de {partidos.length} partidos: los que tienen representación en el Congreso, en un parlamento autonómico o en el Parlamento Europeo. Te contamos qué proponen sobre vivienda, empleo, inmigración y pensiones, en corto y con la página de donde sale.</p>
+    <p>Nos hemos leído los programas de los partidos y te contamos en corto y sin rodeos lo que más te toca. Qué propone cada uno sobre {listaTemas}, con la página del programa de donde sale. <strong>Ahora te toca.</strong></p>
     <ul class="sellos pequeno" aria-label="Lo que prometemos">
-      {['No te decimos qué votar', 'Sin cuentas', 'No guardamos nada'].map((t) => (
+      {['No guardamos tus datos', 'No hace falta una cuenta', 'No te decimos a quién votar', 'Tú te informas, tú decides'].map((t) => (
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>{t}</li>
       ))}
     </ul>
@@ -47,17 +48,22 @@ const pasos = [
 
     <section class="pila bloque" style="--gap: 0.75rem" aria-labelledby="que-hay">
       <h2 class="h2" id="que-hay">Qué vas a encontrar</h2>
-      <p class="secundario">12 preguntas concretas, 3 por tema. Por ejemplo:</p>
-      <ul class="lista">
-        {ejemplos.map(({ tema, pregunta }) => (
-          <li>
-            <a class="tarjeta-enlace" href={urlPregunta(pregunta)} style={`--c: ${tema.color}`}>
-              <span class="etiqueta-tema" style={`--c: ${tema.color}`}><FormaTema forma={tema.forma} class="forma" />{tema.nombre}</span>
-              <span class="titulo">{pregunta.titulo}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
+      <p class="secundario">{preguntas.length} preguntas concretas, 3 por tema, en {familias.length} grupos. Por ejemplo:</p>
+      {grupos.map((g) => (
+        <div class="familia pila" style="--gap: 0.5rem">
+          <h3 class="familia__titulo">{g.nombre} <span class="secundario">· {g.descripcion}</span></h3>
+          <ul class="lista">
+            {g.ejemplos.map(({ tema, pregunta }) => (
+              <li>
+                <a class="tarjeta-enlace" href={urlPregunta(pregunta)} style={`--c: ${tema.color}`}>
+                  <span class="etiqueta-tema" style={`--c: ${tema.color}`}><FormaTema forma={tema.forma} class="forma" />{tema.nombre}</span>
+                  <span class="titulo">{pregunta.titulo}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
 
     <section class="pila bloque" style="--gap: 0.75rem" aria-labelledby="como">
@@ -78,14 +84,38 @@ const pasos = [
       <p><a href={url('mas/como-lo-hacemos')}>Cómo lo hacemos</a> · <a href={url('mas/fuentes')}>Fuentes</a> · <a href={url('mas/privacidad')}>Privacidad</a></p>
     </footer>
   </div>
+  <dialog class="hoja" id="hoja-29n" aria-labelledby="hoja-29n-titulo">
+    <div class="hoja__panel pila" style="--gap: 0.75rem">
+      <div class="hoja__asa" aria-hidden="true"></div>
+      <div class="hoja__cabecera">
+        <h2 class="h2" id="hoja-29n-titulo">El 29N, en corto</h2>
+        <button type="button" class="boton-icono" data-cerrar aria-label="Cerrar"><Icono nombre="cerrar" tam={18} /></button>
+      </div>
+      <ul class="hoja-29n__lista">
+        <li><strong>Qué se vota.</strong> Los 350 diputados del Congreso y buena parte del Senado.</li>
+        <li><strong>Cómo se reparte.</strong> Cada provincia elige sus propios diputados según los votos que hay en ella. Por eso tu voto cuenta en tu provincia.</li>
+        <li><strong>Y después.</strong> El Congreso elige a quien preside el Gobierno: necesita 176 votos en la primera votación, o más síes que noes en la segunda.</li>
+        <li><strong>Calendario.</strong> Campaña del 13 al 27 de noviembre, jornada de reflexión el 28 y votación el domingo 29.</li>
+      </ul>
+      <a class="boton boton--sec" href={url('provincia')}>Ver qué pasa en tu provincia</a>
+    </div>
+  </dialog>
 </Base>
 
 
 <style>
+  .chapa-29n { background: none; color: inherit; cursor: pointer; }
+  .hoja-29n__lista { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; }
   .portada { padding-bottom: 2rem; }
   main { padding-bottom: 1rem; }
-  .formas-temas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.375rem; margin-top: 0.375rem; }
-  .formas-temas :global(svg) { width: 100%; height: 4.5rem; }
+  /* Dos filas de 4 formas, centradas y a todo el ancho (Laura, 03/11). La novena espera fuera
+     y scripts/formas.ts la va cambiando por otra: siempre se ve la que ocupa el sitio 9 escondida. */
+  .formas-temas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); justify-items: center; gap: 0.5rem 0.75rem; width: 100%; max-width: 22rem; margin: 0.375rem auto 0; }
+  .formas-temas :global(svg) { width: 100%; max-width: 4.25rem; height: auto; aspect-ratio: 1; }
+  .formas-temas :global(svg:nth-child(n + 9)) { display: none; }
+  .familia { margin-top: 0.375rem; }
+  .familia__titulo { font-size: 1rem; font-weight: 800; margin: 0; }
+  .familia__titulo .secundario { font-weight: 400; }
   .antetitulo { font-weight: 700; font-size: 0.9375rem; }
   .sellos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; color: var(--ink-2); }
   .sellos li { display: inline-flex; align-items: center; gap: 0.3rem; }
@@ -97,3 +127,10 @@ const pasos = [
     display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 800;
   }
 </style>
+
+<script>
+  import { abrirHoja, prepararHojas } from '../scripts/hojas';
+  prepararHojas();
+  const hoja29 = document.getElementById('hoja-29n') as HTMLDialogElement;
+  document.querySelector<HTMLElement>('[data-abrir-29n]')?.addEventListener('click', (e) => abrirHoja(hoja29, e.currentTarget as HTMLElement));
+</script>

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "bolsillo",
+    "nombre": "Tu bolsillo",
+    "descripcion": "Lo que entra y sale de tu cuenta"
+  },
+  {
+    "id": "servicios",
+    "nombre": "Servicios públicos y planeta",
+    "descripcion": "Lo que usas cada día y lo que dejamos"
+  },
+  {
+    "id": "convivencia",
+    "nombre": "Convivencia",
+    "descripcion": "Cómo vivimos juntos"
+  }
+]

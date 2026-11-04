@@ -10,5 +10,20 @@
   { "id": "I3", "tema": "inmigracion", "slug": "integracion", "titulo": "¿Cómo gestionarían la integración (idioma, empleo, servicios)?" },
   { "id": "P1", "tema": "pensiones", "slug": "subida-ipc", "titulo": "¿Subirían las pensiones con el IPC?" },
   { "id": "P2", "tema": "pensiones", "slug": "futuro", "titulo": "¿Cómo garantizarían que se puedan pagar en el futuro?" },
-  { "id": "P3", "tema": "pensiones", "slug": "jubilacion", "titulo": "¿Cambiarían la edad o las condiciones de jubilación?" }
+  { "id": "P3", "tema": "pensiones", "slug": "jubilacion", "titulo": "¿Cambiarían la edad o las condiciones de jubilación?" },
+  { "id": "F1", "tema": "economia", "slug": "irpf", "titulo": "¿Bajarían o subirían el IRPF? ¿A quién?" },
+  { "id": "F2", "tema": "economia", "slug": "iva-compra-luz", "titulo": "¿Qué harían con el IVA de los alimentos, la luz y el gas?" },
+  { "id": "F3", "tema": "economia", "slug": "grandes-fortunas", "titulo": "¿Subirían los impuestos a las grandes fortunas, la banca o las eléctricas?" },
+  { "id": "S1", "tema": "sanidad", "slug": "listas-de-espera", "titulo": "¿Cómo reducirían las listas de espera?" },
+  { "id": "S2", "tema": "sanidad", "slug": "atencion-primaria", "titulo": "¿Qué harían con la atención primaria (centros de salud, médicos de familia)?" },
+  { "id": "S3", "tema": "sanidad", "slug": "salud-mental", "titulo": "¿Qué proponen en salud mental?" },
+  { "id": "D1", "tema": "educacion", "slug": "becas", "titulo": "¿Qué harían con las becas y el precio de la universidad y la FP?" },
+  { "id": "D2", "tema": "educacion", "slug": "ratios", "titulo": "¿Cuántos alumnos por clase y cuántos docentes? ¿Más inversión pública?" },
+  { "id": "D3", "tema": "educacion", "slug": "0-3", "titulo": "¿Qué harían con la escuela de 0 a 3 años?" },
+  { "id": "C1", "tema": "clima", "slug": "energia", "titulo": "¿Cuándo cerrarían las nucleares y cómo producirían la energía?" },
+  { "id": "C2", "tema": "clima", "slug": "transporte", "titulo": "¿Qué harían con el transporte público y el coche (precio, abonos, coche eléctrico)?" },
+  { "id": "C3", "tema": "clima", "slug": "sequias-incendios", "titulo": "¿Cómo prepararían el país para sequías, incendios e inundaciones?" },
+  { "id": "G1", "tema": "igualdad", "slug": "violencia-de-genero", "titulo": "¿Qué harían contra la violencia de género?" },
+  { "id": "G2", "tema": "igualdad", "slug": "brecha-y-conciliacion", "titulo": "¿Qué proponen contra la brecha salarial y para conciliar (permisos, cuidados)?" },
+  { "id": "G3", "tema": "igualdad", "slug": "lgtbi", "titulo": "¿Qué harían con los derechos LGTBI y la ley trans?" }
 ]

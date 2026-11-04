@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { url } from '../../lib/datos';
-import { NOMBRE } from '../../config';
+import { NOMBRE, KOFI } from '../../config';
 const grupos = [
   { titulo: 'Confianza', enlaces: [
     ['mas/como-lo-hacemos', 'Cómo lo hacemos', 'Qué partidos salen, cómo resumimos y qué significa cada etiqueta'],
@@ -10,6 +10,9 @@ const grupos = [
     ['mas/cambios', 'Registro de cambios', 'Qué hemos cambiado y cuándo'],
     ['mas/avisanos', '¿Ves un error? Avísanos', 'Lo revisamos contra el programa'],
   ] },
+  ...(KOFI ? [{ titulo: 'Colabora', enlaces: [
+    [KOFI, 'Colabora con el proyecto', 'Es autogestionado, sin publicidad ni dinero de partidos. Se abre Ko-fi'],
+  ] }] : []),
   { titulo: 'Legal', enlaces: [
     ['mas/privacidad', 'Privacidad', 'No guardamos tus respuestas ni usamos cookies'],
     ['mas/accesibilidad', 'Accesibilidad', 'Declaración de accesibilidad'],
@@ -27,7 +30,7 @@ const grupos = [
         <h2 class="h2" id={`g-${g.titulo}`}>{g.titulo}</h2>
         <ul class="lista">
           {g.enlaces.map(([ruta, t, d]) => (
-            <li><a class="tarjeta-enlace" href={url(ruta)} style="--c: var(--surface)"><span class="titulo">{t}</span><span class="pequeno secundario">{d}</span></a></li>
+            <li><a class="tarjeta-enlace" href={ruta.startsWith('https://') ? ruta : url(ruta)} {...(ruta.startsWith('https://') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} style="--c: var(--surface)"><span class="titulo">{t}</span><span class="pequeno secundario">{d}</span></a></li>
           ))}
         </ul>
       </section>

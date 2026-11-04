@@ -12,6 +12,11 @@
   .formas-temas .forma-tema:nth-child(2), .formas-mini .forma-tema:nth-child(2) { animation-delay: 70ms; }
   .formas-temas .forma-tema:nth-child(3), .formas-mini .forma-tema:nth-child(3) { animation-delay: 140ms; }
   .formas-temas .forma-tema:nth-child(4), .formas-mini .forma-tema:nth-child(4) { animation-delay: 210ms; }
+  .formas-temas .forma-tema:nth-child(5) { animation-delay: 280ms; }
+  .formas-temas .forma-tema:nth-child(6) { animation-delay: 350ms; }
+  .formas-temas .forma-tema:nth-child(7) { animation-delay: 420ms; }
+  .formas-temas .forma-tema:nth-child(8) { animation-delay: 490ms; }
+  .formas-temas .forma-tema:nth-child(9) { animation-delay: 560ms; }
   @keyframes forma-entra { from { opacity: 0; transform: translateY(14px) scale(0.9); } }
 
   /* Tras la entrada se apagan las animaciones CSS: el intercambio va por JS (scripts/formas.ts) */
