@@ -8,6 +8,7 @@ Comparador de programas para las elecciones generales del 29 de noviembre de 202
 - [Astro](https://astro.build) en modo estático: cada pregunta, tema y provincia es una página HTML ya generada (82 páginas). JavaScript mínimo y sin framework para el perfil, el orden aleatorio, las hojas, el simulador y la tarjeta para stories.
 - Tipografías Unbounded y Figtree servidas desde la propia web (sin Google Fonts, por privacidad).
 - Despliegue gratuito en Cloudflare Pages: se publica sola en cada push a `main`. Configuración: preajuste Astro, `npm run build`, carpeta `dist`; Node 22 sale de `.node-version` y las cabeceras de `public/_headers`.
+- Funciona sin conexión: al terminar el build, `integraciones/sin-conexion.mjs` genera `dist/sw.js` con la lista de todos los ficheros. La primera visita guarda la web entera en el navegador; cada build nuevo cambia la versión y renueva la copia.
 - Estadísticas sin cookies con GoatCounter (se activan poniendo el código en `src/config.ts`).
 
 ## Comandos

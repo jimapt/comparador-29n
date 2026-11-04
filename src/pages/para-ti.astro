@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import FormaTema from '../components/FormaTema.astro';
 import Bienvenida from '../components/Bienvenida.astro';
 import Pildora from '../components/Pildora.astro';
 import TarjetaPregunta from '../components/TarjetaPregunta.astro';
@@ -15,7 +16,7 @@ const orden = situaciones.porDefecto.map(pregunta);
     </header>
     <Bienvenida />
     <div class="formas-mini" aria-hidden="true">
-      {temas.map((t) => <span class={`forma--${t.forma}`} style={`background: ${t.color}`}></span>)}
+      {temas.map((t) => <FormaTema forma={t.forma} color={t.color} trazo />)}
     </div>
     <div class="pila" style="--gap: 0.375rem">
       <h1 class="display">Para ti</h1>
@@ -40,11 +41,7 @@ const orden = situaciones.porDefecto.map(pregunta);
 
 <style>
   .formas-mini { display: flex; gap: 0.375rem; margin-top: 0.25rem; }
-  .formas-mini span { width: 2.25rem; height: 2.25rem; border: 2px solid var(--ink); }
-  .formas-mini .forma--cuadrado { border-radius: 9px; }
-  .formas-mini .forma--pildora { border-radius: 999px; width: 3.25rem; }
-  .formas-mini .forma--arco { border-radius: 9px 9px 999px 999px; }
-  .formas-mini .forma--hoja { border-radius: 999px 9px; }
+  .formas-mini :global(svg) { width: 2.25rem; height: 2.25rem; }
   .temas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
 </style>
 

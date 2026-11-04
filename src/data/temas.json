@@ -3,28 +3,28 @@
     "id": "vivienda",
     "nombre": "Vivienda",
     "color": "#FFC9A8",
-    "forma": "cuadrado",
+    "forma": "casa",
     "descripcion": "El precio del alquiler, cómo comprar la primera vivienda y cuánta vivienda pública construirían."
   },
   {
     "id": "empleo",
     "nombre": "Empleo",
     "color": "#C9E7A7",
-    "forma": "pildora",
+    "forma": "peldanos",
     "descripcion": "El salario mínimo, la temporalidad y el paro juvenil, y qué cambiarían para los autónomos."
   },
   {
     "id": "inmigracion",
     "nombre": "Inmigración",
     "color": "#B8DAF5",
-    "forma": "arco",
+    "forma": "mundo",
     "descripcion": "Cómo regularían la llegada, qué harían con quien ya vive aquí sin papeles y cómo sería la integración."
   },
   {
     "id": "pensiones",
     "nombre": "Pensiones",
     "color": "#DCCBF3",
-    "forma": "hoja",
+    "forma": "reloj",
     "descripcion": "Si subirían con el IPC, cómo garantizarían que se puedan pagar y si cambiarían la edad de jubilación."
   }
 ]

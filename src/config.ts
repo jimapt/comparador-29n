@@ -1,10 +1,9 @@
-// Datos del producto que aún no están cerrados. Todo lo marcado [PENDIENTE]
-// se cambia aquí y se propaga a toda la web.
+// Datos del producto. Se cambian aquí y se propagan a toda la web.
 
 export const NOMBRE = 'esto te toca';
 export const DOMINIO = 'estotetoca.pages.dev'; // se muestra en las tarjetas para compartir; cambiar si Cloudflare da otro nombre
 export const CORREO_CORRECCIONES = 'estotetoca@outlook.es'; // buzón para "¿Ves un error? Avísanos"
-export const PLAZO_CORRECCIONES = '48 horas'; // [PENDIENTE] confirmar con Laura
+export const PLAZO_CORRECCIONES = '48 horas'; // Confirmado por Laura el 03/11/2026
 export const RESPONSABLE = 'Contacto: estotetoca@outlook.es'; // aviso legal y privacidad (Laura, 03/11: solo el correo)
 
 // Fecha de la última revisión del contenido (se muestra en cada pregunta).

@@ -1,7 +1,7 @@
 {
  "fuente": {
-  "titulo": "Ministerio del Interior, escrutinio de las elecciones generales del 23 de julio de 2023 (vía Público)",
-  "url": "https://resultados.generales23j.es/",
+  "titulo": "Ministerio del Interior, escrutinio de las elecciones generales del 23 de julio de 2023, publicado por Público",
+  "url": "https://www.publico.es/resultados-elecciones/generales/2023/",
   "notaMadrid": "En Madrid usamos el resultado definitivo, con el voto desde el extranjero, que movió un escaño del PSOE al PP."
  },
  "nota": "Solo las candidaturas que pasaron del 3 % de los votos válidos en cada provincia. Los votos de las demás no se incluyen.",
@@ -29,7 +29,8 @@
      "votos": 21127,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/andalucia/almeria"
   },
   "cadiz": {
    "blanco": 7092,
@@ -54,7 +55,8 @@
      "votos": 81544,
      "escanos": 1
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/andalucia/cadiz"
   },
   "cordoba": {
    "blanco": 4329,
@@ -79,7 +81,8 @@
      "votos": 61063,
      "escanos": 1
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/andalucia/cordoba"
   },
   "granada": {
    "blanco": 4036,
@@ -104,7 +107,8 @@
      "votos": 57842,
      "escanos": 1
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/andalucia/granada"
   },
   "huelva": {
    "blanco": 2403,
@@ -129,7 +133,8 @@
      "votos": 26607,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/andalucia/huelva"
   },
   "jaen": {
    "blanco": 2490,
@@ -154,7 +159,8 @@
      "votos": 29208,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/andalucia/jaen"
   },
   "malaga": {
    "blanco": 7495,
@@ -179,7 +185,8 @@
      "votos": 95662,
      "escanos": 1
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/andalucia/malaga"
   },
   "sevilla": {
    "blanco": 10902,
@@ -204,7 +211,8 @@
      "votos": 140522,
      "escanos": 1
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/andalucia/sevilla"
   },
   "huesca": {
    "blanco": 1213,
@@ -229,7 +237,8 @@
      "votos": 13624,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/aragon/huesca"
   },
   "teruel": {
    "blanco": 413,
@@ -259,7 +268,8 @@
      "votos": 4081,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/aragon/teruel"
   },
   "zaragoza": {
    "blanco": 4668,
@@ -284,7 +294,8 @@
      "votos": 69239,
      "escanos": 1
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/aragon/zaragoza"
   },
   "asturias": {
    "blanco": 5971,
@@ -309,7 +320,8 @@
      "votos": 73438,
      "escanos": 1
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/principado-de-asturias"
   },
   "baleares": {
    "blanco": 4691,
@@ -334,7 +346,8 @@
      "votos": 76302,
      "escanos": 1
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/illes-balears"
   },
   "las-palmas": {
    "blanco": 3050,
@@ -369,7 +382,8 @@
      "votos": 33327,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/canarias/las-palmas"
   },
   "santa-cruz-de-tenerife": {
    "blanco": 5060,
@@ -394,7 +408,8 @@
      "votos": 53330,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/canarias/santa-cruz-de-tenerife"
   },
   "cantabria": {
    "blanco": 3249,
@@ -419,7 +434,8 @@
      "votos": 29270,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/cantabria"
   },
   "albacete": {
    "blanco": 1829,
@@ -444,7 +460,8 @@
      "votos": 15677,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-la-mancha/albacete"
   },
   "ciudad-real": {
    "blanco": 2344,
@@ -469,7 +486,8 @@
      "votos": 17256,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-la-mancha/ciudad-real"
   },
   "cuenca": {
    "blanco": 967,
@@ -494,7 +512,8 @@
      "votos": 6282,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-la-mancha/cuenca"
   },
   "guadalajara": {
    "blanco": 1138,
@@ -519,7 +538,8 @@
      "votos": 12792,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-la-mancha/guadalajara"
   },
   "toledo": {
    "blanco": 2599,
@@ -544,7 +564,8 @@
      "votos": 31620,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-la-mancha/toledo"
   },
   "avila": {
    "blanco": 620,
@@ -574,7 +595,8 @@
      "votos": 4948,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-y-leon/avila"
   },
   "burgos": {
    "blanco": 1836,
@@ -599,7 +621,8 @@
      "votos": 17249,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-y-leon/burgos"
   },
   "leon": {
    "blanco": 1543,
@@ -629,7 +652,8 @@
      "votos": 18147,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-y-leon/leon"
   },
   "palencia": {
    "blanco": 827,
@@ -654,7 +678,8 @@
      "votos": 5792,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-y-leon/palencia"
   },
   "salamanca": {
    "blanco": 1636,
@@ -679,7 +704,8 @@
      "votos": 10760,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-y-leon/salamanca"
   },
   "segovia": {
    "blanco": 861,
@@ -704,7 +730,8 @@
      "votos": 7020,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-y-leon/segovia"
   },
   "soria": {
    "blanco": 281,
@@ -734,7 +761,8 @@
      "votos": 1679,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-y-leon/soria"
   },
   "valladolid": {
    "blanco": 2410,
@@ -759,7 +787,8 @@
      "votos": 27693,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-y-leon/valladolid"
   },
   "zamora": {
    "blanco": 912,
@@ -784,7 +813,8 @@
      "votos": 5730,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/castilla-y-leon/zamora"
   },
   "barcelona": {
    "blanco": 20899,
@@ -819,7 +849,8 @@
      "votos": 200138,
      "escanos": 2
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/catalunya/barcelona"
   },
   "girona": {
    "blanco": 2971,
@@ -859,7 +890,8 @@
      "votos": 18106,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/catalunya/girona"
   },
   "lleida": {
    "blanco": 2047,
@@ -899,7 +931,8 @@
      "votos": 5403,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/catalunya/lleida"
   },
   "tarragona": {
    "blanco": 3162,
@@ -934,7 +967,8 @@
      "votos": 37910,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/catalunya/tarragona"
   },
   "ceuta": {
    "blanco": 332,
@@ -954,7 +988,8 @@
      "votos": 7742,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/ciudad-de-ceuta"
   },
   "melilla": {
    "blanco": 253,
@@ -984,7 +1019,8 @@
      "votos": 821,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/ciudad-de-melilla"
   },
   "alicante": {
    "blanco": 6558,
@@ -1009,7 +1045,8 @@
      "votos": 114973,
      "escanos": 1
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/comunitat-valenciana/alicante"
   },
   "castellon": {
    "blanco": 2748,
@@ -1034,7 +1071,8 @@
      "votos": 43720,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/comunitat-valenciana/castellon"
   },
   "valencia": {
    "blanco": 10892,
@@ -1059,7 +1097,8 @@
      "votos": 217703,
      "escanos": 2
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/comunitat-valenciana/valencia"
   },
   "badajoz": {
    "blanco": 3217,
@@ -1084,7 +1123,8 @@
      "votos": 26576,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/extremadura/badajoz"
   },
   "caceres": {
    "blanco": 1709,
@@ -1109,7 +1149,8 @@
      "votos": 16170,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/extremadura/caceres"
   },
   "a-coruna": {
    "blanco": 5005,
@@ -1139,7 +1180,8 @@
      "votos": 33606,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/galicia/a-coruna"
   },
   "lugo": {
    "blanco": 1232,
@@ -1169,7 +1211,8 @@
      "votos": 8345,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/galicia/lugo"
   },
   "ourense": {
    "blanco": 1079,
@@ -1199,7 +1242,8 @@
      "votos": 8415,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/galicia/ourense"
   },
   "pontevedra": {
    "blanco": 3759,
@@ -1229,7 +1273,8 @@
      "votos": 26648,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/galicia/pontevedra"
   },
   "madrid": {
    "blanco": 28960,
@@ -1254,7 +1299,8 @@
      "votos": 506164,
      "escanos": 5
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/comunidad-de-madrid"
   },
   "murcia": {
    "blanco": 5009,
@@ -1279,7 +1325,8 @@
      "votos": 70900,
      "escanos": 1
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/region-de-murcia"
   },
   "navarra": {
    "blanco": 2838,
@@ -1314,7 +1361,8 @@
      "votos": 19213,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/comunidad-foral-de-navarra"
   },
   "alava": {
    "blanco": 720,
@@ -1349,7 +1397,8 @@
      "votos": 6500,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/euskadi/alava"
   },
   "gipuzkoa": {
    "blanco": 1991,
@@ -1379,7 +1428,8 @@
      "votos": 32033,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/euskadi/guipuzcoa"
   },
   "bizkaia": {
    "blanco": 3371,
@@ -1409,7 +1459,8 @@
      "votos": 66189,
      "escanos": 1
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/euskadi/vizcaya"
   },
   "la-rioja": {
    "blanco": 1596,
@@ -1434,7 +1485,8 @@
      "votos": 11320,
      "escanos": 0
     }
-   ]
+   ],
+   "url": "https://www.publico.es/resultados-elecciones/generales/2023/la-rioja"
   }
  }
 }
