@@ -32,8 +32,8 @@
   "situaciones": [
     {
       "id": "alquilo",
-      "etiqueta": "Alquilo",
-      "corta": "Alquilo",
+      "etiqueta": "Vivo de alquiler",
+      "corta": "De alquiler",
       "preguntas": [
         "V1",
         "V3",

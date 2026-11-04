@@ -57,7 +57,7 @@ export const provinciasAlfabetico = provincias.slice().sort((a, b) => a.nombre.l
 export const fuenteEscanos2023 = provinciasJson.fuente2023;
 
 /** Votos de 2023 por provincia (solo candidaturas por encima del 3 %), para el simulador. */
-export interface Resultado2023 { blanco: number; url: string; partidos: { nombre: string; votos: number; escanos: number }[] }
+export interface Resultado2023 { blanco: number; partidos: { nombre: string; votos: number; escanos: number }[] }
 export const resultados2023 = resultados2023Json.provincias as Record<string, Resultado2023>;
 export const fuenteResultados2023 = resultados2023Json.fuente;
 export const fuenteEscanos2026 = provinciasJson.fuente2026;

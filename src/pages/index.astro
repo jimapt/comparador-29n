@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import FormaTema from '../components/FormaTema.astro';
+import Icono from '../components/Icono.astro';
 import { url, temas, familias, preguntas, preguntasDeTema, urlPregunta, situaciones, listaTemas } from '../lib/datos';
 import { NOMBRE } from '../config';
 
@@ -16,7 +17,7 @@ const pasos = [
   <div class="contenedor portada pila" style="--gap: 1.125rem">
     <header class="cabecera">
       <span class="marca">{NOMBRE}</span>
-      <span class="chapa-29n" aria-hidden="true">
+      <button type="button" class="chapa-29n" data-abrir-29n aria-haspopup="dialog" aria-label="29N: qué se vota el 29 de noviembre">
         <svg class="urna" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <g class="urna__papeleta">
             <path fill="#fff" d="M8 11V3.5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1V11" />
@@ -24,7 +25,7 @@ const pasos = [
           </g>
           <path fill="#fff" d="M3.5 11h17v8.5a1.5 1.5 0 0 1-1.5 1.5H5a1.5 1.5 0 0 1-1.5-1.5z" />
           <path d="M9 15h6" />
-        </svg>29N</span>
+        </svg>29N</button>
     </header>
 
     <div class="formas-temas" aria-hidden="true" data-visibles="8">
@@ -33,9 +34,9 @@ const pasos = [
 
     <p class="antetitulo">Elecciones generales · 29 de noviembre</p>
     <h1 class="display">¿Qué proponen sobre lo tuyo?</h1>
-    <p>Nos hemos leído los programas de los partidos y te contamos en corto y sin rodeos lo que más te toca. Qué propone cada uno sobre {listaTemas}, con la página del programa de donde sale.</p>
+    <p>Nos hemos leído los programas de los partidos y te contamos en corto y sin rodeos lo que más te toca. Qué propone cada uno sobre {listaTemas}, con la página del programa de donde sale. <strong>Ahora te toca.</strong></p>
     <ul class="sellos pequeno" aria-label="Lo que prometemos">
-      {['No te decimos qué votar', 'Sin cuentas', 'No guardamos nada'].map((t) => (
+      {['No guardamos tus datos', 'No hace falta una cuenta', 'No te decimos a quién votar', 'Tú te informas, tú decides'].map((t) => (
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7" /></svg>{t}</li>
       ))}
     </ul>
@@ -83,10 +84,28 @@ const pasos = [
       <p><a href={url('mas/como-lo-hacemos')}>Cómo lo hacemos</a> · <a href={url('mas/fuentes')}>Fuentes</a> · <a href={url('mas/privacidad')}>Privacidad</a></p>
     </footer>
   </div>
+  <dialog class="hoja" id="hoja-29n" aria-labelledby="hoja-29n-titulo">
+    <div class="hoja__panel pila" style="--gap: 0.75rem">
+      <div class="hoja__asa" aria-hidden="true"></div>
+      <div class="hoja__cabecera">
+        <h2 class="h2" id="hoja-29n-titulo">El 29N, en corto</h2>
+        <button type="button" class="boton-icono" data-cerrar aria-label="Cerrar"><Icono nombre="cerrar" tam={18} /></button>
+      </div>
+      <ul class="hoja-29n__lista">
+        <li><strong>Qué se vota.</strong> Los 350 diputados del Congreso y buena parte del Senado.</li>
+        <li><strong>Cómo se reparte.</strong> Cada provincia elige sus propios diputados según los votos que hay en ella. Por eso tu voto cuenta en tu provincia.</li>
+        <li><strong>Y después.</strong> El Congreso elige a quien preside el Gobierno: necesita 176 votos en la primera votación, o más síes que noes en la segunda.</li>
+        <li><strong>Calendario.</strong> Campaña del 13 al 27 de noviembre, jornada de reflexión el 28 y votación el domingo 29.</li>
+      </ul>
+      <a class="boton boton--sec" href={url('provincia')}>Ver qué pasa en tu provincia</a>
+    </div>
+  </dialog>
 </Base>
 
 
 <style>
+  .chapa-29n { background: none; color: inherit; cursor: pointer; }
+  .hoja-29n__lista { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; }
   .portada { padding-bottom: 2rem; }
   main { padding-bottom: 1rem; }
   /* Dos filas de 4 formas, centradas y a todo el ancho (Laura, 03/11). La novena espera fuera
@@ -108,3 +127,10 @@ const pasos = [
     display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 800;
   }
 </style>
+
+<script>
+  import { abrirHoja, prepararHojas } from '../scripts/hojas';
+  prepararHojas();
+  const hoja29 = document.getElementById('hoja-29n') as HTMLDialogElement;
+  document.querySelector<HTMLElement>('[data-abrir-29n]')?.addEventListener('click', (e) => abrirHoja(hoja29, e.currentTarget as HTMLElement));
+</script>

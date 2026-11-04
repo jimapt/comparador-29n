@@ -9,7 +9,15 @@ const { escanos, escanos2023, provincia, slug } = Astro.props;
 const r = resultados2023[slug];
 const validos = r.partidos.reduce((a, p) => a + p.votos, 0) + r.blanco;
 const pct = (v: number) => Math.round((v / validos) * 1000) / 10;
-const partidos = r.partidos.map((p, i) => ({ ...p, i, pct: pct(p.votos) }));
+// Color principal de cada partido (Laura, 04/11), aproximado al de su marca. Va junto al patrón,
+// que se mantiene para no depender solo del color.
+const COLORES: Record<string, string> = {
+  PP: '#1D84CE', PSOE: '#E30613', Vox: '#63BE21', Sumar: '#E51C55', PSC: '#E73B39', ERC: '#FFB232',
+  Junts: '#20C0B2', CUP: '#FFED00', BNG: '#76B3DD', 'EH Bildu': '#B5CF18', PNV: '#4AAE4A', UPN: '#2A52BE',
+  'Coalición Canaria': '#FFD700', 'Nueva Canarias': '#8DC63F', 'Teruel Existe': '#0F7B4A', 'Por Ávila': '#7FB539',
+  UPL: '#B22234', 'Soria ¡Ya!': '#2F8D46', 'Coalición por Melilla': '#00A650',
+};
+const partidos = r.partidos.map((p, i) => ({ ...p, i, pct: pct(p.votos), color: COLORES[p.nombre] ?? '#ffffff' }));
 const blanco = pct(r.blanco);
 const fmt = (n: number) => n.toLocaleString('es-ES', { maximumFractionDigits: 1 });
 const con2023 = partidos.filter((p) => p.escanos > 0).map((p) => `${p.nombre} ${p.escanos}`).join(', ');
@@ -21,9 +29,9 @@ const con2023 = partidos.filter((p) => p.escanos > 0).map((p) => `${p.nombre} ${
   <div class="pila" style="--gap: 0.5rem">
     {partidos.map((p) => (
       <div class="deslizador">
-        <label for={`sim-${slug}-${p.i}`} class="nombre"><span class={`muestra p-${p.i}`} aria-hidden="true"></span>{p.nombre}</label>
+        <label for={`sim-${slug}-${p.i}`} class="nombre"><span class={`muestra p-${p.i}`} style={`--pc: ${p.color}`} aria-hidden="true"></span>{p.nombre}</label>
         <output id={`sim-${slug}-${p.i}-r`} for={`sim-${slug}-${p.i}`} class="pequeno" data-resultado={p.i}></output>
-        <input id={`sim-${slug}-${p.i}`} type="range" min="0" max="80" step="0.5" value={p.pct} data-inicial={p.pct} data-partido={p.i} data-nombre={p.nombre} aria-describedby={`sim-${slug}-${p.i}-r`} />
+        <input id={`sim-${slug}-${p.i}`} type="range" min="0" max="80" step="0.5" value={p.pct} data-inicial={p.pct} data-color={p.color} data-partido={p.i} data-nombre={p.nombre} aria-describedby={`sim-${slug}-${p.i}-r`} />
       </div>
     ))}
   </div>
@@ -44,7 +52,8 @@ const con2023 = partidos.filter((p) => p.escanos > 0).map((p) => `${p.nombre} ${
     El voto en blanco ({fmt(blanco)} % en 2023) cuenta para el umbral y no se mueve.
   </p>
   <p class="pequeno secundario">
-    <strong>Fuente:</strong> <a href={r.url} target="_blank" rel="noopener noreferrer">resultados de {provincia} en 2023<span class="solo-lector"> (se abre en otra pestaña)</span></a>, del escrutinio del Ministerio del Interior publicado por Público.
+    <strong>Fuente:</strong> <a href={fuenteResultados2023.url} target="_blank" rel="noopener noreferrer">escrutinio del Ministerio del Interior<span class="solo-lector"> (se abre en otra pestaña)</span></a>.
+    El resultado definitivo lo publicó la Junta Electoral Central en el <a href={fuenteResultados2023.definitivo.url} target="_blank" rel="noopener noreferrer">BOE<span class="solo-lector"> (se abre en otra pestaña)</span></a> y puede variar unos cientos de votos, porque suma el voto desde el extranjero.
     {slug === 'madrid' && fuenteResultados2023.notaMadrid}
     Solo aparecen los partidos que pasaron del 3 % en {provincia}, y los porcentajes se calculan sin los demás, así que pueden variar unas décimas respecto a los oficiales.
   </p>
@@ -59,13 +68,14 @@ const con2023 = partidos.filter((p) => p.escanos > 0).map((p) => `${p.nombre} ${
   .escanos { display: grid; grid-template-columns: repeat(auto-fill, minmax(1.5rem, 1fr)); gap: 0.25rem; }
   .escanos :global(span), .muestra { height: 1.5rem; border-radius: 6px; border: 2px solid var(--ink); }
   .muestra { width: 1.25rem; height: 1.25rem; flex: none; }
-  :global(.simulador .p-0) { background: var(--ink); }
-  :global(.simulador .p-1) { background: repeating-linear-gradient(45deg, var(--ink) 0 2px, #fff 2px 6px); }
-  :global(.simulador .p-2) { background: radial-gradient(circle, var(--ink) 1.5px, #fff 1.6px) 0 0 / 6px 6px; }
-  :global(.simulador .p-3) { background: #fff; }
-  :global(.simulador .p-4) { background: repeating-linear-gradient(0deg, var(--ink) 0 2px, #fff 2px 6px); }
-  :global(.simulador .p-5) { background: repeating-linear-gradient(-45deg, var(--ink) 0 2px, #fff 2px 6px), repeating-linear-gradient(45deg, var(--ink) 0 2px, #fff 2px 6px); background-blend-mode: multiply; }
-  :global(.simulador .p-6) { background: repeating-linear-gradient(90deg, var(--ink) 0 2px, #fff 2px 6px); }
+  /* Color del partido (--pc) con un patrón distinto para cada uno */
+  :global(.simulador .p-0) { background: var(--pc, #fff); }
+  :global(.simulador .p-1) { background: repeating-linear-gradient(45deg, var(--ink) 0 2px, var(--pc, #fff) 2px 6px); }
+  :global(.simulador .p-2) { background: radial-gradient(circle, var(--ink) 1.5px, var(--pc, #fff) 1.6px) 0 0 / 6px 6px; }
+  :global(.simulador .p-3) { background: conic-gradient(var(--ink) 25%, var(--pc, #fff) 0 50%, var(--ink) 0 75%, var(--pc, #fff) 0) 0 0 / 8px 8px; }
+  :global(.simulador .p-4) { background: repeating-linear-gradient(0deg, var(--ink) 0 2px, var(--pc, #fff) 2px 6px); }
+  :global(.simulador .p-5) { background: repeating-linear-gradient(-45deg, var(--ink) 0 1.5px, transparent 1.5px 6px), repeating-linear-gradient(45deg, var(--ink) 0 1.5px, var(--pc, #fff) 1.5px 6px); }
+  :global(.simulador .p-6) { background: repeating-linear-gradient(90deg, var(--ink) 0 2px, var(--pc, #fff) 2px 6px); }
   summary { cursor: pointer; min-height: 2.75rem; display: flex; align-items: center; }
   .tabla { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
   .tabla th, .tabla :global(td) { text-align: left; padding: 0.375rem 0.25rem; border-bottom: 1.5px solid var(--ink); }
@@ -100,18 +110,20 @@ const con2023 = partidos.filter((p) => p.escanos > 0).map((p) => `${p.nombre} ${
     const bloques = sim.querySelector('[data-bloques]')!;
     const explicacion = sim.querySelector('[data-explicacion]')!;
     const tabla = sim.querySelector('[data-tabla]')!;
-    function pintar() {
-      const votos = inputs.map((i) => Number(i.value));
+    // escala < 1 solo durante la animación de entrada: los escaños son los finales y el % crece desde 0
+    function pintar(escala = 1) {
+      const votos = inputs.map((i) => Number(escala < 1 ? i.dataset.inicial : i.value));
       const { res, validos, entran } = dhondt(votos, blanco, escanos);
       bloques.innerHTML = '';
       tabla.innerHTML = '';
       votos.forEach((v, k) => {
-        const pct = validos ? (v / validos) * 100 : 0;
+        const pct = (validos ? (v / validos) * 100 : 0) * escala;
         sim.querySelector(`[data-resultado="${k}"]`)!.textContent = `${fmt(pct)} % · ${res[k]} esc.`;
         inputs[k].setAttribute('aria-valuetext', `${fmt(pct)} % de los votos, ${res[k]} escaños`);
         for (let i = 0; i < res[k]; i++) {
           const s = document.createElement('span');
           s.className = `p-${k}`;
+          s.style.setProperty('--pc', inputs[k].dataset.color!);
           bloques.append(s);
         }
         const tr = document.createElement('tr');
@@ -130,11 +142,35 @@ const con2023 = partidos.filter((p) => p.escanos > 0).map((p) => `${p.nombre} ${
       frases.push(`En esta simulación: ${con.join(', ')} de ${escanos} escaños.`);
       explicacion.textContent = frases.join(' ');
     }
-    inputs.forEach((i) => i.addEventListener('input', pintar));
+    inputs.forEach((i) => i.addEventListener('input', () => pintar()));
     sim.querySelector('[data-reiniciar]')!.addEventListener('click', () => {
       inputs.forEach((i) => (i.value = i.dataset.inicial!));
       pintar();
     });
     pintar();
+
+    // Entrada (Laura, 04/11): al verse por primera vez, los tiradores van de 0 a su sitio y el % crece.
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      const DURACION = 1400;
+      const curva = (t: number) => 1 - Math.pow(1 - t, 3);
+      const animar = () => {
+        const t0 = performance.now();
+        const paso = (ahora: number) => {
+          const t = Math.min(1, (ahora - t0) / DURACION);
+          const e = curva(t);
+          inputs.forEach((i) => (i.value = String(Number(i.dataset.inicial) * e)));
+          pintar(t < 1 ? e : 1);
+          if (t < 1) requestAnimationFrame(paso);
+          else inputs.forEach((i) => (i.value = i.dataset.inicial!));
+        };
+        requestAnimationFrame(paso);
+      };
+      inputs.forEach((i) => (i.value = '0'));
+      pintar(0.0001);
+      const obs = new IntersectionObserver((entradas) => {
+        if (entradas.some((e) => e.isIntersecting)) { obs.disconnect(); animar(); }
+      }, { threshold: 0.35 });
+      obs.observe(sim);
+    }
   });
 </script>
