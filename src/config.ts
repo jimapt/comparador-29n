@@ -17,4 +17,4 @@ export const GOATCOUNTER = 'https://estotetoca.goatcounter.com/count';
 
 // Enlace a la página de Ko-fi para aportaciones voluntarias. Vacío = la página
 // "Apoya el proyecto" muestra que aún no está activo. Ejemplo: 'https://ko-fi.com/estotetoca'
-export const KOFI = '';
+export const KOFI = 'https://ko-fi.com/estotetoca';
