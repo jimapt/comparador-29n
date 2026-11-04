@@ -14,3 +14,7 @@ export const ELECCIONES = '29 de noviembre de 2026';
 // Estadísticas agregadas y sin cookies con GoatCounter (gratis para proyectos
 // sin ánimo de lucro). Vacío = sin estadísticas. Ejemplo: 'https://estotetoca.goatcounter.com/count'
 export const GOATCOUNTER = 'https://estotetoca.goatcounter.com/count';
+
+// Enlace a la página de Ko-fi para aportaciones voluntarias. Vacío = la página
+// "Apoya el proyecto" muestra que aún no está activo. Ejemplo: 'https://ko-fi.com/estotetoca'
+export const KOFI = '';
