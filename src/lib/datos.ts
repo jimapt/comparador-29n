@@ -73,7 +73,10 @@ export const situaciones = {
 /** "vivienda, empleo y pensiones": los temas publicados, en minúscula y en el orden de las familias. */
 export const listaTemas = (() => {
   const n = familias.flatMap((f) => f.temas).map((t) => t.nombre.toLowerCase());
-  return n.length > 1 ? `${n.slice(0, -1).join(', ')} y ${n.at(-1)}` : n.join('');
+  // «e» ante palabra que suena /i/ (igualdad, historia), pero «y» ante «hie-» (hielo): norma de la RAE
+  const ultima = n.at(-1) ?? '';
+  const y = /^(i|í|hi|hí)/.test(ultima) && !/^hi[aeo]/.test(ultima) ? 'e' : 'y';
+  return n.length > 1 ? `${n.slice(0, -1).join(', ')} ${y} ${ultima}` : n.join('');
 })();
 
 export const ETIQUETA_CONCRETA: Record<Concreta, string> = {
