@@ -5,7 +5,7 @@ import '../styles/global.css';
 import '../styles/movimiento.css';
 import Icono from '../components/Icono.astro';
 import { url, situaciones, provincias, listaTemas } from '../lib/datos';
-import { NOMBRE, GOATCOUNTER } from '../config';
+import { NOMBRE, GOATCOUNTER, KOFI } from '../config';
 
 interface Props {
   titulo: string;
@@ -54,6 +54,9 @@ const datosPerfil = {
         <a href={url('provincia')} data-enlace-provincia aria-current={nav === 'provincia' ? 'page' : undefined}>Tu provincia</a>
         <a href={url('mas')} aria-current={nav === 'mas' ? 'page' : undefined}>Más</a>
       </nav>
+    )}
+    {KOFI && (
+      <a class="colabora-fijo" class:list={[{ 'colabora-fijo--sin-nav': nav === null }]} href={KOFI} target="_blank" rel="noopener noreferrer" aria-label="Colabora con el proyecto en Ko-fi (se abre en otra pestaña)">Colabora</a>
     )}
 
     <dialog class="hoja" id="hoja-glosario" aria-labelledby="glosario-titulo">
@@ -164,6 +167,19 @@ const datosPerfil = {
         }
       }
       faviconAnimado();
+      // «Colabora»: se aparta al bajar (para no tapar contenido) y vuelve al subir o al llegar al final.
+      const colabora = document.querySelector<HTMLElement>('.colabora-fijo');
+      if (colabora) {
+        let ultimo = scrollY;
+        addEventListener('scroll', () => {
+          const y = scrollY;
+          const final = innerHeight + y >= document.documentElement.scrollHeight - 80;
+          if (Math.abs(y - ultimo) < 8 && !final) return;
+          colabora.toggleAttribute('data-oculto', y > ultimo && y > 120 && !final);
+          ultimo = y;
+        }, { passive: true });
+      }
+
       // Modo sin conexión: guarda la web en el navegador (ver integraciones/sin-conexion.mjs).
       if (import.meta.env.PROD && 'serviceWorker' in navigator) {
         window.addEventListener('load', () => {

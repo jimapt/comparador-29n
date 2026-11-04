@@ -1,7 +1,7 @@
 ---
 import Pagina from '../../layouts/Pagina.astro';
 import { url, partidos, preguntas, fechaLarga } from '../../lib/datos';
-import { ACTUALIZADO } from '../../config';
+import { ACTUALIZADO, KOFI } from '../../config';
 ---
 <Pagina resumen={[`Las mismas ${preguntas.length} preguntas para todos los partidos, en 25 palabras como máximo.`, "Cada respuesta enlaza a su documento, con página y cita literal.", "Lo resume una IA y lo revisa una persona contra el original.", "El orden de los partidos es aleatorio y no sumamos ni puntuamos a nadie."]} titulo="Cómo lo hacemos" descripcion="Qué partidos salen, cómo resumimos sus propuestas y qué significa cada etiqueta.">
   <p>Hemos leído los programas para que tú no tengas que hacerlo. Aquí te contamos cómo, para que puedas comprobarlo.</p>
@@ -50,6 +50,9 @@ import { ACTUALIZADO } from '../../config';
     <li>No guardamos lo que eliges. Mira la <a href={url('mas/privacidad')}>política de privacidad</a>.</li>
     <li>No damos opinión sobre las propuestas.</li>
   </ul>
+
+  <h2>Cómo nos financiamos</h2>
+  <p>Es un proyecto autogestionado, sin publicidad. {KOFI && <>Se sostiene con <a href={KOFI} target="_blank" rel="noopener noreferrer">aportaciones voluntarias</a> de quien la usa. </>}No aceptamos dinero de partidos, candidatos, cargos públicos ni fundaciones de partidos, y las aportaciones no cambian el contenido.</p>
 
   <p class="pequeno secundario">Contenido revisado el {fechaLarga(ACTUALIZADO)}. ¿Ves algo mal? <a href={url('mas/avisanos')}>Avísanos</a>.</p>
 </Pagina>
