@@ -9,7 +9,10 @@ import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const FUERA = new Set(['_headers', '_redirects', 'sw.js']);
+const FUERA = new Set(['_headers', '_redirects', 'sw.js', 'robots.txt']);
+// Las imágenes de vista previa solo las piden WhatsApp, X… al pegar un enlace,
+// y el sitemap solo los buscadores: no hace falta guardarlos sin conexión.
+const FUERA_PREFIJO = ['og/', 'sitemap', 'google'];
 
 async function ficheros(dir) {
   const salida = [];
@@ -35,7 +38,7 @@ export default function sinConexion() {
         const urls = [];
         for (const f of (await ficheros(raiz)).sort()) {
           const rel = relative(raiz, f).split(sep).join('/');
-          if (FUERA.has(rel)) continue;
+          if (FUERA.has(rel) || FUERA_PREFIJO.some((p) => rel.startsWith(p))) continue;
           hash.update(rel).update(await readFile(f));
           // Las páginas se piden como carpeta (trailingSlash: 'always').
           urls.push(base + rel.replace(/(^|\/)index\.html$/, '$1'));

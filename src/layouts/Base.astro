@@ -5,7 +5,8 @@ import '../styles/global.css';
 import '../styles/movimiento.css';
 import Icono from '../components/Icono.astro';
 import { url, situaciones, provincias, listaTemas } from '../lib/datos';
-import { NOMBRE, GOATCOUNTER, KOFI } from '../config';
+import { NOMBRE, GOATCOUNTER, KOFI, VERIFICACION_GOOGLE, VERIFICACION_BING } from '../config';
+import { imagenDe } from '../lib/og';
 
 interface Props {
   titulo: string;
@@ -17,6 +18,7 @@ interface Props {
 const { titulo, descripcion = `Qué propone cada partido sobre ${listaTemas}, en corto y con la fuente. Sin cuentas y sin guardar nada.`, tema, fondo, nav = null } = Astro.props;
 const tituloCompleto = titulo === NOMBRE ? `${NOMBRE} · elecciones generales 29N` : `${titulo} · ${NOMBRE}`;
 const canonica = new URL(Astro.url.pathname, Astro.site);
+const imagen = new URL(url(imagenDe(Astro.url.pathname, import.meta.env.BASE_URL)), Astro.site);
 const datosPerfil = {
   situaciones: Object.fromEntries(situaciones.situaciones.map((s) => [s.id, s.corta])),
   provincias: Object.fromEntries(provincias.map((p) => [p.slug, p.nombre])),
@@ -38,7 +40,16 @@ const datosPerfil = {
     <meta property="og:title" content={tituloCompleto} />
     <meta property="og:description" content={descripcion} />
     <meta property="og:url" content={canonica} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content={NOMBRE} />
+    <meta property="og:image" content={imagen} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={tituloCompleto} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={imagen} />
+    {VERIFICACION_GOOGLE && <meta name="google-site-verification" content={VERIFICACION_GOOGLE} />}
+    {VERIFICACION_BING && <meta name="msvalidate.01" content={VERIFICACION_BING} />}
     {GOATCOUNTER && <script is:inline async data-goatcounter={GOATCOUNTER} src="https://gc.zgo.at/count.js"></script>}
   </head>
   <body data-tema={tema} data-fondo={fondo}>

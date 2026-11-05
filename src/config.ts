@@ -18,3 +18,9 @@ export const GOATCOUNTER = 'https://estotetoca.goatcounter.com/count';
 // Enlace a la página de Ko-fi para aportaciones voluntarias. Vacío = la página
 // "Apoya el proyecto" muestra que aún no está activo. Ejemplo: 'https://ko-fi.com/estotetoca'
 export const KOFI = 'https://ko-fi.com/estotetoca';
+
+// Verificación de Google Search Console y Bing Webmaster Tools (05/11/2026).
+// Pegar solo el código de la etiqueta <meta> que dan (lo que va en content="…").
+// Vacío = no se añade la etiqueta.
+export const VERIFICACION_GOOGLE = 'IhQxBIWn3gO9f4L2Qkk6sxj9inhDKxmd4N6yzQAfv9M';
+export const VERIFICACION_BING = '';

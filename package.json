@@ -17,11 +17,18 @@
   },
   "homepage": "https://github.com/jimapt/comparador-29n#readme",
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "@fontsource-variable/figtree": "^5.3.0",
     "@fontsource-variable/unbounded": "^5.3.0",
-    "astro": "^5.18.2"
+    "@resvg/resvg-js": "2.6",
+    "astro": "^5.18.2",
+    "satori": "^0.12.2"
   },
   "private": true,
   "type": "module",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@fontsource/figtree": "^5.3.0",
+    "@fontsource/unbounded": "^5.3.0"
+  }
 }
