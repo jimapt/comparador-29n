@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 const FUERA = new Set(['_headers', '_redirects', 'sw.js', 'robots.txt']);
 // Las imágenes de vista previa solo las piden WhatsApp, X… al pegar un enlace,
 // y el sitemap solo los buscadores: no hace falta guardarlos sin conexión.
-const FUERA_PREFIJO = ['og/', 'sitemap', 'google'];
+const FUERA_PREFIJO = ['og/', 'sitemap', 'google', 'BingSiteAuth'];
 
 async function ficheros(dir) {
   const salida = [];
