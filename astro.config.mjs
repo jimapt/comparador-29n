@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 import sinConexion from './integraciones/sin-conexion.mjs';
 
 // Dirección pública: estotetoca.pages.dev (Cloudflare Pages). SITE y BASE permiten
@@ -12,5 +13,6 @@ export default defineConfig({
   trailingSlash: 'always',
   build: { format: 'directory' },
   devToolbar: { enabled: false },
-  integrations: [sinConexion()],
+  // sitemap antes que sinConexion para que el sitemap ya exista al hacer la lista.
+  integrations: [sitemap({ filter: (pagina) => !pagina.includes('/404') }), sinConexion()],
 });
