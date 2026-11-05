@@ -23,4 +23,4 @@ export const KOFI = 'https://ko-fi.com/estotetoca';
 // Pegar solo el código de la etiqueta <meta> que dan (lo que va en content="…").
 // Vacío = no se añade la etiqueta.
 export const VERIFICACION_GOOGLE = 'IhQxBIWn3gO9f4L2Qkk6sxj9inhDKxmd4N6yzQAfv9M';
-export const VERIFICACION_BING = '';
+export const VERIFICACION_BING = 'A8C1A5C1351350F87E013C75570587F0';
