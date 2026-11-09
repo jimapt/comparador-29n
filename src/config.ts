@@ -7,7 +7,7 @@ export const PLAZO_CORRECCIONES = '48 horas'; // Confirmado por Laura el 03/11/2
 export const RESPONSABLE = 'Contacto: estotetoca@outlook.es'; // aviso legal y privacidad (Laura, 03/11: solo el correo)
 
 // Fecha de la última revisión del contenido (se muestra en cada pregunta).
-export const ACTUALIZADO = '2026-11-01';
+export const ACTUALIZADO = '2026-11-09';
 
 export const ELECCIONES = '29 de noviembre de 2026';
 
