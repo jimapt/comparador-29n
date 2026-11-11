@@ -8,8 +8,8 @@
       "nombreLargo": "Partido Popular",
       "circunscripciones": "todas",
       "documento": {
-        "titulo": "Programa electoral 2023",
-        "url": "https://www.pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf",
+        "titulo": "Programa electoral 29N «La Reconstrucción Nacional»",
+        "url": "https://www.democrata.es/uploads/s1/35/09/79/8/la-reconstruccion-nacional.pdf",
         "pdf": true
       },
       "listas": {
@@ -330,10 +330,9 @@
         "malaga",
         "sevilla"
       ],
-      "nota": "Usamos su programa autonómico de 2026: varias propuestas son competencia de la Junta o del Estado, y se dice en cada respuesta.",
       "documento": {
-        "titulo": "Programa de Gobierno, elecciones andaluzas 2026",
-        "url": "https://adelanteandalucia.org/wp-content/uploads/2026/04/PROGRAMA-AA-2026-DEF.pdf",
+        "titulo": "Programa electoral 29N",
+        "url": "https://programa.adelanteandalucia.org/programa-29n-adelante-andalucia.pdf",
         "pdf": true
       }
     },
