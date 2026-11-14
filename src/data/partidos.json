@@ -8,8 +8,8 @@
       "nombreLargo": "Partido Popular",
       "circunscripciones": "todas",
       "documento": {
-        "titulo": "Programa electoral 2023",
-        "url": "https://www.pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf",
+        "titulo": "Programa electoral 29N «La Reconstrucción Nacional»",
+        "url": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
         "pdf": true
       },
       "listas": {
@@ -206,8 +206,8 @@
         "navarra"
       ],
       "documento": {
-        "titulo": "Programa electoral 2023 (en catalán)",
-        "url": "https://defensacatalunya.esquerrarepublicana.cat/documents/e2023-programa.pdf",
+        "titulo": "Programa electoral 29N (en catalán)",
+        "url": "https://www.esquerrarepublicana.cat/documents/e2026-programa.pdf",
         "pdf": true
       },
       "listas": {
@@ -275,8 +275,8 @@
         "pontevedra"
       ],
       "documento": {
-        "titulo": "Programa electoral 2023 (en gallego)",
-        "url": "https://www.bng.gal/media/bnggaliza/files/2023/07/05/23_bng_xerais_programa.pdf",
+        "titulo": "Programa electoral 29N (en gallego)",
+        "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
         "pdf": true
       }
     },
@@ -330,10 +330,9 @@
         "malaga",
         "sevilla"
       ],
-      "nota": "Usamos su programa autonómico de 2026: varias propuestas son competencia de la Junta o del Estado, y se dice en cada respuesta.",
       "documento": {
-        "titulo": "Programa de Gobierno, elecciones andaluzas 2026",
-        "url": "https://adelanteandalucia.org/wp-content/uploads/2026/04/PROGRAMA-AA-2026-DEF.pdf",
+        "titulo": "Programa electoral 29N",
+        "url": "https://programa.adelanteandalucia.org/programa-29n-adelante-andalucia.pdf",
         "pdf": true
       }
     },
