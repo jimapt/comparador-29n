@@ -33,8 +33,8 @@
       "nombreLargo": "Vox",
       "circunscripciones": "todas",
       "documento": {
-        "titulo": "Programa electoral 2023",
-        "url": "https://votaabascal.es/assets/pdf/Programa-VOX-2023.pdf",
+        "titulo": "Programa electoral 29N «Es sentido común»",
+        "url": "https://votasentidocomun.es/general/files/programa-elecct-vox.pdf",
         "pdf": true
       }
     },
@@ -259,8 +259,8 @@
         "bizkaia"
       ],
       "documento": {
-        "titulo": "Programa electoral 2023 «Con voz propia»",
-        "url": "https://www.eaj-pnv.eus/es/adjuntos-documentos/20945/pdf/con-voz-propia-programa-electoral-23-j",
+        "titulo": "Programa electoral 29N",
+        "url": "https://www.eaj-pnv.eus/es/adjuntos-documentos/21765/pdf/programa-electoral-29n",
         "pdf": true
       }
     },
@@ -288,10 +288,10 @@
         "las-palmas",
         "santa-cruz-de-tenerife"
       ],
-      "nota": "Su documento de 2023 es un manifiesto de reivindicaciones canarias: por eso muchas preguntas quedan en «No lo concreta».",
+      "nota": "Su programa del 29N se centra en reivindicaciones para Canarias, por eso varias preguntas quedan en «No lo concreta».",
       "documento": {
-        "titulo": "Manifiesto 2023 «Un objetivo común, la defensa de Canarias»",
-        "url": "https://coalicioncanaria.org/wp-content/uploads/2023/06/COALICION_POR_CANARIAS.pdf",
+        "titulo": "Bases del programa electoral 29N «Defiende Canarias»",
+        "url": "https://coalicioncanaria.org/wp-content/uploads/2026/11/CCA-26-Programa_Electoral-29NOV.pdf",
         "pdf": true
       },
       "listas": {
