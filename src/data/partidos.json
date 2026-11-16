@@ -22,8 +22,8 @@
       "nombreLargo": "Partido Socialista Obrero Español",
       "circunscripciones": "todas",
       "documento": {
-        "titulo": "Programa electoral 2023",
-        "url": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf",
+        "titulo": "Programa electoral 29N «La fuerza de seguir avanzando»",
+        "url": "https://www.psoe.es/media-content/2026/11/PROGRAMAPSOE29N26.pdf",
         "pdf": true
       }
     },
@@ -93,10 +93,10 @@
         "segovia",
         "soria"
       ],
-      "nota": "Es la candidatura del espacio de Sumar para el 29N. Aún no ha publicado programa conjunto: usamos el programa de Sumar de 2023 y sus propuestas públicas fechadas.",
+      "nota": "Es la candidatura del espacio de Sumar para el 29N.",
       "documento": {
-        "titulo": "Programa electoral 2023 «Un programa para ti»",
-        "url": "https://movimientosumar.es/wp-content/uploads/2023/07/Un-Programa-para-ti.pdf",
+        "titulo": "Programa electoral 29N (copia publicada por Demócrata)",
+        "url": "https://www.democrata.es/uploads/s1/35/42/91/4/programafrenteamplio.pdf",
         "pdf": true
       },
       "listas": {
@@ -388,10 +388,10 @@
         "zamora",
         "zaragoza"
       ],
-      "nota": "No ha publicado programa para el 29N. Usamos su contrato electoral de Castilla y León (2026) y su acto de Vistalegre (octubre de 2025).",
+      "nota": "Su contrato electoral del 29N no trata la escuela de 0 a 3 años, el clima, la conciliación ni los derechos LGTBI. En esas preguntas usamos su contrato electoral de Castilla y León (2026).",
       "documento": {
-        "titulo": "Contrato electoral de Castilla y León 2026 (copia publicada por The Objective)",
-        "url": "https://theobjective.com/wp-content/uploads/2026/03/Programa-electoral-CyL-de-Alvise-Pe%CC%81rez.pdf",
+        "titulo": "Contrato electoral simplificado 29N (copia publicada por The Objective)",
+        "url": "https://theobjective.com/wp-content/uploads/2026/11/salf.pdf",
         "pdf": true
       }
     }
