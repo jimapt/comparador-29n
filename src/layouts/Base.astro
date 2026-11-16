@@ -50,6 +50,47 @@ const datosPerfil = {
     <meta name="twitter:image" content={imagen} />
     {VERIFICACION_GOOGLE && <meta name="google-site-verification" content={VERIFICACION_GOOGLE} />}
     {VERIFICACION_BING && <meta name="msvalidate.01" content={VERIFICACION_BING} />}
+    <script is:inline>
+      // Cada visita empieza de cero. Lo que eliges vive en sessionStorage, pero los móviles
+      // casi nunca cierran pestañas y los navegadores las restauran, así que se borra también:
+      // - al entrar desde fuera (otra web, un enlace compartido, la barra de direcciones),
+      //   aunque sea en la misma pestaña; recargar o ir atrás y adelante no cuenta como salir;
+      // - tras 30 minutos sin usar la web (pestaña olvidada, volver al día siguiente).
+      // Va en <head> para que ninguna página llegue a leer la selección antigua.
+      (function () {
+        var CLAVES = ['ltt-perfil', 'ltt-orden', 'ltt-bienvenida', 'ltt-volver'];
+        var VISTO = 'ltt-visto';
+        var MAX = 30 * 60 * 1000;
+        function borrar() { CLAVES.forEach(function (k) { sessionStorage.removeItem(k); }); }
+        function caducada() { var v = Number(sessionStorage.getItem(VISTO)); return !v || Date.now() - v > MAX; }
+        function marcar() { try { sessionStorage.setItem(VISTO, String(Date.now())); } catch (e) {} }
+        try {
+          var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+          var tipo = nav ? nav.type : 'navigate';
+          var interno = false;
+          try { interno = !!document.referrer && new URL(document.referrer).origin === location.origin; } catch (e) {}
+          if ((tipo === 'navigate' && !interno) || caducada()) borrar();
+        } catch (e) {}
+        marcar();
+        // Al volver a una pestaña que llevaba mucho rato en segundo plano, en la caché de
+        // atrás/adelante o sin tocar, la página ya pintada aún enseña la selección: se borra y se recarga.
+        function alVolver() {
+          try {
+            if (caducada() && CLAVES.some(function (k) { return sessionStorage.getItem(k) !== null; })) {
+              borrar(); marcar(); location.reload(); return;
+            }
+          } catch (e) {}
+          marcar();
+        }
+        addEventListener('pageshow', function (e) { if (e.persisted) alVolver(); });
+        document.addEventListener('visibilitychange', function () {
+          if (document.visibilityState === 'visible') alVolver(); else marcar();
+        });
+        // Pestaña a la vista pero sin tocar durante mucho rato: se comprueba al volver a usarla.
+        addEventListener('pointerdown', alVolver, { capture: true, passive: true });
+        addEventListener('keydown', alVolver, true);
+      })();
+    </script>
     {GOATCOUNTER && <script is:inline async data-goatcounter={GOATCOUNTER} src="https://gc.zgo.at/count.js"></script>}
   </head>
   <body data-tema={tema} data-fondo={fondo}>

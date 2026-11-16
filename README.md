@@ -41,4 +41,4 @@ Todo lo pendiente está marcado como `[PENDIENTE]`.
 
 - Una respuesta marcada ⚠️ en las fichas (o de un partido en `SIN_VERIFICAR` del script de importación) sale como «En revisión» y no se publica. Para publicarla, quita la marca tras comprobar la cita y ejecuta `npm run contenido`.
 - Nada asocia un color a un partido: el color es del tema.
-- Nunca se guarda ni se envía la situación o la provincia. Viven en `sessionStorage` de la pestaña.
+- Nunca se guarda ni se envía la situación o la provincia. Viven en `sessionStorage` de la pestaña y se borran al entrar desde fuera o tras 30 minutos sin uso (script en `<head>` de `src/layouts/Base.astro`).
