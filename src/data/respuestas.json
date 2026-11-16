@@ -100,15 +100,13 @@
   {
     "partido": "pp",
     "pregunta": "E1",
-    "texto": "Actualizarlo pactando con sindicatos y empresarios, sin decir cuánto.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "Programa electoral 2023, med. 22, p. 18",
-    "enlaces": [
-      "https://www.pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf#page=18"
-    ],
-    "pagina": 18,
-    "cita": "\"ACTUALIZAREMOS EL SALARIO MÍNIMO INTERPROFESIONAL EN EL MARCO DEL DIÁLOGO SOCIAL\"",
+    "texto": "No lo concreta. No habla del salario mínimo.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
@@ -162,15 +160,13 @@
   {
     "partido": "vox",
     "pregunta": "E1",
-    "texto": "No habla del salario mínimo. Promete impulsar la subida de todos los salarios, sobre todo los más bajos.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "Programa electoral 2023, med. 30, p. 22",
-    "enlaces": [
-      "https://votaabascal.es/assets/pdf/Programa-VOX-2023.pdf#page=22"
-    ],
-    "pagina": 22,
-    "cita": "\"Impulsaremos la subida de todos los salarios, especialmente los más bajos.\"",
+    "texto": "No lo concreta. No habla del salario mínimo.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
@@ -734,15 +730,13 @@
   {
     "partido": "erc",
     "pregunta": "I2",
-    "texto": "Regularización extraordinaria (unas 500.000 personas, según la ILP Regularización Ya) y nuevas vías para tener papeles sin depender solo de un contrato.",
-    "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "Programa electoral 2023 (en catalán), Ciutadania, apdo. c) \"Regularització de treball i residència\", p. 40",
-    "enlaces": [
-      "https://defensacatalunya.esquerrarepublicana.cat/documents/e2023-programa.pdf#page=40"
-    ],
-    "pagina": 40,
-    "cita": "\"Regularitzar a les persones en situació administrativa irregular, incloses les persones inexpulsables, en base a la Iniciativa Legislativa Popular\" [Regularizar a las personas en situación administrativa irregular, incluidas las personas inexpulsables, en base a la Iniciativa Legislativa Popular]",
+    "texto": "No lo concreta. No habla de qué hacer con las personas en situación irregular.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
@@ -799,15 +793,13 @@
   {
     "partido": "psoe",
     "pregunta": "I2",
-    "texto": "Seguir facilitando que se incorporen al trabajo. No habla de regularización.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "Programa electoral 2023, p. 250",
-    "enlaces": [
-      "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf#page=250"
-    ],
-    "pagina": 250,
-    "cita": "\"Seguiremos trabajando en la facilitación de la incorporación al mercado laboral de las personas que ya se encuentran en España\"",
+    "texto": "No lo concreta. No habla de qué hacer con las personas en situación irregular.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
@@ -1055,15 +1047,13 @@
   {
     "partido": "cc",
     "pregunta": "P1",
-    "texto": "Sí, actualizarlas según el coste de la vida.",
-    "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "Manifiesto 2023, compromiso 23, p. 7",
-    "enlaces": [
-      "https://coalicioncanaria.org/wp-content/uploads/2023/06/COALICION_POR_CANARIAS.pdf#page=7"
-    ],
-    "pagina": 7,
-    "cita": "\"Garantizando pensiones dignas y actualizadas en función del coste de la vida.\"",
+    "texto": "No lo concreta. No habla de subir las pensiones con el IPC.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
@@ -1227,15 +1217,13 @@
   {
     "partido": "cc",
     "pregunta": "P2",
-    "texto": "Pagarlas en parte con los Presupuestos del Estado y apoyar un pacto de Estado de todos los partidos en el Pacto de Toledo.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "Manifiesto 2023, compromiso 23, p. 7",
-    "enlaces": [
-      "https://coalicioncanaria.org/wp-content/uploads/2023/06/COALICION_POR_CANARIAS.pdf#page=7"
-    ],
-    "pagina": 7,
-    "cita": "\"Tomando decisiones, como la financiación vía Presupuestos Generales del Estado, que eliminen incertidumbres y blinden su presente y futuro.\"",
+    "texto": "No lo concreta. No dice cómo pagar las pensiones en el futuro.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
@@ -2295,15 +2283,13 @@
   {
     "partido": "pnv",
     "pregunta": "F3",
-    "texto": "Si se mantienen los gravámenes a la banca y las energéticas, que sean impuestos normales y los gestione también Euskadi.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "Programa electoral 2023, Apdo. 5 \"Fiscalidad justa y redistributiva\", p. 16",
-    "enlaces": [
-      "https://www.eaj-pnv.eus/es/adjuntos-documentos/20945/pdf/con-voz-propia-programa-electoral-23-j#page=16"
-    ],
-    "pagina": 16,
-    "cita": "\"deberían incluirse en una reforma tributaria y tramitarse como impuestos\"",
+    "texto": "No lo concreta. No habla de impuestos a las grandes fortunas, la banca o las eléctricas.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
@@ -2477,15 +2463,13 @@
   {
     "partido": "vox",
     "pregunta": "F3",
-    "texto": "Lo contrario: suprimir los impuestos de patrimonio y de sucesiones.",
-    "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "Programa electoral 2023, med. 151, p. 77",
-    "enlaces": [
-      "https://votaabascal.es/assets/pdf/Programa-VOX-2023.pdf#page=77"
-    ],
-    "pagina": 77,
-    "cita": "\"Suprimiremos el Impuesto sobre el Patrimonio\"",
+    "texto": "No lo concreta. No habla de impuestos a las grandes fortunas, la banca o las eléctricas.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
@@ -3457,15 +3441,13 @@
   {
     "partido": "vox",
     "pregunta": "D2",
-    "texto": "Gastar más en educación, sin cifras. No habla de alumnos por clase.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "Programa electoral 2023, med. 123, p. 64",
-    "enlaces": [
-      "https://votaabascal.es/assets/pdf/Programa-VOX-2023.pdf#page=64"
-    ],
-    "pagina": 64,
-    "cita": "\"Incrementaremos el gasto público en Sanidad, Educación, Dependencia e Infraestructuras.\"",
+    "texto": "No lo concreta. No habla de alumnos por clase, docentes ni inversión en educación.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
@@ -3549,15 +3531,13 @@
   {
     "partido": "salf",
     "pregunta": "D3",
-    "texto": "En Castilla y León: gratuita.",
-    "concreta": "si",
-    "origen": "Programa autonómico 2026",
-    "fuente": "Contrato electoral de Castilla y León, apdo. «Conciliación real trabajo-familia»",
-    "enlaces": [
-      "https://theobjective.com/wp-content/uploads/2026/03/Programa-electoral-CyL-de-Alvise-Pe%CC%81rez.pdf"
-    ],
+    "texto": "No lo concreta. No habla de la escuela de 0 a 3 años.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
     "pagina": null,
-    "cita": "\"Implantaremos la gratuidad de la educación infantil de 0 a 3 años en Castilla y León\"",
+    "cita": null,
     "verificado": true
   },
   {
@@ -3971,43 +3951,37 @@
   {
     "partido": "salf",
     "pregunta": "C1",
-    "texto": "Pedir al Gobierno que pare el cierre de las nucleares, y nuevos reactores pequeños en Castilla y León.",
-    "concreta": "si",
-    "origen": "Programa autonómico 2026",
-    "fuente": "Contrato electoral de Castilla y León, apdo. 7 «Energía y Campo»",
-    "enlaces": [
-      "https://theobjective.com/wp-content/uploads/2026/03/Programa-electoral-CyL-de-Alvise-Pe%CC%81rez.pdf"
-    ],
+    "texto": "No lo concreta. No habla de las nucleares ni de cómo producir la energía.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
     "pagina": null,
-    "cita": "\"exigiremos al Gobierno de España que paralice el calendario de cierres nucleares.\"",
+    "cita": null,
     "verificado": true
   },
   {
     "partido": "salf",
     "pregunta": "C2",
-    "texto": "En Castilla y León: más autobuses entre pueblos, hospitales y cabeceras de comarca, sin concretar.",
-    "concreta": "vago",
-    "origen": "Programa autonómico 2026",
-    "fuente": "Contrato electoral de Castilla y León, apdo. 6 «Servicios públicos en todo el territorio»",
-    "enlaces": [
-      "https://theobjective.com/wp-content/uploads/2026/03/Programa-electoral-CyL-de-Alvise-Pe%CC%81rez.pdf"
-    ],
+    "texto": "No lo concreta. No habla del transporte público ni del coche.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
     "pagina": null,
-    "cita": "\"Reforzaremos el transporte público interurbano, con especial atención a comunicación de pueblos con sus hospitales de referencia\"",
+    "cita": null,
     "verificado": true
   },
   {
     "partido": "salf",
     "pregunta": "C3",
-    "texto": "En Castilla y León: modernizar los regadíos. No habla de sequías, incendios ni inundaciones.",
-    "concreta": "vago",
-    "origen": "Programa autonómico 2026",
-    "fuente": "Contrato electoral de Castilla y León, apdo. 7 «Agua para el campo»",
-    "enlaces": [
-      "https://theobjective.com/wp-content/uploads/2026/03/Programa-electoral-CyL-de-Alvise-Pe%CC%81rez.pdf"
-    ],
+    "texto": "No lo concreta. No habla de sequías, incendios ni inundaciones.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
     "pagina": null,
-    "cita": "\"Modernizaremos regadíos con cofinanciación autonómica y plazos reales.\"",
+    "cita": null,
     "verificado": true
   },
   {
@@ -4313,29 +4287,25 @@
   {
     "partido": "cc",
     "pregunta": "G2",
-    "texto": "Mejorar los permisos de maternidad y paternidad y la escuela de 0 a 3, sin concretar cuánto.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "Manifiesto 2023, punto 29, p. 8",
-    "enlaces": [
-      "https://coalicioncanaria.org/wp-content/uploads/2023/06/COALICION_POR_CANARIAS.pdf#page=8"
-    ],
-    "pagina": 8,
-    "cita": "\"la mejora de los permisos de paternidad y maternidad y atención a la dependencia\"",
+    "texto": "No lo concreta. No habla de brecha salarial ni de conciliación.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
     "partido": "cc",
     "pregunta": "G3",
-    "texto": "Medidas contra la LGTBIfobia y apoyo para denunciar la violencia, sin concretar.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "Manifiesto 2023, punto 30, p. 9",
-    "enlaces": [
-      "https://coalicioncanaria.org/wp-content/uploads/2023/06/COALICION_POR_CANARIAS.pdf#page=9"
-    ],
-    "pagina": 9,
-    "cita": "\"Uno de los desafíos políticos sigue siendo la lucha contra la LGTBIfobia\"",
+    "texto": "No lo concreta. No habla de los derechos LGTBI ni de la ley trans.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
@@ -4437,15 +4407,13 @@
   {
     "partido": "vox",
     "pregunta": "G3",
-    "texto": "Derogar las leyes LGTBI y trans, y prohibir hormonas y cirugía de cambio de sexo en menores.",
-    "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "Programa electoral 2023, med. 14, p. 11",
-    "enlaces": [
-      "https://votaabascal.es/assets/pdf/Programa-VOX-2023.pdf#page=11"
-    ],
-    "pagina": 11,
-    "cita": "\"Derogación de las leyes ideológicas que no protegen a las personas, sino que colectivizan al individuo y los someten a las exigencias de grupos de interés, ya sea LGTBIQ+ o Ley trans.\"",
+    "texto": "No lo concreta. No habla de los derechos LGTBI ni de la ley trans.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
+    "pagina": null,
+    "cita": null,
     "verificado": true
   },
   {
@@ -4505,29 +4473,25 @@
   {
     "partido": "salf",
     "pregunta": "G2",
-    "texto": "En Castilla y León: horarios flexibles para padres con hijos pequeños, una baja automática optativa desde el cuarto mes y ventajas fiscales a empresas.",
-    "concreta": "si",
-    "origen": "Programa autonómico 2026",
-    "fuente": "Contrato electoral de Castilla y León, apdo. 4 «Conciliación real trabajo-familia»",
-    "enlaces": [
-      "https://theobjective.com/wp-content/uploads/2026/03/Programa-electoral-CyL-de-Alvise-Pe%CC%81rez.pdf"
-    ],
+    "texto": "No lo concreta. No habla de brecha salarial ni de conciliación.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
     "pagina": null,
-    "cita": "\"Así como la baja automática optativa a partir del cuarto mes.\"",
+    "cita": null,
     "verificado": true
   },
   {
     "partido": "salf",
     "pregunta": "G3",
-    "texto": "En Castilla y León: quitar de la sanidad pública las operaciones y tratamientos de cambio de sexo.",
-    "concreta": "si",
-    "origen": "Programa autonómico 2026",
-    "fuente": "Contrato electoral de Castilla y León, apdo. 6.2 «Sanidad»",
-    "enlaces": [
-      "https://theobjective.com/wp-content/uploads/2026/03/Programa-electoral-CyL-de-Alvise-Pe%CC%81rez.pdf"
-    ],
+    "texto": "No lo concreta. No habla de los derechos LGTBI ni de la ley trans.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": null,
+    "enlaces": [],
     "pagina": null,
-    "cita": "\"Eliminaremos las operaciones y tratamientos de cambio de sexo y similares de la cartera de servicios del sistema público de salud de Castilla y León.\"",
+    "cita": null,
     "verificado": true
   },
   {
