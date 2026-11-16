@@ -1,6 +1,7 @@
 // Estado de la visita. Vive solo en este navegador y en esta pestaña
-// (sessionStorage): se borra al cerrarla, no se envía a ningún sitio y
-// nunca va en los enlaces que se comparten.
+// (sessionStorage), no se envía a ningún sitio y nunca va en los enlaces que
+// se comparten. Se borra al cerrar la pestaña, al entrar de nuevo desde fuera
+// y tras 30 minutos sin usar la web (ver el script en <head> de Base.astro).
 
 export interface Perfil { situaciones: string[]; provincia: string | null }
 
