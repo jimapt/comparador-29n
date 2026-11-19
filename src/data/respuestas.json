@@ -62,13 +62,13 @@
   {
     "partido": "junts",
     "pregunta": "E1",
-    "texto": "Subirlo de 1.080 a 1.319 € al mes y que la Generalitat fije uno propio para Cataluña, que podría acercarse a 1.400-1.500 €.",
+    "texto": "Un salario mínimo catalán que avance poco a poco hacia el 60 % del salario medio catalán.",
     "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "3.A.i \"Pobresa, inclusió social i treball digne\", p. 90; 2.d.iv \"Polítiques d'ocupació i treball autònom\", p. 63",
+    "origen": "Programa 29N",
+    "fuente": "Economia, objectiu 5, p. 70",
     "enlaces": [],
-    "pagina": 90,
-    "cita": "\"El salari mínim interprofessional ha d’augmentar dels 1080€ actuals fins als 1319€ del salari mig europeu. La Generalitat ha de poder-lo fixar per Catalunya.\" [El salario mínimo interprofesional debe aumentar de los 1.080 € actuales hasta los 1.319 € del salario medio europeo. La Generalitat debe poder fijarlo para Cataluña.]",
+    "pagina": 70,
+    "cita": "\"Impulsar un salari mínim català que avanci progressivament cap al 60% del salari mitjà català\" [Impulsar un salario mínimo catalán que avance progresivamente hacia el 60 % del salario medio catalán]",
     "verificado": true
   },
   {
@@ -86,15 +86,13 @@
   {
     "partido": "podemos",
     "pregunta": "E1",
-    "texto": "Fijar por ley un salario mínimo de 1.800 euros al mes.",
+    "texto": "Subir el salario mínimo a 1.800 € al mes en una legislatura y fijar por ley que nunca baje del 75 % del salario mediano.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "web de campaña de Irene Montero, medida 04 \"Trabajar menos para vivir mejor\", consultada el 20/10/2026",
-    "enlaces": [
-      "https://pazcasaytrabajo.es/"
-    ],
-    "pagina": null,
-    "cita": "\"1.800€ de salario mínimo por Ley.\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 111, p. 41",
+    "enlaces": [],
+    "pagina": 41,
+    "cita": "\"Aumentaremos el SMI hasta los 1.800 euros al mes en una legislatura\"",
     "verificado": true
   },
   {
@@ -232,13 +230,13 @@
   {
     "partido": "junts",
     "pregunta": "E2",
-    "texto": "\"Mochila austriaca\" y despidos más caros a corto plazo. Contratos en prácticas con ayuda del 50 % del salario mínimo y sin cotizaciones dos años.",
+    "texto": "Bonificar las cuotas de la empresa por contratar de forma indefinida a menores de 35 años, un Estatuto del becario con prácticas pagadas y menos IRPF los primeros años de trabajo.",
     "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "2.d.iv \"Polítiques d'ocupació i treball autònom\", pp. 63-64 y 66-67",
+    "origen": "Programa 29N",
+    "fuente": "Joves, objectius 3-4, pp. 60-61",
     "enlaces": [],
-    "pagina": 63,
-    "cita": "\"Un nou sistema d’indemnitzacions per acomiadament que faci més costoses les extincions a curt termini.\" [Un nuevo sistema de indemnizaciones por despido que haga más costosas las extinciones a corto plazo.] / \"atorgar una subvenció del 50% del SMI i una bonificació del 100% de les cotitzacions socials durant dos anys per als nous contractes en pràctiques\" [otorgar una subvención del 50 % del SMI y una bonificación del 100 % de las cotizaciones sociales durante dos años para los nuevos contratos en prácticas]",
+    "pagina": 61,
+    "cita": "\"Ampliar a tots els joves menors de 35 anys o recent titulats les bonificacions de les quotes empresarials a la Seguretat Social per contractació indefinida\" [Ampliar a todos los jóvenes menores de 35 años o recién titulados las bonificaciones de las cuotas empresariales a la Seguridad Social por contratación indefinida]",
     "verificado": true
   },
   {
@@ -256,15 +254,13 @@
   {
     "partido": "podemos",
     "pregunta": "E2",
-    "texto": "Para la UE: una prestación de paro especial para jóvenes que no dependa del tiempo cotizado. No habla de temporalidad.",
-    "concreta": "vago",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 6, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"que no se condicionen al tiempo cotizado y tengan en cuenta la intermitencia en el empleo.\"",
+    "texto": "Quitar la posibilidad de contratos temporales sin causa 90 días al año y más Inspección de Trabajo. Prácticas siempre pagadas, al menos según el salario mínimo.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Med. 120 y 134, pp. 42 y 45",
+    "enlaces": [],
+    "pagina": 42,
+    "cita": "\"Eliminaremos la posibilidad de recurrir a la contratación temporal sin causa justificada durante 90 días al año\"",
     "verificado": true
   },
   {
@@ -402,13 +398,13 @@
   {
     "partido": "junts",
     "pregunta": "E3",
-    "texto": "Cotizar según ingresos reales, cuota cero si se gana menos del salario mínimo, tarifa plana reducida dos años, aplazar el IVA y menos papeleo.",
+    "texto": "Cuota cero para autónomos menores de 35 años los tres primeros años, frenar las subidas de cuotas y cotizar según los rendimientos reales, y pagar el IVA solo cuando se cobre la factura.",
     "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "2.d.iv, apdo. \"Revisió de l'Estatut del Treball Autònom i de les cotitzacions socials\", p. 69, y \"Apropar la càrrega administrativa i fiscal\", p. 70",
+    "origen": "Programa 29N",
+    "fuente": "Joves, objectiu 4, p. 61; Economia, objectius 2-3, p. 69",
     "enlaces": [],
-    "pagina": 69,
-    "cita": "\"Modificar la llei de reforma del Règim Especial de Treballadors Autònoms (RETA) per establir un sistema progressiu de cotitzacions en funció dels ingressos reals\" [Modificar la ley de reforma del Régimen Especial de Trabajadores Autónomos (RETA) para establecer un sistema progresivo de cotizaciones en función de los ingresos reales] / \"Establir una tarifa zero per a autònoms no habituals i per aquells que tenen ingressos baixos, per exemple ingressos inferiors al SMI.\" [Establecer una tarifa cero para autónomos no habituales y para aquellos que tienen ingresos bajos, por ejemplo ingresos inferiores al SMI.]",
+    "pagina": 61,
+    "cita": "\"Reformar el RETA per establir una quota zero per a joves autònoms de fins a 35 anys durant els 3 primers anys d’activitat\" [Reformar el RETA para establecer una cuota cero para jóvenes autónomos de hasta 35 años durante los 3 primeros años de actividad]",
     "verificado": true
   },
   {
@@ -426,15 +422,13 @@
   {
     "partido": "podemos",
     "pregunta": "E3",
-    "texto": "Para la UE: crear la figura del autónomo vulnerable para proteger a los más precarios. No habla de cuota ni de trámites.",
-    "concreta": "vago",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 6, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"Creación de la figura del y de la trabajadora autónoma vulnerable.\"",
+    "texto": "Que los autónomos coticen un porcentaje de su beneficio, con cuota cero si tienen pérdidas, y no tener que adelantar el IVA de facturas sin cobrar.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Med. 64-65, p. 23",
+    "enlaces": [],
+    "pagina": 23,
+    "cita": "\"llegando a la cotización 0 en caso de incurrir en pérdidas\"",
     "verificado": true
   },
   {
@@ -572,13 +566,13 @@
   {
     "partido": "junts",
     "pregunta": "I1",
-    "texto": "Vías legales y seguras de migración, que Cataluña decida sobre los flujos migratorios y derogar la norma que permite las devoluciones en caliente.",
+    "texto": "Que la Generalitat gestione toda la inmigración, de los permisos a las expulsiones, y priorizar las vías legales y la contratación en origen según lo que necesiten las empresas.",
     "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "3.A.x \"Fluxos migratoris i acollida de refugiats\", p. 107",
+    "origen": "Programa 29N",
+    "fuente": "Immigració, objectius 1-2, p. 48",
     "enlaces": [],
-    "pagina": 107,
-    "cita": "\"Treballar per articular vies legals i segures de migració regular i mobilitat.\" [Trabajar para articular vías legales y seguras de migración regular y movilidad.] / \"Que Catalunya pugui decidir en relació als fluxos migratoris.\" [Que Cataluña pueda decidir en relación con los flujos migratorios.]",
+    "pagina": 48,
+    "cita": "\"Prioritzar les vies legals i la contractació en origen\" [Priorizar las vías legales y la contratación en origen]",
     "verificado": true
   },
   {
@@ -596,15 +590,13 @@
   {
     "partido": "podemos",
     "pregunta": "I1",
-    "texto": "Vías legales y seguras hacia Europa (reasentamiento, asilo en embajadas, visados humanitarios), suprimir Frontex y prohibir las devoluciones en caliente.",
+    "texto": "Vías legales y seguras de entrada, un visado para buscar empleo y más facilidades para la reagrupación familiar. Derogar la Ley de Extranjería y acabar con las devoluciones en caliente.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 8, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"Estableceremos vías legales y seguras de acceso a Europa a través de un programa efectivo de reasentamiento\" / \"La UE abolirá la Agencia Europea de la Guardia de Fronteras y Costas (Frontex)\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 88, p. 32, y 205, p. 65",
+    "enlaces": [],
+    "pagina": 32,
+    "cita": "\"Implantaremos una nueva política de visados con distinta tipología, como por ejemplo el de búsqueda de empleo\"",
     "verificado": true
   },
   {
@@ -742,13 +734,13 @@
   {
     "partido": "junts",
     "pregunta": "I2",
-    "texto": "Buscar soluciones para quienes viven aquí sin papeles, sin decir cuáles. No habla de regularización ni de expulsiones.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "3.A.x \"Fluxos migratoris i acollida de refugiats\", p. 107",
+    "texto": "Se opone a las regularizaciones masivas por decreto y pide que se cumplan las órdenes de retorno.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Immigració, objectius 2 i 5, pp. 48-49",
     "enlaces": [],
-    "pagina": 107,
-    "cita": "\"Buscar vies de solució a les persones que es troben al territori sense la seva situació administrativa resolta.\" [Buscar vías de solución para las personas que se encuentran en el territorio sin su situación administrativa resuelta.]",
+    "pagina": 48,
+    "cita": "\"Oposar-nos a les regularitzacions massives aprovades per decret\" [Oponernos a las regularizaciones masivas aprobadas por decreto]",
     "verificado": true
   },
   {
@@ -766,16 +758,13 @@
   {
     "partido": "podemos",
     "pregunta": "I2",
-    "texto": "Regularización extraordinaria (pactada con el Gobierno) para quien llegara antes del 31/12/2025, unas 500.000 personas. Cerrar los centros de internamiento.",
+    "texto": "Un procedimiento permanente de regularización basado en el arraigo, sin exigir un contrato de trabajo, y cerrar los CIE.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Irene Montero sobre el acuerdo, recogido por Periódico de Ibiza, 27/01/2026; cierre de CIE: Programa europeas 2024, cap. 8",
-    "enlaces": [
-      "https://www.periodicodeibiza.es/noticias/nacional/2026/01/27/2557523/regularizacion-migratoria-espana-gobierno-acuerda-podemos-reforma-extraordinaria.html",
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"tendrán papeles todas las personas que estuvieran en España antes del 31 de diciembre de 2025\" / \"Impulsaremos el cierre de todos los centros de internamiento y detención\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 210, p. 67",
+    "enlaces": [],
+    "pagina": 67,
+    "cita": "\"Establecimiento de un procedimiento permanente de regularización de las personas migrantes.\"",
     "verificado": true
   },
   {
@@ -913,13 +902,13 @@
   {
     "partido": "junts",
     "pregunta": "I3",
-    "texto": "Solo habla de refugiados: más acogida y que Cataluña trate directamente con la Comisión Europea. Nada sobre idioma, empleo o servicios para migrantes.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "3.A.x \"Fluxos migratoris i acollida de refugiats\", p. 108",
+    "texto": "Exigir saber catalán para el arraigo y para renovar los permisos, agilizar la homologación de títulos y prohibir en la calle el niqab y el burka.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Immigració, objectiu 4, p. 48",
     "enlaces": [],
-    "pagina": 108,
-    "cita": "\"Reclamar la interlocució directa entre el govern de Catalunya i la Comissió Europea per tal de poder complir amb els objectius europeus d’acollida de refugiats sense interferència del govern espanyol.\" [Reclamar la interlocución directa entre el gobierno de Cataluña y la Comisión Europea para poder cumplir con los objetivos europeos de acogida de refugiados sin interferencia del gobierno español.] / \"Abordar un canvi d’orientació en les polítiques d’asil i d’atenció als refugiats per articular polítiques d’obertura i acollida.\" [Abordar un cambio de orientación en las políticas de asilo y de atención a los refugiados para articular políticas de apertura y acogida.]",
+    "pagina": 48,
+    "cita": "\"Exigir el coneixement del català en els processos d’arrelament i de renovació dels permisos\" [Exigir el conocimiento del catalán en los procesos de arraigo y de renovación de los permisos]",
     "verificado": true
   },
   {
@@ -937,15 +926,13 @@
   {
     "partido": "podemos",
     "pregunta": "I3",
-    "texto": "Asegurar atención sanitaria a todas las personas, vivan donde vivan. No habla de idioma ni de empleo.",
-    "concreta": "vago",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 8, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"todas las personas tengan acceso a una cobertura sanitaria adecuada, al margen de donde vivan\"",
+    "texto": "Sanidad y educación para todos sin importar la situación administrativa, homologación de títulos más fácil y un fondo estatal de acogida.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Med. 215-217, pp. 68-69",
+    "enlaces": [],
+    "pagina": 69,
+    "cita": "\"Facilitaremos la homologación de títulos extranjeros, el reconocimiento de competencias profesionales y el acceso a la formación.\"",
     "verificado": true
   },
   {
@@ -1083,13 +1070,13 @@
   {
     "partido": "junts",
     "pregunta": "P1",
-    "texto": "Mantener la subida anual que conserva el poder de compra y tener en cuenta el coste de vida de cada territorio al calcular las pensiones.",
+    "texto": "Sí, y con el IPC catalán: revisar las pensiones cada año según el coste de la vida en Cataluña y subir las mínimas hasta 1.400 € al mes.",
     "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "3.A.v \"Pensions\", p. 100",
+    "origen": "Programa 29N",
+    "fuente": "Persones grans, objectiu 5, p. 57",
     "enlaces": [],
-    "pagina": 100,
-    "cita": "\"continuarem sent propositius per tal de que aquesta revalorització pugui continuar\" [seguiremos siendo propositivos para que esta revalorización pueda continuar] / \"S’ha d’introduir un mecanisme que incorpori la variable “cost de la vida” a l’hora de calcular els imports de les prestacions podent individualitzar per territori quan aquest cost de vida sigui indicatiu.\" [Se debe introducir un mecanismo que incorpore la variable \"coste de la vida\" a la hora de calcular los importes de las prestaciones, pudiendo individualizar por territorio cuando este coste de vida sea indicativo.]",
+    "pagina": 57,
+    "cita": "\"revisant anualment les pensions segons l’IPC català\" [revisando anualmente las pensiones según el IPC catalán]",
     "verificado": true
   },
   {
@@ -1107,15 +1094,13 @@
   {
     "partido": "podemos",
     "pregunta": "P1",
-    "texto": "No habla del IPC. Propone que las pensiones más bajas nunca queden por debajo del umbral de la pobreza.",
-    "concreta": "vago",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 6, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"que nunca podrán situarse por debajo del umbral de la pobreza\"",
+    "texto": "No lo concreta. No habla de subir las pensiones con el IPC; sí de que la pensión mínima sea igual al salario mínimo.",
+    "concreta": "no",
+    "origen": "Programa 29N",
+    "fuente": "Med. 127, p. 44",
+    "enlaces": [],
+    "pagina": 44,
+    "cita": "\"Garantizaremos que la pensión mínima contributiva se equipare al SMI\"",
     "verificado": true
   },
   {
@@ -1253,13 +1238,13 @@
   {
     "partido": "junts",
     "pregunta": "P2",
-    "texto": "Eliminar el déficit de la Seguridad Social la próxima legislatura separando sus fuentes de financiación, más natalidad e inmigración y planes de pensiones complementarios.",
-    "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "3.A.v \"Pensions\", p. 100",
+    "texto": "Que Cataluña gestione la Seguridad Social y fomentar los planes de pensiones complementarios. No dice cómo financiar el sistema.",
+    "concreta": "vago",
+    "origen": "Programa 29N",
+    "fuente": "Persones grans, objectiu 5, p. 57",
     "enlaces": [],
-    "pagina": 100,
-    "cita": "\"Per assegurar el sistema de les pensions, en la propera legislatura urgeix eliminar els dèficits anuals que avui registra la Seguretat Social. Seguir avançant en la separació de les fonts de finançament de la Seguretat Social és una de les vies per reduir aquest dèficit.\" [Para asegurar el sistema de pensiones, en la próxima legislatura urge eliminar los déficits anuales que hoy registra la Seguridad Social. Seguir avanzando en la separación de las fuentes de financiación de la Seguridad Social es una de las vías para reducir este déficit.]",
+    "pagina": 57,
+    "cita": "\"Fomentar i facilitar des de les institucions plans d’estalvi i de pensions complementaris\" [Fomentar y facilitar desde las instituciones planes de ahorro y de pensiones complementarios]",
     "verificado": true
   },
   {
@@ -1277,15 +1262,13 @@
   {
     "partido": "podemos",
     "pregunta": "P2",
-    "texto": "Mantener las pensiones públicas e impedir su privatización. No dice cómo financiarlas.",
-    "concreta": "vago",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 6, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"para blindar el carácter público de los sistemas estatales de pensiones impidiendo su privatización\"",
+    "texto": "Quitar el tope de las bases de cotización, cotizaciones progresivas según renta y beneficios, y pagar parte de las pensiones con los Presupuestos del Estado.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Med. 116 y 126, pp. 41 y 44",
+    "enlaces": [],
+    "pagina": 44,
+    "cita": "\"Suprimiremos la base máxima de cotización y estableceremos un sistema de cotización progresiva\"",
     "verificado": true
   },
   {
@@ -1423,13 +1406,13 @@
   {
     "partido": "junts",
     "pregunta": "P3",
-    "texto": "Ligar cualquier retraso de la edad de jubilación a la esperanza de vida, adelantarla en trabajos más duros y poder cobrar pensión trabajando.",
+    "texto": "No cambia la edad de jubilación. Quitar las penalizaciones por jubilación anticipada a quien tenga 40 años cotizados.",
     "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "3.A.v \"Pensions\", pp. 100-101",
+    "origen": "Programa 29N",
+    "fuente": "Persones grans, objectiu 5, p. 58",
     "enlaces": [],
-    "pagina": 100,
-    "cita": "\"L’estabilitat del sistema també requereix la introducció d’un factor de sostenibilitat que vinculi qualsevol retard en l’edat legal de jubilació a l’augment de l’esperança de vida.\" [La estabilidad del sistema también requiere la introducción de un factor de sostenibilidad que vincule cualquier retraso en la edad legal de jubilación al aumento de la esperanza de vida.] / \"Els sectors i àmbits de treball amb pitjors condicions laborals han de poder avançar en l’establiment de nous coeficients reductors especials de l’edat de jubilació.\" [Los sectores y ámbitos de trabajo con peores condiciones laborales deben poder avanzar en el establecimiento de nuevos coeficientes reductores especiales de la edad de jubilación.]",
+    "pagina": 58,
+    "cita": "\"les persones jubilades amb 40 anys o més cotitzats puguin percebre íntegrament la pensió\" [las personas jubiladas con 40 años o más cotizados puedan percibir íntegramente la pensión]",
     "verificado": true
   },
   {
@@ -1447,15 +1430,25 @@
   {
     "partido": "podemos",
     "pregunta": "P3",
-    "texto": "No propone cambiar la edad. Jubilación anticipada sin penalización para empleadas del hogar y otros trabajos duros, y que cuenten periodos no cotizados.",
+    "texto": "Bajar la edad de jubilación a 63 años y quitar las penalizaciones a quien se jubile antes con 40 años cotizados.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 6 y 5.1, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"la posibilidad de jubilación anticipada sin penalización por la especial dureza de estos empleos\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 115-116, p. 41",
+    "enlaces": [],
+    "pagina": 41,
+    "cita": "\"Reformaremos el sistema de pensiones para adelantar la edad ordinaria de jubilación a los 63 años\"",
+    "verificado": true
+  },
+  {
+    "partido": "podemos",
+    "pregunta": "F1",
+    "texto": "Subir el IRPF a partir de 60.000 € (del 23 % al 28,5 % desde 500.000 €), bajar el tipo mínimo al 9 % y que quien cobre menos del salario mínimo no pague.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Med. 48, p. 21",
+    "enlaces": [],
+    "pagina": 21,
+    "cita": "\"elevaremos los tipos a las bases imponibles de más de 60.000 euros anuales\"",
     "verificado": true
   },
   {
@@ -1593,13 +1586,13 @@
   {
     "partido": "junts",
     "pregunta": "V1",
-    "texto": "No propone limitar precios. Ventajas fiscales a quien alquile bajo el índice de referencia catalán y deducción en el IRPF para inquilinos menores de 30.",
+    "texto": "No propone limitar precios: quiere derogar los topes de la ley de vivienda. Recuperar la deducción del 15 % en el IRPF por el alquiler y que la Administración pague al propietario cuando un inquilino vulnerable no pueda.",
     "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "3.A.iii \"Polítiques d'habitatge social\", pp. 95-96; 3.A.iv \"Polítiques per als joves\", p. 98",
+    "origen": "Programa 29N",
+    "fuente": "Habitatge, objectius 2-3, p. 17",
     "enlaces": [],
-    "pagina": 95,
-    "cita": "\"Impulsar modificacions de l’impost de societats que tendeixin a bonificar fiscalment els rendiments obtinguts per societats a partir de lloguers que es trobin per sota de l’Índex de Referència de Preus del Lloguer\" [Impulsar modificaciones del impuesto de sociedades que tiendan a bonificar fiscalmente los rendimientos obtenidos por sociedades a partir de alquileres que se encuentren por debajo del Índice de Referencia de Precios del Alquiler] / \"d'IRPF per a lloguer d'habitatge habitual per als joves menors de 30 anys\" [de IRPF por alquiler de vivienda habitual para los jóvenes menores de 30 años]",
+    "pagina": 17,
+    "cita": "\"Recuperar la deducció del 15% a l’IRPF pel lloguer de l’habitatge habitual.\" [Recuperar la deducción del 15 % en el IRPF por el alquiler de la vivienda habitual.]",
     "verificado": true
   },
   {
@@ -1617,15 +1610,13 @@
   {
     "partido": "podemos",
     "pregunta": "V1",
-    "texto": "Bajar por ley un 40 % todos los alquileres y que los contratos de alquiler pasen a ser indefinidos.",
+    "texto": "Bajar por ley un 40 % todos los alquileres, también los contratos en vigor, y que los contratos de alquiler de vivienda habitual sean indefinidos.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Mociones en el Congreso, recogidas por Merca2, 14/02/2025",
-    "enlaces": [
-      "https://www.merca2.es/2025/02/14/pp-vox-y-podemos-presentan-sus-propuestas-en-el-pleno-del-congreso-para-abordar-la-crisis-de-la-vivienda-en-espana-2140828/"
-    ],
-    "pagina": null,
-    "cita": "\"rebajar por ley la cuantía de todos los alquileres un 40% con respecto a los precios actuales\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 1-2, p. 8",
+    "enlaces": [],
+    "pagina": 8,
+    "cita": "\"Aprobaremos una reducción extraordinaria del 40 % de los precios del alquiler\"",
     "verificado": true
   },
   {
@@ -1763,13 +1754,13 @@
   {
     "partido": "junts",
     "pregunta": "V2",
-    "texto": "Mejores condiciones de hipoteca a través del ICO y un programa de avales para la entrada, para jóvenes de hasta 35 años.",
+    "texto": "Aval público para la entrada de la primera vivienda a menores de 35 años, recuperar la cuenta vivienda y la deducción por hipoteca (15 %), y bajar del 10 % al 5 % el IVA de la vivienda nueva.",
     "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "3.A.iv \"Polítiques per als joves\", apdo. \"Accés a l'habitatge\", p. 98",
+    "origen": "Programa 29N",
+    "fuente": "Habitatge, objectius 3 i 6, pp. 17-18",
     "enlaces": [],
-    "pagina": 98,
-    "cita": "\"Adaptar des de l’Institut de Crèdit Oficial (ICO) les condicions de finançament hipotecari per a joves de fins a 35 anys per accedir al seu primer habitatge, impulsant un programa d'avals a l'entrada hipotecària.\" [Adaptar desde el Instituto de Crédito Oficial (ICO) las condiciones de financiación hipotecaria para jóvenes de hasta 35 años para acceder a su primera vivienda, impulsando un programa de avales a la entrada hipotecaria.]",
+    "pagina": 17,
+    "cita": "\"Reduir del 10% al 5% l’IVA de la compra d’habitatge nou\" [Reducir del 10 % al 5 % el IVA de la compra de vivienda nueva]",
     "verificado": true
   },
   {
@@ -1787,15 +1778,13 @@
   {
     "partido": "podemos",
     "pregunta": "V2",
-    "texto": "No lo concreta. No propone ayudas a la compra. Propone que nadie pueda comprar vivienda para especular.",
+    "texto": "No lo concreta. No propone ayudas para comprar; prohíbe comprar viviendas que no sean para vivir en ellas.",
     "concreta": "no",
-    "origen": "Propuesta 2024-26",
-    "fuente": "web de campaña de Irene Montero, medida 01 \"Las casas son para vivir\", consultada el 20/10/2026",
-    "enlaces": [
-      "https://pazcasaytrabajo.es/"
-    ],
-    "pagina": null,
-    "cita": "\"Nadie que quiera especular debería poder comprar una vivienda en España.\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 3, p. 8",
+    "enlaces": [],
+    "pagina": 8,
+    "cita": "\"Prohibiremos la adquisición y acumulación de viviendas que no estén destinadas a residencia habitual.\"",
     "verificado": true
   },
   {
@@ -1933,13 +1922,13 @@
   {
     "partido": "junts",
     "pregunta": "V3",
-    "texto": "Gasto en vivienda al 0,6 % del PIB y ceder a Cataluña el 30 % de pisos vacíos de la Sareb. Sin cifra de viviendas.",
+    "texto": "Que el Estado dedique a vivienda lo mismo que la media europea y ceda a la Generalitat y los ayuntamientos los pisos y el suelo de la SAREB y Casa 47. No dice cuántas viviendas construiría.",
     "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "3.A.iii \"Polítiques d'habitatge social\", pp. 94-95",
+    "origen": "Programa 29N",
+    "fuente": "Habitatge, objectiu 5, pp. 17-18",
     "enlaces": [],
-    "pagina": 94,
-    "cita": "\"augmentar progressivament els fons estatals destinats a polítiques d’habitatge, per a situar-los en la mitjana europea, del 0,6 % del PIB\" [aumentar progresivamente los fondos estatales destinados a políticas de vivienda, para situarlos en la media europea, del 0,6 % del PIB] / \"Exigir la transmissió a la Generalitat i als ajuntaments del 30% dels pisos buits que la SAREB té a Catalunya\" [Exigir la transmisión a la Generalitat y a los ayuntamientos del 30 % de los pisos vacíos que la SAREB tiene en Cataluña]",
+    "pagina": 17,
+    "cita": "\"per començar a cobrir els més de 140.000 habitatges que falten\" [para empezar a cubrir las más de 140.000 viviendas que faltan]",
     "verificado": true
   },
   {
@@ -1957,15 +1946,13 @@
   {
     "partido": "podemos",
     "pregunta": "V3",
-    "texto": "Expropiar el uso de la mitad de las viviendas de los grandes fondos, unas 92.000, para alquiler social público. No habla de construir.",
+    "texto": "Ampliar el parque público expropiando el uso de las viviendas de grandes tenedores a partir de la décima (unas 626.000) y reservar al menos el 50 % de la vivienda nueva de los planes urbanísticos al alquiler social.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Ione Belarra en el Congreso, recogido por idealista, 13/06/2024",
-    "enlaces": [
-      "https://www.idealista.com/news/inmobiliario/vivienda/2024/06/13/817769-podemos-propone-al-psoe-expropiar-92-000-viviendas-de-fondos-de-inversion-para"
-    ],
-    "pagina": null,
-    "cita": "\"expropiar el uso de 92.000 viviendas en manos de grandes fondos de inversión\" (texto del periodista)",
+    "origen": "Programa 29N",
+    "fuente": "Med. 4 y 16, pp. 8 y 11",
+    "enlaces": [],
+    "pagina": 11,
+    "cita": "\"obligación de reservar al menos el 50% de las nuevas viviendas previstas en los planes urbanísticos al alquiler social\"",
     "verificado": true
   },
   {
@@ -2187,37 +2174,37 @@
   {
     "partido": "junts",
     "pregunta": "F1",
-    "texto": "Ajustar todos los impuestos a la inflación y bajar el peso del IRPF sobre los sueldos.",
+    "texto": "Bajarlo: ajustar el IRPF a la inflación, rebajar los primeros tramos y no cobrar IRPF a los menores de 35 el primer año de trabajo.",
     "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "2.d.ii \"Política fiscal\"",
+    "origen": "Programa 29N",
+    "fuente": "Economia, objectiu 2, p. 68; Joves, objectiu 4, p. 61",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"Compromís de deflactar les escales impositives de tots els impostos a la inflació\" [Compromiso de deflactar las escalas impositivas de todos los impuestos a la inflación]",
+    "pagina": 68,
+    "cita": "\"Deflactar l’IRPF, rebaixar els primers trams\" [Deflactar el IRPF, rebajar los primeros tramos]",
     "verificado": true
   },
   {
     "partido": "junts",
     "pregunta": "F2",
-    "texto": "Bajar el IVA de todos los alimentos del 10 % al 4 %. No habla de la luz ni del gas.",
+    "texto": "Bajar al 10 % el IVA de la luz y el gas. No habla del IVA de los alimentos.",
     "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "2.d.v \"Polítiques sectorials\", apdo. \"Comerç\"",
+    "origen": "Programa 29N",
+    "fuente": "Economia, objectiu 2, p. 69",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"Reduir l'IVA del 10% al 4% en tots els productes alimentaris\" [Reducir el IVA del 10 % al 4 % en todos los productos alimentarios]",
+    "pagina": 69,
+    "cita": "\"Reduir al 10% l’IVA de la llum i el gas natural\" [Reducir al 10 % el IVA de la luz y el gas natural]",
     "verificado": true
   },
   {
     "partido": "junts",
     "pregunta": "F3",
-    "texto": "No habla de impuestos a grandes fortunas, banca ni eléctricas. Quiere corregir la desigualdad sin subir la presión fiscal.",
+    "texto": "No propone subirlos. En su balance de la legislatura destaca haber frenado el impuesto a las energéticas, y pide eliminar el de sucesiones.",
     "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "2.d.ii \"Política fiscal\"",
+    "origen": "Programa 29N",
+    "fuente": "Annex, p. 88",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"sense incrementar la pressió fiscal, caldrà fer ajustos en la política fiscal per corregir-ho\" [sin incrementar la presión fiscal, habrá que hacer ajustes en la política fiscal para corregirlo]",
+    "pagina": 88,
+    "cita": "\"Fre a l’impost a les energètiques\" [Freno al impuesto a las energéticas]",
     "verificado": true
   },
   {
@@ -2475,15 +2462,25 @@
   {
     "partido": "podemos",
     "pregunta": "F2",
-    "texto": "Pide bajar el coste de la vida, sin decir cómo.",
+    "texto": "No habla del IVA de los alimentos, la luz ni el gas. Propone que las facturas de luz y gas no suban más de un 5 % y topar los márgenes de los supermercados.",
     "concreta": "vago",
-    "origen": "Propuesta 2024-26",
-    "fuente": "web de campaña de Irene Montero, medida 02 «Hay que bajar el coste de la vida», consultada el 03/11/2026",
-    "enlaces": [
-      "https://pazcasaytrabajo.es/"
-    ],
-    "pagina": null,
-    "cita": "\"Hay que bajar el coste de la vida y recuperar el poder adquisitivo de gente frente a quienes tienen beneficios sin límite.\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 35 y 38, p. 18",
+    "enlaces": [],
+    "pagina": 18,
+    "cita": "\"Las tarifas domésticas de electricidad y gas no podrán superar en más de un 5 % la media\"",
+    "verificado": true
+  },
+  {
+    "partido": "podemos",
+    "pregunta": "F3",
+    "texto": "Sí. Un impuesto permanente a las grandes fortunas y a la banca, para que al menos el 50 % de sus beneficios extraordinarios vaya a las arcas públicas, y recuperar los beneficios extra de eléctricas y petroleras.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Med. 30-31, pp. 16-17",
+    "enlaces": [],
+    "pagina": 17,
+    "cita": "\"Estableceremos un impuesto permanente sobre los beneficios extraordinarios de la gran banca\"",
     "verificado": true
   },
   {
@@ -2669,9 +2666,9 @@
   {
     "partido": "junts",
     "pregunta": "S1",
-    "texto": "No lo concreta. No habla de las listas de espera; pide más recursos para la sanidad catalana.",
+    "texto": "No lo concreta. No habla de listas de espera.",
     "concreta": "no",
-    "origen": "Programa 2023",
+    "origen": "Programa 29N",
     "fuente": null,
     "enlaces": [],
     "pagina": null,
@@ -2681,25 +2678,25 @@
   {
     "partido": "junts",
     "pregunta": "S2",
-    "texto": "Poder crear más plazas MIR en Cataluña para formar más médicos especialistas.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "3.A.xi «Salut»",
+    "texto": "Destinar el 25 % del presupuesto de salud a la atención primaria y más plazas MIR de medicina de familia.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Salut, objectius 1-2, p. 51",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"Poder ampliar el nombre de places MIR per poder abastir de metges especialitzats els sistema públic de salut a Catalunya.\" [Poder ampliar el número de plazas MIR para poder abastecer de médicos especializados el sistema público de salud en Cataluña.]",
+    "pagina": 51,
+    "cita": "\"destinar el 25 % del pressupost de salut a l’atenció primària\" [destinar el 25 % del presupuesto de salud a la atención primaria]",
     "verificado": true
   },
   {
     "partido": "junts",
     "pregunta": "S3",
-    "texto": "Que el Gobierno pague el teléfono de atención a la salud mental de Cataluña.",
+    "texto": "Reforzar la atención a la salud mental de los jóvenes y que el Estado pague el teléfono de atención de salud mental del CatSalut. Sin más detalle.",
     "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "3.A.iv «Polítiques per als joves», apdo. «Salut»",
+    "origen": "Programa 29N",
+    "fuente": "Joves, objectiu 8, p. 62",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"Exigir al Gobierno el pagament del telèfon d’atenció́ a la salut mental\" [Exigir al Gobierno el pago del teléfono de atención a la salud mental]",
+    "pagina": 62,
+    "cita": "\"Exigir al Govern espanyol el finançament del servei telefònic d’atenció a la salut mental\" [Exigir al Gobierno español la financiación del servicio telefónico de atención a la salud mental]",
     "verificado": true
   },
   {
@@ -2957,41 +2954,37 @@
   {
     "partido": "podemos",
     "pregunta": "S1",
-    "texto": "No lo concreta.",
-    "concreta": "no",
-    "origen": "Propuesta 2024-26",
-    "fuente": null,
+    "texto": "Más recursos públicos y coordinación entre primaria y hospitales, cumplir los tiempos máximos acordados y datos transparentes. No da plazos propios.",
+    "concreta": "vago",
+    "origen": "Programa 29N",
+    "fuente": "Med. 304, p. 90",
     "enlaces": [],
-    "pagina": null,
-    "cita": null,
+    "pagina": 90,
+    "cita": "\"Reduciremos las listas de espera mediante el refuerzo de los recursos públicos\"",
     "verificado": true
   },
   {
     "partido": "podemos",
     "pregunta": "S2",
-    "texto": "Mejorar y financiar bien la atención primaria, y que los centros sean de gestión pública.",
-    "concreta": "vago",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 5.3, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"promoveremos la mejora y la financiación suficiente de los sistemas de atención primaria\"",
+    "texto": "Una ley de atención primaria: el 25 % del presupuesto sanitario, como máximo 1.300 pacientes por médico de familia y cita en 48 horas hábiles.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Med. 305, p. 90",
+    "enlaces": [],
+    "pagina": 90,
+    "cita": "\"fijará un máximo de 1.300 pacientes por profesional de medicina de familia\"",
     "verificado": true
   },
   {
     "partido": "podemos",
     "pregunta": "S3",
-    "texto": "Una estrategia europea de salud mental con dinero y un protocolo para prevenir el suicidio.",
-    "concreta": "vago",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 5.3, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"una Estrategia Europea sobre salud mental que incluya programas de financiación\"",
+    "texto": "Una Ley General de Salud Mental con 18 psiquiatras y 18 psicólogos clínicos por cada 100.000 habitantes, y atención psicológica pública y gratuita.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Med. 306, p. 91",
+    "enlaces": [],
+    "pagina": 91,
+    "cita": "\"ratios mínimas de 18 psiquiatras, 18 psicólogos y psicólogas clínicas\"",
     "verificado": true
   },
   {
@@ -3177,37 +3170,37 @@
   {
     "partido": "junts",
     "pregunta": "D1",
-    "texto": "Que Cataluña gestione las becas, para facilitar el acceso a estudiantes vulnerables.",
+    "texto": "Que la Generalitat gestione todas las becas e introducir poco a poco becas-salario. No habla del precio de la universidad.",
     "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "3.A.xiii «Ensenyament»",
+    "origen": "Programa 29N",
+    "fuente": "Escola i universitat, competències, p. 54; Joves, objectiu 1, p. 60",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"Exigir de nou al Govern de l'Estat el traspàs de la competència i els fons de les beques i ajuts a l'estudi\" [Exigir de nuevo al Gobierno del Estado el traspaso de la competencia y los fondos de las becas y ayudas al estudio]",
+    "pagina": 54,
+    "cita": "\"implantar progressivament un sistema de beques salari\" [implantar progresivamente un sistema de becas salario]",
     "verificado": true
   },
   {
     "partido": "junts",
     "pregunta": "D2",
-    "texto": "Más presupuesto para educación y más personal en la escuela pública, sin cifras.",
+    "texto": "Más recursos para la escuela pública y la concertada, y llegar al 6 % del PIB que fija la ley catalana. No habla de alumnos por clase.",
     "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "3.A.xiii «Ensenyament»",
+    "origen": "Programa 29N",
+    "fuente": "Escola i universitat, p. 53, i objectiu 1, p. 54",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"Cal incrementar els pressupostos públics destinats a educació\" [Hay que incrementar los presupuestos públicos destinados a educación]",
+    "pagina": 54,
+    "cita": "\"Més recursos humans i materials per a l’escola pública i la d’iniciativa social finançada amb fons públics.\" [Más recursos humanos y materiales para la escuela pública y la de iniciativa social financiada con fondos públicos.]",
     "verificado": true
   },
   {
     "partido": "junts",
     "pregunta": "D3",
-    "texto": "Que el Estado la financie, sin decir cómo.",
+    "texto": "Que la educación de 0 a 3 años tenga financiación del Estado, sin más detalle.",
     "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "3.A.xiii «Ensenyament»",
+    "origen": "Programa 29N",
+    "fuente": "Escola i universitat, objectiu 1, p. 54",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"L’educació dels infants de 0 a 3 anys ha de tenir finançament públic estatal\" [La educación de los niños de 0 a 3 años debe tener financiación pública estatal]",
+    "pagina": 54,
+    "cita": "\"L’educació dels infants de 0 a 3 anys ha de tenir finançament públic estatal.\" [La educación de los niños de 0 a 3 años debe tener financiación pública estatal.]",
     "verificado": true
   },
   {
@@ -3465,43 +3458,73 @@
   {
     "partido": "podemos",
     "pregunta": "D1",
-    "texto": "Que la universidad pública sea gratuita en toda Europa.",
+    "texto": "Universidad pública gratuita en grado, máster y doctorado durante la legislatura y becas-salario de hasta 800 € al mes según la renta.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 5.3, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"la gratuidad en los estudios del Espacio Europeo de Educación Superior impartidos en Universidades y centros públicos\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 294, p. 85",
+    "enlaces": [],
+    "pagina": 85,
+    "cita": "\"sistema de becas-salario de hasta 800 euros mensuales en función de la renta familiar\"",
     "verificado": true
   },
   {
     "partido": "podemos",
     "pregunta": "D2",
-    "texto": "Que cada país de la UE invierta al menos el 5 % en educación. No habla de alumnos por clase.",
+    "texto": "Como máximo 15 alumnos por clase en Primaria, 20 en Secundaria y 23 en Bachillerato, y llegar al 7 % del PIB en educación.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 5.3, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"una inversión educativa mínima del 5% para todos los países de la UE\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 280-281, pp. 79-80",
+    "enlaces": [],
+    "pagina": 79,
+    "cita": "\"Fijar nuevas ratios máximas en 15 alumnos y alumnas en Primaria, 20 en Secundaria y 23 en Bachillerato.\"",
     "verificado": true
   },
   {
     "partido": "podemos",
     "pregunta": "D3",
-    "texto": "Pública, gratuita y para todos los niños de Europa.",
+    "texto": "Crear en cuatro años todas las plazas públicas de 0 a 3 años necesarias, gratuitas y de gestión pública.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 5.2, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"Cobertura universal, pública y gratuita de la educación de 0 a 3 años en toda Europa\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 281, p. 80",
+    "enlaces": [],
+    "pagina": 80,
+    "cita": "\"construiremos en un plazo máximo de cuatro años todas las plazas públicas necesarias\"",
+    "verificado": true
+  },
+  {
+    "partido": "podemos",
+    "pregunta": "C1",
+    "texto": "Cumplir el calendario de cierre de las nucleares, empezando por Almaraz, y un sistema eléctrico 100 % renovable.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Med. 328 y 339, pp. 98 y 103",
+    "enlaces": [],
+    "pagina": 103,
+    "cita": "\"Defenderemos el cumplimiento del calendario de cierre de las centrales nucleares, comenzando por Almaraz\"",
+    "verificado": true
+  },
+  {
+    "partido": "podemos",
+    "pregunta": "C2",
+    "texto": "Transporte público gratuito para todos, con una tarjeta única en todo el país, y una red pública de recarga para el coche eléctrico.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Med. 40, p. 19, y 342, p. 104",
+    "enlaces": [],
+    "pagina": 19,
+    "cita": "\"Garantizaremos la gratuidad de todo el transporte público de viajeros\"",
+    "verificado": true
+  },
+  {
+    "partido": "podemos",
+    "pregunta": "C3",
+    "texto": "Prohibir construir en zonas inundables, reforzar todo el año la prevención y extinción de incendios y un fondo permanente para la sequía.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Med. 360, p. 110; 370, p. 113, y 387, p. 119",
+    "enlaces": [],
+    "pagina": 110,
+    "cita": "\"Prohibiremos los nuevos desarrollos urbanísticos en zonas inundables\"",
     "verificado": true
   },
   {
@@ -3687,37 +3710,37 @@
   {
     "partido": "junts",
     "pregunta": "C1",
-    "texto": "Más renovables de todo tipo y centrales hidroeléctricas públicas, sin fechas para cerrar las nucleares.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "2.d.v.7 «Model energètic»",
+    "texto": "Revisar el calendario de cierre de las nucleares catalanas si las renovables no bastan, y acelerar la solar y la eólica.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "Energia, objectiu 5, p. 78",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"Potenciar la implantació renovable en tots els fonts\" [Potenciar la implantación renovable en todas las fuentes]",
+    "pagina": 78,
+    "cita": "\"Revisar el calendari de tancament de les centrals nuclears catalanes\" [Revisar el calendario de cierre de las centrales nucleares catalanas]",
     "verificado": true
   },
   {
     "partido": "junts",
     "pregunta": "C2",
-    "texto": "Que el Estado ponga más dinero en el transporte público catalán, lo que podría bajar el precio de los billetes.",
-    "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "2.c.iv «Transport»",
+    "texto": "Traspasar a Cataluña todo Rodalies con un plan de choque contra los retrasos, y ayudas para comprar coches eléctricos y más puntos de recarga. No habla de precios ni abonos.",
+    "concreta": "vago",
+    "origen": "Programa 29N",
+    "fuente": "Infraestructures, objectiu 1, p. 72; Energia, objectiu 3, p. 78",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"la qual cosa pot incidir en la reducció del preu dels bitllets\" [lo cual puede incidir en la reducción del precio de los billetes]",
+    "pagina": 72,
+    "cita": "\"Reclamar el traspàs immediat i incondicional del 100% de Rodalies i Mitjana Distància\" [Reclamar el traspaso inmediato e incondicional del 100 % de Rodalies y Media Distancia]",
     "verificado": true
   },
   {
     "partido": "junts",
     "pregunta": "C3",
-    "texto": "Coordinarse con el Estado en los incendios forestales cerca de Cataluña, como ya hace con Francia. No habla de sequías.",
+    "texto": "Contra la sequía, desaladoras, agua regenerada y bajar las fugas de la red por debajo del 10 %. Más medios para prevenir incendios e inundaciones.",
     "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "2.d.v.1 «Agricultura»",
+    "origen": "Programa 29N",
+    "fuente": "Medi ambient, p. 81; Seguretat, objectiu 4, p. 23",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"Establir protocols de coordinació, similars als que hi ha amb França, per mantenir la col·laboració en incendis forestals transfronterers.\" [Establecer protocolos de coordinación, similares a los que hay con Francia, para mantener la colaboración en incendios forestales transfronterizos.]",
+    "pagina": 81,
+    "cita": "\"Renovar les xarxes municipals d’aigua per reduir les pèrdues per sota del 10%\" [Renovar las redes municipales de agua para reducir las pérdidas por debajo del 10 %]",
     "verificado": true
   },
   {
@@ -4131,37 +4154,37 @@
   {
     "partido": "junts",
     "pregunta": "G1",
-    "texto": "Que la declaración de las mujeres y los menores sea prueba preconstituida en casos de violencia machista.",
-    "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "3.A.xii «Igualtat»",
+    "texto": "Evitar que las víctimas tengan que repetir su declaración y cobren más fácilmente las ayudas, y leyes contra la violencia machista digital. Sin cifras.",
+    "concreta": "vago",
+    "origen": "Programa 29N",
+    "fuente": "Igualtat, objectius 2 i 4, p. 33",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"Incloure en la legislació processal per tal que en casos de violència masclista la declaració de les dones i la dels menors sigui prova preconstituïda.\" [Incluir en la legislación procesal que en casos de violencia machista la declaración de las mujeres y la de los menores sea prueba preconstituida.]",
+    "pagina": 33,
+    "cita": "\"La declaració de la víctima s’ha de poder fer com a prova preconstituïda\" [La declaración de la víctima se tiene que poder hacer como prueba preconstituida]",
     "verificado": true
   },
   {
     "partido": "junts",
     "pregunta": "G2",
-    "texto": "Una ley de corresponsabilidad y conciliación, y rebajar un 50 % las cotizaciones de empresas con trabajadores en guarda legal.",
-    "concreta": "si",
-    "origen": "Programa 2023",
-    "fuente": "3.A.xii «Igualtat»",
+    "texto": "Auditorías salariales para que haya el mismo sueldo por el mismo trabajo y permisos individuales y pagados para cuidar. No da semanas ni cifras.",
+    "concreta": "vago",
+    "origen": "Programa 29N",
+    "fuente": "Igualtat, objectius 1 i 3, p. 33",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"Impulsar una llei de corresponsabilitat i conciliació entre dones i homes amb mesures per les empreses per fomentar també la flexibilitat horària.\" [Impulsar una ley de corresponsabilidad y conciliación entre mujeres y hombres con medidas para las empresas para fomentar también la flexibilidad horaria.]",
+    "pagina": 33,
+    "cita": "\"Mateix sou per a treballs d’igual valor, amb auditories retributives\" [Mismo sueldo para trabajos de igual valor, con auditorías retributivas]",
     "verificado": true
   },
   {
     "partido": "junts",
     "pregunta": "G3",
-    "texto": "Defender los derechos LGTBI en todos los ámbitos, sin medidas concretas.",
-    "concreta": "vago",
-    "origen": "Programa 2023",
-    "fuente": "3.A.xii «Igualtat»",
+    "texto": "Oponerse a cualquier recorte de la ley trans y LGTBI, defender el matrimonio igualitario y aprobar la ley que castiga como delito las terapias de conversión.",
+    "concreta": "si",
+    "origen": "Programa 29N",
+    "fuente": "LGTBI+, objectius 1-2, p. 36",
     "enlaces": [],
-    "pagina": null,
-    "cita": "\"Pel reconeixement i defensa dels drets de les persones del col·lectiu LGTBI (lesbianes, gais, bisexuals, trans* i intersexuals) en tots els àmbits.\" [Por el reconocimiento y defensa de los derechos de las personas del colectivo LGTBI (lesbianas, gais, bisexuales, trans* e intersexuales) en todos los ámbitos.]",
+    "pagina": 36,
+    "cita": "\"Oposar-nos a qualsevol derogació o retallada de la Llei 4/2023 (trans i LGTBI)\" [Oponernos a cualquier derogación o recorte de la Ley 4/2023 (trans y LGTBI)]",
     "verificado": true
   },
   {
@@ -4419,43 +4442,37 @@
   {
     "partido": "podemos",
     "pregunta": "G1",
-    "texto": "Que la UE dedique el 5 % de su presupuesto a acabar con las violencias machistas.",
+    "texto": "Una prestación equivalente al salario mínimo durante 6 meses prorrogables para las víctimas y una vivienda inmediata.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 4, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"Blindaremos el 5 % del presupuesto de la UE para ese fin\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 151, p. 53",
+    "enlaces": [],
+    "pagina": 53,
+    "cita": "\"La prestación supondrá un salario mínimo equivalente al Salario Mínimo Interprofesional durante 6 meses prorrogables\"",
     "verificado": true
   },
   {
     "partido": "podemos",
     "pregunta": "G2",
-    "texto": "Permisos iguales de al menos 36 semanas para cada progenitor y tratar como discriminación toda brecha salarial de más del 20 %.",
+    "texto": "Permisos por nacimiento de 26 semanas por progenitor, el doble para familias monomarentales, y una Inspección de Igualdad para vigilar la igualdad salarial.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, caps. 4 y 5.1, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"Estableceremos un objetivo mínimo de 36 semanas iguales\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 178, p. 60, y 125, p. 44",
+    "enlaces": [],
+    "pagina": 60,
+    "cita": "\"Ampliaremos los permisos por nacimiento, adopción y acogimiento a 26 semanas por progenitor\"",
     "verificado": true
   },
   {
     "partido": "podemos",
     "pregunta": "G3",
-    "texto": "Una directiva europea contra la discriminación LGBTIQ+ que prohíba las terapias de conversión, y cupo laboral trans.",
+    "texto": "Reconocer el género no binario en los documentos oficiales y un cupo de empleo público para personas trans.",
     "concreta": "si",
-    "origen": "Propuesta 2024-26",
-    "fuente": "Programa europeas 2024, cap. 4, mayo de 2024",
-    "enlaces": [
-      "https://podemos.info/programa-podemos-elecciones-europeas-2024"
-    ],
-    "pagina": null,
-    "cita": "\"Directiva específica contra la discriminación LGBTIQ+ que aborde la prohibición de las prácticas de conversión\"",
+    "origen": "Programa 29N",
+    "fuente": "Med. 150, p. 52",
+    "enlaces": [],
+    "pagina": 52,
+    "cita": "\"Establecimiento de un cupo laboral trans en el empleo público\"",
     "verificado": true
   },
   {
