@@ -180,11 +180,10 @@
         "soria",
         "ceuta"
       ],
-      "nota": "En 2023 se presentó dentro de Sumar y no tiene programa propio de generales. Usamos propuestas públicas fechadas de 2024 a 2026.",
       "documento": {
-        "titulo": "Programa de las europeas 2024",
-        "url": "https://podemos.info/programa-podemos-elecciones-europeas-2024",
-        "pdf": false
+        "titulo": "Programa electoral 29N «Así de básico: paz, casa y trabajo»",
+        "url": "https://podemos.info/wp-content/uploads/2026/11/29N-programa-Podemos.-Paz-casa-y-trabajo.pdf",
+        "pdf": true
       },
       "listas": {
         "alicante": "Compromís: Front Valencià (coalición de Compromís, EUPV-IU, Podem y ERPV)",
@@ -225,8 +224,8 @@
         "tarragona"
       ],
       "documento": {
-        "titulo": "Programa electoral 2023 (en catalán, copia de RTVE)",
-        "url": "https://www.rtve.es/contenidos/documentos/elecciones_generales_2023/programa_electoral_junts.pdf",
+        "titulo": "Programa electoral 29N (en catalán, copia publicada por el diario Ara)",
+        "url": "https://static1.ara.cat/ara/public/content/file/original/2026/1118/17/programa-electoral-junts-29n.pdf",
         "pdf": true
       }
     },
